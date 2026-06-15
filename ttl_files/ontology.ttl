@@ -1,0 +1,106 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lkg: <http://example.org/lkg#> .
+
+### ============================
+###  Classes for DRS format
+### ============================
+
+lkg:DRSBox rdf:type owl:Class ;
+    rdfs:label "DRS Box" .
+
+lkg:LogicalOperator rdf:type owl:Class ;
+    rdfs:label "Logical Operator" .
+
+### ==============================
+###  Classes for Medical Domain
+### ==============================
+
+lkg:MedEntity rdf:type owl:Class ;
+    rdfs:label "Medical Entity" .
+
+lkg:Species rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "Species" .
+
+lkg:Disease rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "Disease" .
+
+lkg:Chemical rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "Chemical" .
+
+lkg:Gene rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "Gene" .
+
+lkg:Variant rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "Variant" .
+
+lkg:CellLine rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "CellLine" .
+
+
+### ================================
+###  Properties for DRS format
+### ================================
+
+
+### =====================================
+###  Properties for Medical Semantics
+### =====================================
+
+lkg:MedRelation rdf:type owl:ObjectProperty .
+
+lkg:associate rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Associate" .
+
+lkg:negativeCorrelate rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Negative Correlate" .
+
+lkg:positiveCorrelate rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Positive Correlate" .
+
+lkg:compare rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Compare" .
+
+lkg:cotreat rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Cotreat" .
+
+lkg:interact rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Interact" .
+
+lkg:drugInteract rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Drug Interact" .
+
+lkg:cause rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Cause" .
+
+lkg:inhibit rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Inhibit" .
+
+lkg:treat rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Treat" .
+
+lkg:stimulate rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Stimulate" .
+
+lkg:prevent rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:label "Prevent" .

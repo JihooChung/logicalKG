@@ -90,49 +90,49 @@ lkg:containsStatement rdf:type owl:ObjectProperty ;
 lkg:MedRelation rdf:type owl:ObjectProperty .
 
 lkg:associate rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Associate" .
 
 lkg:negativeCorrelate rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Negative Correlate" .
 
 lkg:positiveCorrelate rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Positive Correlate" .
 
 lkg:compare rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Compare" .
 
 lkg:cotreat rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Cotreat" .
 
 lkg:interact rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Interact" .
 
 lkg:drugInteract rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Drug Interact" .
 
 lkg:cause rdf:type owl:ObjectProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Cause" .
 
 lkg:inhibit rdf:type owl:ObjectProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Inhibit" .
 
 lkg:treat rdf:type owl:ObjectProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Treat" .
 
 lkg:stimulate rdf:type owl:ObjectProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Stimulate" .
 
 lkg:prevent rdf:type owl:ObjectProperty ;
-    rdfs:subPropertyOf lkg:MedicalRelation ;
+    rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Prevent" .

@@ -8,10 +8,13 @@
 ###  Classes for DRS format
 ### ============================
 
-lkg:DRSBox rdf:type owl:Class ;
+lkg:Formula rdf:type owl:Class ;
+    rdfs:label "Logical Formula"
+
+lkg:DRSBox rdfs:subClassOf lkg:Formula ;
     rdfs:label "DRS Box" .
 
-lkg:LogicalOperator rdf:type owl:Class ;
+lkg:LogicalOperator rdfs:subClassOf lkg:Formula ;
     rdfs:label "Logical Operator" .
 
 lkg:Negation rdf:type owl:Class ; 
@@ -64,13 +67,20 @@ lkg:CellLine rdf:type owl:Class ;
 ### ================================
 
 lkg:hasOperand rdf:type owl:ObjectProperty ;
+    rdfs:domain lkg:LogicalOperator ;
+    rdfs:range lkg:Formula ;
     rdfs:label "has Operand" .
 
 lkg:hasAntecedent rdf:type owl:ObjectProperty ; 
     rdfs:subClassOf lkg:hasOperand ;
+    rdfs:domain lkg:Implication ;
+    rdfs:range lkg:Formula ;
     rdfs:label "IF" .
+
 lkg:hasConsequent rdf:type owl:ObjectProperty ; 
     rdfs:subClassOf lkg:hasOperand ; 
+    rdfs:domain lkg:Implication ;
+    rdfs:range lkg:Formula ;
     rdfs:label "THEN" .
 
 lkg:containsEntity rdf:type owl:ObjectProperty ;

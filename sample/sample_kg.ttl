@@ -1,0 +1,37 @@
+#IN PROGRESS
+
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease ;
+    rdfs:label "Pancreatic cancer" .
+
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease ;
+    rdfs:label "PDAC" .
+
+lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical ;
+    rdfs:label "Gemcitabine" .
+
+lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical ;
+    rdfs:label "Folfirinox" .
+
+
+# DRS_1: Chemical_MESH_D000093542 treats Disease_MESH_D010190
+
+lkg:box_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_01 .
+
+lkg:stmt_01 rdf:type rdf:Statement ;
+    rdf:subject ex:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object ex:Disease_MESH_D010190 .
+
+
+# DRS_2: Chemical_MESH_C000627770 treats Disease_MESH_D010190
+
+ex:box_02 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_02 .
+
+ex:stmt_02 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .

@@ -1,0 +1,50 @@
+===========qwen3-30b-a3b-instruct-2507===========
+p:Disease_MESH_D010190 exists .  
+p:Disease_MESH_D021441 exists .  
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .  
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .  
+p:Chemical_MESH_D000093542 v:increase a n:mean_overall_survival of p:Disease_MESH_D010190 by a few months .  
+p:Chemical_MESH_C000627770 v:increase a n:mean_overall_survival of p:Disease_MESH_D010190 by a few months .  
+p:Chemical_MESH_D000093542 v:cause a n:chemoresistance in p:Disease_MESH_D010190 .  
+p:Chemical_MESH_C000627770 v:cause a n:chemoresistance in p:Disease_MESH_D010190 .  
+a n:dense_tumoral_stroma v:contribute_to a n:therapeutic_difficulty of p:Disease_MESH_D021441 .  
+p:Disease_MESH_D021441 v:have a n:dense_tumoral_stroma .  
+a n:targeting_technology v:act_on a n:dense_tumoral_stroma of p:Disease_MESH_D021441 .  
+a n:pharmacological_weapon v:be_potentiated by a n:targeting_technology .  
+a n:targeting_technology v:improve a n:therapeutic_outcome of p:Disease_MESH_D021441 .  
+a n:recent_development v:involve a n:targeting_technology for p:Disease_MESH_D021441 .  
+a n:recent_development v:involve a n:experimental_drug for p:Disease_MESH_D021441 .  
+a n:recent_development v:involve a n:current_used_drug for p:Disease_MESH_D021441 .  
+a n:recent_development v:involve a n:physiology aspect of p:Disease_MESH_D021441 .  
+a n:recent_development v:involve a n:biochemistry aspect of p:Disease_MESH_D021441 .
+===================================================
+
+=============gemma-4-31b-it=============
+p:Disease_MESH_D010190 exists .
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_D000093542 v:increase a n:mean_overall_survival .
+p:Chemical_MESH_C000627770 v:increase a n:mean_overall_survival .
+p:Disease_MESH_D021441 exists .
+a n:dense_tumoral_stroma v:associate_with p:Disease_MESH_D021441 .
+==========================================
+
+=============internvl3.5-30b-a3b====================
+p:Disease_MESH_D010190 exists .
+p:Disease_MESH_D021441 exists .
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
+p:Disease_MESH_D010190 v:increase a n:mean_overall_survival .
+p:Disease_MESH_D010190 v:increase a n:chemoresistance .
+p:Disease_MESH_D021441 v:account_for a n:therapeutic_difficulty .
+p:Disease_MESH_D021441 v:increase a n:physiology .
+p:Disease_MESH_D021441 v:increase a n:biochemistry .
+p:Disease_MESH_D021441 v:increase a n:experimental_drugs .
+p:Disease_MESH_D021441 v:increase a n:targeting_technologies .
+=====================================================
+
+==================medgemma-27b-it=====================
+p:Disease_MESH_D010190 exists .
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
+======================================================

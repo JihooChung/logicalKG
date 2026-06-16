@@ -14,6 +14,19 @@ lkg:DRSBox rdf:type owl:Class ;
 lkg:LogicalOperator rdf:type owl:Class ;
     rdfs:label "Logical Operator" .
 
+lkg:Negation rdf:type owl:Class ; 
+    rdfs:subClassOf lkg:LogicalOperator ;
+    rdfs:label "NOT" .
+lkg:Conjunction rdf:type owl:Class ; 
+    rdfs:subClassOf lkg:LogicalOperator ;
+    rdfs:label "AND" .
+lkg:Disjunction rdf:type owl:Class ; 
+    rdfs:subClassOf lkg:LogicalOperator ;
+    rdfs:label "OR" .
+lkg:Implication rdf:type owl:Class ; 
+    rdfs:subClassOf lkg:LogicalOperator ;
+    rdfs:label "IF-THEN" .
+
 ### ==============================
 ###  Classes for Medical Domain
 ### ==============================
@@ -50,6 +63,25 @@ lkg:CellLine rdf:type owl:Class ;
 ###  Properties for DRS format
 ### ================================
 
+lkg:hasOperand rdf:type owl:ObjectProperty ;
+    rdfs:label "has Operand" .
+
+lkg:hasAntecedent rdf:type owl:ObjectProperty ; 
+    rdfs:subClassOf lkg:hasOperand ;
+    rdfs:label "IF" .
+lkg:hasConsequent rdf:type owl:ObjectProperty ; 
+    rdfs:subClassOf lkg:hasOperand ; 
+    rdfs:label "THEN" .
+
+lkg:containsEntity rdf:type owl:ObjectProperty ;
+    rdfs:domain lkg:DRSBox ;
+    rdfs:range lkg:MedEntity ;
+    rdfs:label "contains Entity" .
+
+lkg:containsStatement rdf:type owl:ObjectProperty ;
+    rdfs:domain lkg:DRSBox ;
+    rdfs:range rdf:Statement ;
+    rdfs:label "contains Statement" .
 
 ### =====================================
 ###  Properties for Medical Semantics

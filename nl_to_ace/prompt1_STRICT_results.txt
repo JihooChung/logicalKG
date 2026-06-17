@@ -1,0 +1,101 @@
+===========qwen3-30b-a3b-instruct-2507===========
+p:Disease_MESH_D021441 exists .  
+p:Disease_MESH_D007249 exists .  
+p:Disease_MESH_D001778 exists .  
+p:Disease_MESH_D004194 exists .  
+p:Gene_7058 exists .  
+p:Gene_5168 exists .  
+p:Chemical_MESH_C032881 exists .  
+
+p:Disease_MESH_D021441 v:have v:poor_prognosis .  
+p:Disease_MESH_D021441 v:cause v:high_mortality .  
+p:Disease_MESH_D021441 v:have v:late_diagnosis .  
+p:Disease_MESH_D021441 v:have v:lack_of_effective_treatment .  
+
+p:Disease_MESH_D021441 v:have v:early_detection .  
+p:Disease_MESH_D021441 v:decrease v:mortality .  
+
+p:Gene_7058 v:be v:candidate_biomarker .  
+p:Gene_5168 v:be v:candidate_biomarker .  
+p:Chemical_MESH_C032881 v:be v:candidate_biomarker .  
+p:Ca19-9 v:be v:conventional_biomarker .  
+p:Disease_MESH_D007249 v:be v:conventional_biomarker .  
+p:Disease_MESH_D001778 v:be v:conventional_biomarker .  
+
+p:Disease_MESH_D021441 v:have v:early_detection .  
+p:Disease_MESH_D021441 v:have v:prognosis_prediction .  
+p:Disease_MESH_D021441 v:have v:treatment_response_prediction .  
+p:Disease_MESH_D021441 v:have v:differentiation_from p:Disease_MESH_D004194 .  
+
+p:Gene_7058 v:associate_with p:Disease_MESH_D021441 .  
+p:Gene_5168 v:associate_with p:Disease_MESH_D021441 .  
+p:Chemical_MESH_C032881 v:associate_with p:Disease_MESH_D021441 .  
+p:Ca19-9 v:associate_with p:Disease_MESH_D021441 .  
+p:Disease_MESH_D007249 v:associate_with p:Disease_MESH_D021441 .  
+p:Disease_MESH_D001778 v:associate_with p:Disease_MESH_D021441 .  
+
+p:Gene_7058 v:be v:cost_effective .  
+p:Gene_5168 v:be v:cost_effective .  
+p:Chemical_MESH_C032881 v:be v:cost_effective .  
+p:Ca19-9 v:be v:cost_effective .  
+p:Disease_MESH_D007249 v:be v:cost_effective .  
+p:Disease_MESH_D001778 v:be v:cost_effective .  
+
+p:Gene_7058 v:be v:detectable_in_easily_accessible_material .  
+p:Gene_5168 v:be v:detectable_in_easily_accessible_material .  
+p:Chemical_MESH_C032881 v:be v:detectable_in_easily_accessible_material .  
+p:Ca19-9 v:be v:detectable_in_easily_accessible_material .  
+p:Disease_MESH_D007249 v:be v:detectable_in_easily_accessible_material .  
+p:Disease_MESH_D001778 v:be v:detectable_in_easily_accessible_material .  
+
+p:Gene_7058 v:be v:present_in_early_phase .  
+p:Gene_5168 v:be v:present_in_early_phase .  
+p:Chemical_MESH_C032881 v:be v:present_in_early_phase .  
+p:Ca19-9 v:be v:present_in_early_phase .  
+p:Disease_MESH_D007249 v:be v:present_in_early_phase .  
+p:Disease_MESH_D001778 v:be v:present_in_early_phase .  
+
+p:Gene_7058 v:be v:useful_in_diagnostic_panel .  
+p:Gene_5168 v:be v:useful_in_diagnostic_panel .  
+p:Chemical_MESH_C032881 v:be v:useful_in_diagnostic_panel .  
+p:Ca19-9 v:be v:useful_in_diagnostic_panel .  
+p:Disease_MESH_D007249 v:be v:useful_in_diagnostic_panel .  
+p:Disease_MESH_D001778 v:be v:useful_in_diagnostic_panel .  
+
+p:Gene_7058 v:co_treat p:Disease_MESH_D021441 .  
+p:Gene_5168 v:co_treat p:Disease_MESH_D021441 .  
+p:Chemical_MESH_C032881 v:co_treat p:Disease_MESH_D021441 .  
+p:Ca19-9 v:co_treat p:Disease_MESH_D021441 .  
+p:Disease_MESH_D007249 v:co_treat p:Disease_MESH_D021441 .  
+p:Disease_MESH_D001778 v:co_treat p:Disease_MESH_D021441 .
+===================================================
+
+=============gemma-4-31b-it=============
+p:Disease_MESH_D021441 exists .
+p:Gene_7058 exists .
+p:Chemical_MESH_C032881 exists .
+p:Gene_5168 exists .
+p:Disease_MESH_D007249 exists .
+p:Disease_MESH_D001778 exists .
+p:Disease_MESH_D004194 exists .
+p:Gene_7058 v:associate_with p:Disease_MESH_D021441 .
+p:Chemical_MESH_C032881 v:associate_with p:Disease_MESH_D021441 .
+p:Gene_5168 v:associate_with p:Disease_MESH_D021441 .
+p:Disease_MESH_D007249 v:associate_with p:Disease_MESH_D021441 .
+p:Disease_MESH_D001778 v:associate_with p:Disease_MESH_D021441 .
+p:Disease_MESH_D021441 v:compare_with p:Disease_MESH_D004194 .
+==========================================
+
+=============internvl3.5-30b-a3b====================
+p:Disease_MESH_D021441 v:have_prognosis p:Disease_MESH_D021441 .
+p:Disease_MESH_D021441 v:have_treatment p:Chemical_MESH_C032881 .
+p:Disease_MESH_D021441 v:have_diagnosis p:Disease_MESH_D007249 .
+p:Disease_MESH_D021441 v:have_diagnosis p:Disease_MESH_D001778 .
+p:Disease_MESH_D021441 v:have_diagnosis p:Disease_MESH_D004194 .
+p:Disease_MESH_D021441 v:have_diagnosis p:Gene_7058 .
+p:Disease_MESH_D021441 v:have_diagnosis p:Gene_5168 .
+=====================================================
+
+==================medgemma-27b-it=====================
+
+======================================================

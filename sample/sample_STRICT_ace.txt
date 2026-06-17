@@ -1,0 +1,7 @@
+p:Disease_MESH_D010190 exists .
+p:Disease_MESH_D021441 exists .
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_C000627770 exists .
+
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .

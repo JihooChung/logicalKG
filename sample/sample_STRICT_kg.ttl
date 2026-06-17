@@ -1,5 +1,3 @@
-#IN PROGRESS
-
 lkg:Disease_MESH_D010190 rdf:type lkg:Disease ;
     rdfs:label "Pancreatic cancer" .
 

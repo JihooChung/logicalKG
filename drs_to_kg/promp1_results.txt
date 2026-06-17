@@ -1,0 +1,133 @@
+===================qwen3-30b-a3b-instruct-2507======================
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+
+lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical .
+
+lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+lkg:DRS_02 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D021441 .
+
+lkg:DRS_03 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 .
+
+lkg:DRS_04 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 .
+
+lkg:DRS_05 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_05 .
+
+lkg:DRS_06 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_06 .
+
+lkg:STMT_05 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:STMT_06 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+========================================================================
+
+========================gemma-4-31b-it==================================
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+lkg:DRS_02 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D021441 .
+
+lkg:DRS_03 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 .
+
+lkg:DRS_04 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 .
+
+lkg:DRS_05 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_05 .
+
+lkg:STMT_05 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:DRS_06 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_06 .
+
+lkg:STMT_06 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+========================================================================
+
+========================internvl3.5-30b-a3b========================
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+
+lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical .
+
+lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical .
+
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+lkg:DRS_02 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D021441 .
+
+lkg:DRS_03 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 .
+
+lkg:DRS_04 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 .
+
+lkg:DRS_05 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_05 .
+
+lkg:DRS_06 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_06 .
+
+lkg:STMT_05 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:STMT_06 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+rdf:type lkg:Disease_MESH_D010190 .
+
+rdf:type lkg:Disease_MESH_D021441 .
+
+rdf:type lkg:Chemical_MESH_D000093542 .
+
+rdf:type lkg:Chemical_MESH_C000627770 .
+
+rdf:type lkg:STMT_05 .
+
+rdf:type lkg:STMT_06 .
+========================================================================
+
+========================medgemma-27b-it========================
+
+========================================================================

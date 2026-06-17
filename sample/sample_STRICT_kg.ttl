@@ -10,26 +10,46 @@ lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical ;
 lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical ;
     rdfs:label "Folfirinox" .
 
-
-# DRS_1: Chemical_MESH_D000093542 treats Disease_MESH_D010190
+# DRS_1: Disease_MESH_D010190 exists
 
 lkg:box_01 rdf:type lkg:DRSBox ;
-    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
-    lkg:containsStatement lkg:stmt_01 .
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
 
-lkg:stmt_01 rdf:type rdf:Statement ;
+# DRS_2: Disease_MESH_D021441 exists
+
+lkg:box_02 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D021441 .
+
+# DRS_3: Chemical_MESH_D000093542 exists
+
+lkg:box_03 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 .
+
+# DRS_4: Chemical_MESH_C000627770 exists
+
+lkg:box_04 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 .
+
+
+# DRS_5: Chemical_MESH_D000093542 treats Disease_MESH_D010190
+
+lkg:box_05 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_05 .
+
+lkg:stmt_05 rdf:type rdf:Statement ;
     rdf:subject ex:Chemical_MESH_D000093542 ;
     rdf:predicate lkg:treat ;
     rdf:object ex:Disease_MESH_D010190 .
 
 
-# DRS_2: Chemical_MESH_C000627770 treats Disease_MESH_D010190
+# DRS_6: Chemical_MESH_C000627770 treats Disease_MESH_D010190
 
-ex:box_02 rdf:type lkg:DRSBox ;
+ex:box_06 rdf:type lkg:DRSBox ;
     lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Disease_MESH_D010190 ;
-    lkg:containsStatement lkg:stmt_02 .
+    lkg:containsStatement lkg:stmt_06 .
 
-ex:stmt_02 rdf:type rdf:Statement ;
+ex:stmt_06 rdf:type rdf:Statement ;
     rdf:subject lkg:Chemical_MESH_C000627770 ;
     rdf:predicate lkg:treat ;
     rdf:object lkg:Disease_MESH_D010190 .

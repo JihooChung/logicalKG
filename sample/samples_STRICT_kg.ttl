@@ -1,0 +1,133 @@
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+lkg:Disease_MESH_D006331 rdf:type lkg:Disease .
+lkg:Disease_MESH_D011085 rdf:type lkg:Disease .
+
+lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_C070243 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_D007986 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_D008055 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_D013739 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_D002784 rdf:type lkg:Chemical .
+
+lkg:Gene_3835 rdf:type lkg:Gene .
+lkg:Gene_5604 rdf:type lkg:Gene .
+lkg:Gene_5605 rdf:type lkg:Gene .
+lkg:Gene_5595 rdf:type lkg:Gene .
+lkg:Gene_5594 rdf:type lkg:Gene .
+lkg:Gene_1033 rdf:type lkg:Gene .
+lkg:Gene_1026 rdf:type lkg:Gene .
+lkg:Gene_5609 rdf:type lkg:Gene .
+lkg:Gene_1401 rdf:type lkg:Gene .
+lkg: rdf:type lkg:Gene .
+lkg: rdf:type lkg:Gene .
+lkg: rdf:type lkg:Gene .
+
+lkg:Species_9606 rdf:type lkg:Species .
+
+lkg:CellLine_CVCL_0480 rdf:type lkg:CellLine .
+lkg:CellLine_CVCL_0428 rdf:type lkg:CellLine .
+
+lkg:Variant_tmVar_rs2276008 rdf:type lkg:Variant .
+lkg:Variant_tmVar_rs11865228 rdf:type lkg:Variant .
+
+
+# DRS_1: Disease_MESH_D010190 exists.
+
+lkg:box_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+# DRS_2: Disease_MESH_D021441 exists.
+
+lkg:box_02 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D021441 .
+
+# DRS_3: Chemical_MESH_D000093542 exists.
+
+lkg:box_03 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 .
+
+# DRS_4: Chemical_MESH_C000627770 exists.
+
+lkg:box_04 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 .
+
+
+# DRS_5: Chemical_MESH_D000093542 treats Disease_MESH_D010190.
+
+lkg:box_05 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_05 .
+
+lkg:stmt_05 rdf:type rdf:Statement ;
+    rdf:subject ex:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object ex:Disease_MESH_D010190 .
+
+
+# DRS_6: Chemical_MESH_C000627770 treats Disease_MESH_D010190.
+
+ex:box_06 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_06 .
+
+ex:stmt_06 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+# DRS_7: Gene_3835 exists .
+Disease_MESH_D010190 exists .
+Chemical_MESH_C070243 exists .
+Gene_5604 exists .
+Gene_5605 exists .
+Gene_5595 exists .
+Gene_5594 exists .
+Gene_1033 exists .
+Gene_1026 exists .
+Species_9606 exists .
+CellLine_CVCL_0480 exists .
+CellLine_CVCL_0428 exists .
+Gene_5609 exists .
+Gene_3835 v:associate_with Disease_MESH_D010190 .
+Gene_5609 v:associate_with Disease_MESH_D010190 .
+Gene_5594 v:associate_with Disease_MESH_D010190 .
+Gene_1026 v:associate_with Disease_MESH_D010190 .
+Gene_1026 v:associate_with Gene_3835 .
+Gene_1026 v:associate_with Gene_5609 .
+Gene_1026 v:associate_with Gene_5594 .
+Gene_1033 v:associate_with Gene_3835 .
+Gene_3835 v:associate_with Gene_5604 .
+Gene_3835 v:associate_with Gene_5605 .
+Gene_3835 v:associate_with Gene_5609 .
+Gene_3835 v:associate_with Gene_5594 .
+Gene_3835 v:associate_with Gene_5595 .
+
+Gene_5595 exists .
+Gene_5594 exists .
+Chemical_MESH_D007986 exists .
+Disease_MESH_D006331 exists .
+Disease_MESH_D011085 exists . 
+Species_9606 exists .
+Chemical_MESH_D008055 exists .
+Gene_1401 exists .
+Chemical_MESH_D013739 exists.
+Variant_tmVar_rs2276008 exists .
+Variant_tmVar_rs11865228 exists .
+Chemical_MESH_D002784 exists .
+Chemical_MESH_D002784 v:associate_with Disease_MESH_D011085 .
+Chemical_MESH_D002784 v:associate_with Gene_5595 .
+Chemical_MESH_D002784 v:associate_with Gene_5594 .
+Chemical_MESH_D007986 v:associate_with Gene_5595 .
+Chemical_MESH_D007986 v:associate_with Gene_5594 .
+Chemical_MESH_D013739 v:associate_with Disease_MESH_D011085 .
+Chemical_MESH_D013739 v:associate_with Gene_5595 .
+Chemical_MESH_D013739 v:associate_with Gene_5594 .
+Disease_MESH_D011085 v:associate_with Gene_1401 .
+Disease_MESH_D011085 v:associate_with Gene_5595 .
+Disease_MESH_D011085 v:associate_with Gene_5594 .
+Disease_MESH_D011085 v:associate_with Variant_tmVar_rs2276008 .
+Disease_MESH_D011085 v:associate_with Variant_tmVar_rs11865228 .
+Gene_1401 v:associate_with Gene_5595 .
+Gene_1401 v:associate_with Gene_5594 .

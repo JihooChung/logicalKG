@@ -33,3 +33,32 @@
 [A] predicate(A,associate_with,named(Gene_3835),named(Gene_5609))-1/6
 [A] predicate(A,associate_with,named(Gene_3835),named(Gene_5594))-1/6
 [A] predicate(A,associate_with,named(Gene_3835),named(Gene_5595))-1/6
+
+#Sample3:
+[A] predicate(A,exist,named(Gene_5595))-1/4
+[A] predicate(A,exist,named(Gene_5594))-1/4
+[A] predicate(A,exist,named(Chemical_MESH_D007986))-1/4
+[A] predicate(A,exist,named(Disease_MESH_D006331))-1/4
+[A] predicate(A,exist,named(Disease_MESH_D011085))-1/4
+[A] predicate(A,exist,named(Species_9606))-1/4
+[A] predicate(A,exist,named(Chemical_MESH_D008055))-1/4
+[A] predicate(A,exist,named(Gene_1401))-1/4
+[A] predicate(A,exist,named(Chemical_MESH_D013739))-1/4
+[A] predicate(A,exist,named(Variant_tmVar_rs2276008))-1/4
+[A] predicate(A,exist,named(Variant_tmVar_rs11865228))-1/4
+[A] predicate(A,exist,named(Chemical_MESH_D002784))-1/4
+[A] predicate(A,associate_with,named(Chemical_MESH_D002784),named(Disease_MESH_D011085))-1/6
+[A] predicate(A,associate_with,named(Chemical_MESH_D002784),named(Gene_5595))-1/6
+[A] predicate(A,associate_with,named(Chemical_MESH_D002784),named(Gene_5594))-1/6
+[A] predicate(A,associate_with,named(Chemical_MESH_D007986),named(Gene_5595))-1/6
+[A] predicate(A,associate_with,named(Chemical_MESH_D007986),named(Gene_5594))-1/6
+[A] predicate(A,associate_with,named(Chemical_MESH_D013739),named(Disease_MESH_D011085))-1/6
+[A] predicate(A,associate_with,named(Chemical_MESH_D013739),named(Gene_5595))-1/6
+[A] predicate(A,associate_with,named(Chemical_MESH_D013739),named(Gene_5594))-1/6
+[A] predicate(A,associate_with,named(Disease_MESH_D011085),named(Gene_1401))-1/6
+[A] predicate(A,associate_with,named(Disease_MESH_D011085),named(Gene_5595))-1/6
+[A] predicate(A,associate_with,named(Disease_MESH_D011085),named(Gene_5594))-1/6
+[A] predicate(A,associate_with,named(Disease_MESH_D011085),named(Variant_tmVar_rs2276008))-1/6
+[A] predicate(A,associate_with,named(Disease_MESH_D011085),named(Variant_tmVar_rs11865228))-1/6
+[A] predicate(A,associate_with,named(Gene_1401),named(Gene_5595))-1/6
+[A] predicate(A,associate_with,named(Gene_1401),named(Gene_5594))-1/6

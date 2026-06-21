@@ -1,0 +1,58 @@
+=============qwen3-30b-a3b-instruct-2507=======================
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+
+lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical .
+
+lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical .
+
+lkg:mean_overall_survival rdf:type lkg:SurvivalMetric .
+
+lkg:dense_tumoral_stroma rdf:type lkg:HistologicalFeature .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+lkg:DRS_02 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:DRS_03 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_02 .
+
+lkg:DRS_04 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:mean_overall_survival , lkg:Chemical_MESH_D000093542 ;
+    lkg:containsStatement lkg:STMT_03 .
+
+lkg:DRS_05 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:mean_overall_survival , lkg:Chemical_MESH_C000627770 ;
+    lkg:containsStatement lkg:STMT_04 .
+
+lkg:DRS_06 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D021441 , lkg:dense_tumoral_stroma ;
+    lkg:containsStatement lkg:STMT_05 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:STMT_02 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:STMT_03 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:increase ;
+    rdf:object lkg:mean_overall_survival .
+
+lkg:STMT_04 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:increase ;
+    rdf:object lkg:mean_overall_survival .
+
+lkg:STMT_05 rdf:type rdf:Statement ;
+    rdf:subject lkg:dense_tumoral_stroma ;
+    rdf:predicate lkg:associate_with ;
+    rdf:object lkg:Disease_MESH_D021441 .

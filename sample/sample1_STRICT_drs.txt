@@ -1,6 +1,0 @@
-[A] predicate(A,exist,named(Disease_MESH_D010190))-1/4
-[A] predicate(A,exist,named(Disease_MESH_D021441))-1/4
-[A] predicate(A,exist,named(Chemical_MESH_D000093542))-1/4
-[A] predicate(A,exist,named(Chemical_MESH_C000627770))-1/4
-[A] predicate(A,treat,named(Chemical_MESH_D000093542),named(Disease_MESH_D010190))-1/6
-[A] predicate(A,treat,named(Chemical_MESH_C000627770),named(Disease_MESH_D010190))-1/6

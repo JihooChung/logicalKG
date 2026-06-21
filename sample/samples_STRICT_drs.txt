@@ -1,0 +1,35 @@
+#Sample1:
+[A] predicate(A,exist,named(Disease_MESH_D010190))-1/4
+[A] predicate(A,exist,named(Disease_MESH_D021441))-1/4
+[A] predicate(A,exist,named(Chemical_MESH_D000093542))-1/4
+[A] predicate(A,exist,named(Chemical_MESH_C000627770))-1/4
+[A] predicate(A,treat,named(Chemical_MESH_D000093542),named(Disease_MESH_D010190))-1/6
+[A] predicate(A,treat,named(Chemical_MESH_C000627770),named(Disease_MESH_D010190))-1/6
+
+#Sample2:
+[A] predicate(A,exist,named(Gene_3835))-1/4
+[A] predicate(A,exist,named(Disease_MESH_D010190))-1/4
+[A] predicate(A,exist,named(Chemical_MESH_C070243))-1/4
+[A] predicate(A,exist,named(Gene_5604))-1/4
+[A] predicate(A,exist,named(Gene_5605))-1/4
+[A] predicate(A,exist,named(Gene_5595))-1/4
+[A] predicate(A,exist,named(Gene_5594))-1/4
+[A] predicate(A,exist,named(Gene_1033))-1/4
+[A] predicate(A,exist,named(Gene_1026))-1/4
+[A] predicate(A,exist,named(Species_9606))-1/4
+[A] predicate(A,exist,named(CellLine_CVCL_0480))-1/4
+[A] predicate(A,exist,named(CellLine_CVCL_0428))-1/4
+[A] predicate(A,exist,named(Gene_5609))-1/4
+[A] predicate(A,associate_with,named(Gene_3835),named(Disease_MESH_D010190))-1/6
+[A] predicate(A,associate_with,named(Gene_5609),named(Disease_MESH_D010190))-1/6
+[A] predicate(A,associate_with,named(Gene_5594),named(Disease_MESH_D010190))-1/6
+[A] predicate(A,associate_with,named(Gene_1026),named(Disease_MESH_D010190))-1/6
+[A] predicate(A,associate_with,named(Gene_1026),named(Gene_3835))-1/6
+[A] predicate(A,associate_with,named(Gene_1026),named(Gene_5609))-1/6
+[A] predicate(A,associate_with,named(Gene_1026),named(Gene_5594))-1/6
+[A] predicate(A,associate_with,named(Gene_1033),named(Gene_3835))-1/6
+[A] predicate(A,associate_with,named(Gene_3835),named(Gene_5604))-1/6
+[A] predicate(A,associate_with,named(Gene_3835),named(Gene_5605))-1/6
+[A] predicate(A,associate_with,named(Gene_3835),named(Gene_5609))-1/6
+[A] predicate(A,associate_with,named(Gene_3835),named(Gene_5594))-1/6
+[A] predicate(A,associate_with,named(Gene_3835),named(Gene_5595))-1/6

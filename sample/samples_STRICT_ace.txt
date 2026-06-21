@@ -37,6 +37,31 @@ p:Gene_3835 v:associate_with p:Gene_5594 .
 p:Gene_3835 v:associate_with p:Gene_5595 .
 
 #Sample3:
+p:Gene_5595 exists .
+p:Gene_5594 exists .
+p:Chemical_MESH_D007986 exists .
+p:Disease_MESH_D006331 exists .
+p:Disease_MESH_D011085 exists . 
+p:Species_9606 exists .
+p:Chemical_MESH_D008055 exists .
+p:Gene_1401 exists .
+p:Chemical_MESH_D013739 exists.
+p:Variant_tmVar_rs2276008 exists .
+p:Variant_tmVar_rs11865228 exists .
+p:Chemical_MESH_D002784 exists .
 
-
-BACKGROUND: Ovulation is regulated by Gene_5595 (Gene_5595) and Gene_5594 signaling mechanisms, and Gene_5595;5594 kinases modulates the function of most of the Chemical_MESH_D007986-regulated genes. Defective ERK kinase signaling that is secondary to a genetic problem contributes to both Disease_MESH_D006331 and metabolic problems in Disease_MESH_D011085 (Disease_MESH_D011085). We planned to investigate Gene_5595 and Gene_5594 gene polymorphisms in Disease_MESH_D011085 for the first time in the Turkish population. METHODS: One hundred two Disease_MESH_D011085 Species_9606 and 102 healthy controls were recruited for this Species_9606 control study. HOMA-IR, Ferriman-Gallwey score (FGS), waist-to-hip ratio (WHR), and body mass index (BMI) were assessed. Chemical_MESH_D008055 profile levels, Gene_1401, and total Chemical_MESH_D013739 were determined. Gene_5594 Variant_tmVar_rs2276008;VariantGroup_1;CorrespondingGene_5594;RS#_2276008;CorrespondingSpecies_9606 (Variant_tmVar_c|SUB|G||C;VariantGroup_1;CorrespondingGene_5594;RS#_2276008;CorrespondingSpecies_9606;CA#_14920918) and Gene_5595 Variant_tmVar_rs11865228;VariantGroup_0;CorrespondingGene_5595;RS#_11865228;CorrespondingSpecies_9606 (Variant_tmVar_c|SUB|G||A;VariantGroup_0;CorrespondingGene_5595;RS#_11865228;CorrespondingSpecies_9606) SNPs were analyzed with a real-time PCR system. RESULTS: Gene_5595 and Gene_5594 genotypes were found to differ between the Disease_MESH_D011085 and control groups. In Species_9606 with Disease_MESH_D011085, Gene_5595 GA and Gene_5594 GC genotypes were different in terms of BMI, FGS, HOMA-IR, Gene_1401, total Chemical_MESH_D013739, and total Chemical_MESH_D002784 levels. CONCLUSIONS: Gene_5595 and Gene_5594 genes are involved in Disease_MESH_D011085 pathogenesis. BMI, FGS, HOMA-IR, and Gene_1401 levels are related to the heterozygote polymorphic types of Gene_5595 and Gene_5594 genes.
+p:Chemical_MESH_D002784 v:associate_with p:Disease_MESH_D011085 .
+p:Chemical_MESH_D002784 v:associate_with p:Gene_5595 .
+p:Chemical_MESH_D002784 v:associate_with p:Gene_5594 .
+p:Chemical_MESH_D007986 v:associate_with p:Gene_5595 .
+p:Chemical_MESH_D007986 v:associate_with p:Gene_5594 .
+p:Chemical_MESH_D013739 v:associate_with p:Disease_MESH_D011085 .
+p:Chemical_MESH_D013739 v:associate_with p:Gene_5595 .
+p:Chemical_MESH_D013739 v:associate_with p:Gene_5594 .
+p:Disease_MESH_D011085 v:associate_with p:Gene_1401 .
+p:Disease_MESH_D011085 v:associate_with p:Gene_5595 .
+p:Disease_MESH_D011085 v:associate_with p:Gene_5594 .
+p:Disease_MESH_D011085 v:associate_with p:Variant_tmVar_rs2276008 .
+p:Disease_MESH_D011085 v:associate_with p:Variant_tmVar_rs11865228 .
+p:Gene_1401 v:associate_with p:Gene_5595 .
+p:Gene_1401 v:associate_with p:Gene_5594 .

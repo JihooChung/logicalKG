@@ -1,0 +1,168 @@
+lkg:ClinicalOutcome rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "ClinicalOutcome" .
+
+lkg:ClinicalStatus rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "ClinicalStatus" .
+
+lkg:MedicalCondition rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "MedicalCondition" .
+
+lkg:MedicalFeature rdf:type owl:Class ;
+    rdfs:subClassOf lkg:MedEntity ;
+    rdfs:label "MedicalFeature" .
+
+lkg:increase rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf lkg:MedRelation ;
+    rdfs:label "increase" .
+
+lkg:isOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf lkg:MedRelation ;
+    rdfs:label "of" .
+
+lkg:isFeatureOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf lkg:MedRelation ;
+    rdfs:label "isFeatureOf" .
+
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+
+lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical .
+
+lkg:Mean_overall_survival rdf:type lkg:ClinicalOutcome .
+lkg:Therapeutic_difficulty rdf:type lkg:ClinicalStatus .
+lkg:Chemoresistance rdf:type  lkg:MedicalCondition .
+lkg:Dense_Tumoral_Stroma rdf:type  lkg:MedicalFeature .
+
+# DRS_1: Disease_MESH_D010190 exists.
+
+lkg:box_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+# DRS_2: Disease_MESH_D021441 exists.
+
+lkg:box_02 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D021441 .
+
+# DRS_3: Chemical_MESH_D000093542 exists.
+
+lkg:box_03 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 .
+
+# DRS_4: Chemical_MESH_C000627770 exists.
+
+lkg:box_04 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 .
+
+
+# DRS_5: Chemical_MESH_D000093542 treats Disease_MESH_D010190.
+
+lkg:box_05 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_05 .
+
+lkg:stmt_05 rdf:type rdf:Statement ;
+    rdf:subject ex:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object ex:Disease_MESH_D010190 .
+
+
+# DRS_6: Chemical_MESH_C000627770 treats Disease_MESH_D010190.
+
+lkg:box_06 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_06 .
+
+lkg:stmt_06 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+# DRS_7: Chemical_MESH_D000093542 increase the mean_overall_survival of Disease_MESH_D010190 .
+
+lkg:box_07 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Mean_overall_survival, lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_071, lkg:stmt_072 .
+
+lkg:stmt_071 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Mean_overall_survival .
+
+lkg:stmt_072 rdf:type rdf:Statement ;
+    rdf:subject lkg:Mean_overall_survival ;
+    rdf:predicate lkg:isOf ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+# DRS_8: Chemical_MESH_C000627770 increase the mean_overall_survival of Disease_MESH_D010190 .
+
+lkg:box_08 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Mean_overall_survival, lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_081, lkg:stmt_082 .
+
+lkg:stmt_081 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Mean_overall_survival .
+
+lkg:stmt_082 rdf:type rdf:Statement ;
+    rdf:subject lkg:Mean_overall_survival ;
+    rdf:predicate lkg:isOf ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+# DRS_9: Chemical_MESH_D000093542 cause a chemoresistance of Disease_MESH_D010190 .
+
+lkg:box_09 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Chemoresistance, lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_091, lkg:stmt_092 .
+
+lkg:stmt_091 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:cause ;
+    rdf:object lkg:Chemoresistance .
+
+lkg:stmt_092 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemoresistance ;
+    rdf:predicate lkg:isOf ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+# DRS_10: Chemical_MESH_C000627770 cause a chemoresistance of Disease_MESH_D010190 .
+
+lkg:box_10 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 , lkg:Chemoresistance, lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_101, lkg:stmt_102 .
+
+lkg:stmt_101 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:cause ;
+    rdf:object lkg:Chemoresistance .
+
+lkg:stmt_102 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemoresistance ;
+    rdf:predicate lkg:isOf ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+#DRS_11: A a:dense n:tumoral_stroma is a distinctive feature of p:Disease_MESH_D021441 .
+
+lkg:box_11 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Dense_Tumoral_Stroma , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_11 .
+
+lkg:stmt_11 rdf:type rdf:Statement ;
+    rdf:subject lkg:Dense_Tumoral_Stroma ;
+    rdf:predicate lkg:isFeatureOf ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+#DRS_12: The a:dense n:tumoral_stroma v:cause the therapeutic difficulty .
+
+lkg:box_12 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Dense_Tumoral_Stroma , lkg:Therapeutic_difficulty ;
+    lkg:containsStatement lkg:stmt_11 .
+
+lkg:stmt_12 rdf:type rdf:Statement ;
+    rdf:subject lkg:Dense_Tumoral_Stroma ;
+    rdf:predicate lkg:cause ;
+    rdf:object lkg:Disease_MESH_D010190 .

@@ -13,4 +13,4 @@ p:Chemical_MESH_D000093542 v:cause a n:chemoresistance of p:Disease_MESH_D010190
 p:Chemical_MESH_C000627770 v:cause a n:chemoresistance of p:Disease_MESH_D010190 .
 
 A a:dense n:tumoral_stroma is a distinctive feature of p:Disease_MESH_D021441 .
-The n:dense_tumoral_stroma v:cause the therapeutic difficulty .
+The a:dense n:tumoral_stroma v:cause the therapeutic difficulty .

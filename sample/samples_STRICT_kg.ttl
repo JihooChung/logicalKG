@@ -57,9 +57,9 @@ lkg:box_05 rdf:type lkg:DRSBox ;
     lkg:containsStatement lkg:stmt_05 .
 
 lkg:stmt_05 rdf:type rdf:Statement ;
-    rdf:subject ex:Chemical_MESH_D000093542 ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
     rdf:predicate lkg:treat ;
-    rdf:object ex:Disease_MESH_D010190 .
+    rdf:object lkg:Disease_MESH_D010190 .
 
 # DRS_6: Chemical_MESH_C000627770 treats Disease_MESH_D010190.
 

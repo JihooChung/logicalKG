@@ -4,7 +4,7 @@
 [A] predicate(A,exist,named(Chemical_MESH_C000627770))-1/4
 [A] predicate(A,treat,named(Chemical_MESH_D000093542),named(Disease_MESH_D010190))-1/6
 [A] predicate(A,treat,named(Chemical_MESH_C000627770),named(Disease_MESH_D010190))-1/6
-[A,B] relation(B,of,named(Disease_MESH_D010190))-1/11 object(B,mean_overall_survival,countable,na,eq,1)-1/10 predicate(A,increase,named(Chemical_MESH_C000627770),B)-1/6
+[A,B] relation(B,of,named(Disease_MESH_D010190))-1/11 object(B,mean_overall_survival,countable,na,eq,1)-1/10 predicate(A,increase,named(Chemical_MESH_D000093542),B)-1/6
 [A,B] relation(B,of,named(Disease_MESH_D010190))-1/11 object(B,mean_overall_survival,countable,na,eq,1)-1/10 predicate(A,increase,named(Chemical_MESH_C000627770),B)-1/6
 [A,B] object(A,chemoresistance,countable,na,eq,1)-1/10 relation(A,of,named(Disease_MESH_D010190))-1/11 predicate(B,cause,named(Chemical_MESH_D000093542),A)-1/6
 [A,B] object(A,chemoresistance,countable,na,eq,1)-1/10 relation(A,of,named(Disease_MESH_D010190))-1/11 predicate(B,cause,named(Chemical_MESH_C000627770),A)-1/6

@@ -9,4 +9,4 @@
 [A,B] object(A,chemoresistance,countable,na,eq,1)-1/10 relation(A,of,named(Disease_MESH_D010190))-1/11 predicate(B,cause,named(Chemical_MESH_D000093542),A)-1/6
 [A,B] object(A,chemoresistance,countable,na,eq,1)-1/10 relation(A,of,named(Disease_MESH_D010190))-1/11 predicate(B,cause,named(Chemical_MESH_C000627770),A)-1/6
 [A,B,C] object(A,tumoral_stroma,countable,na,eq,1)-1/7 property(A,dense,pos)-1/4 object(B,feature,countable,na,eq,1)-1/11 property(B,distinctive,pos)-1/10 relation(B,of,named(Disease_MESH_D021441))-1/12 predicate(C,be,A,B)-1/8
-[A,B,C] object(C,dense_tumoral_stroma,countable,na,eq,1)-1/4 property(B,therapeutic,pos)-1/9 object(B,difficulty,countable,na,eq,1)-1/10 predicate(A,cause,C,B)-1/7
+[A,B,C] property(C,dense,pos)-1/4 object(C,tumoral_stroma,countable,na,eq,1)-1/7 property(B,therapeutic,pos)-1/12 object(B,difficulty,countable,na,eq,1)-1/13 predicate(A,cause,C,B)-1/10

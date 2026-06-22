@@ -6,7 +6,7 @@ p:Chemical_MESH_C000627770 exists .
 p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
 p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
 
-p:Chemical_MESH_C000627770 v:increase the n:mean_overall_survival of p:Disease_MESH_D010190 .
+p:Chemical_MESH_D000093542 v:increase the n:mean_overall_survival of p:Disease_MESH_D010190 .
 p:Chemical_MESH_C000627770 v:increase the n:mean_overall_survival of p:Disease_MESH_D010190 . 
 
 p:Chemical_MESH_D000093542 v:cause a n:chemoresistance of p:Disease_MESH_D010190 .

@@ -18,7 +18,7 @@ p:Disease_MESH_D021441 v:be_targeted_by p:Chemical_MESH_C000627770 .
 p:Disease_MESH_D021441 v:be_targeted_by p:Chemical_MESH_D000093542 .
 
 #Sample2
-
+ReadTimeOut (LOOP)
 
 #Sample3
 p:Species_9606 exists .  
@@ -207,7 +207,7 @@ p:Variant_tmVar_rs11865228 v:inhibit p:Gene_5595 .
 p:Variant_tmVar_rs11865228 v:inhibit p:Gene_5594 .
 ==================================================================
 
-############medgemma-27b-it############
+==================medgemma-27b-it==================
 #Sample1
 ```ace
 p:Disease_MESH_D010190 exists .
@@ -215,3 +215,5 @@ p:Chemical_MESH_D000093542 exists .
 p:Chemical_MESH_C000627770 exists .
 p:Disease_MESH_D021441 exists .
 ```
+#Sample2, 3
+ReadTimeOut (LOOP)

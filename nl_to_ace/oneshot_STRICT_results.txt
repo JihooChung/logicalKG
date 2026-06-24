@@ -1,4 +1,37 @@
-############gemma-4-31b-it############
+================qwen3-30b-a3b-instruct-2507=======================
+#Sample1
+p:Disease_MESH_D010190 exists .  
+p:Disease_MESH_D021441 exists .  
+p:Chemical_MESH_D000093542 exists .  
+p:Chemical_MESH_C000627770 exists .  
+
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D021441 .  
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D021441 .  
+
+p:Disease_MESH_D021441 v:cause p:Disease_MESH_D010190 .  
+p:Disease_MESH_D021441 v:inhibit p:Disease_MESH_D010190 .  
+
+p:Disease_MESH_D021441 v:interact_with p:Chemical_MESH_D000093542 .  
+p:Disease_MESH_D021441 v:interact_with p:Chemical_MESH_C000627770 .  
+
+p:Disease_MESH_D021441 v:stimulate p:Disease_MESH_D010190 .  
+p:Disease_MESH_D010190 v:stimulate p:Disease_MESH_D021441 .  
+
+p:Disease_MESH_D021441 v:associate_with p:Chemical_MESH_D000093542 .  
+p:Disease_MESH_D021441 v:associate_with p:Chemical_MESH_C000627770 .  
+
+p:Disease_MESH_D021441 v:prevent p:Disease_MESH_D010190 .  
+p:Disease_MESH_D010190 v:prevent p:Disease_MESH_D021441 .
+
+#Sample2
+ReadTimeOut (LOOP)
+
+#Sample3
+ReadTimeOut (LOOP)
+
+==================================================================
+
+====================gemma-4-31b-it================================
 #Sample1
 p:Disease_MESH_D010190 exists .
 p:Chemical_MESH_D000093542 exists .
@@ -54,8 +87,7 @@ p:Gene_5594 v:cause p:Disease_MESH_D011085 .
 p:Variant_tmVar_rs2276008 v:associate_with p:Disease_MESH_D011085 .
 p:Variant_tmVar_rs11865228 v:associate_with p:Disease_MESH_D011085 .
 
-
-############medgemma-27b-it############
+==================internvl3.5-30b-a3b============================
 #Sample1
 p:Disease_MESH_D010190 exists .
 p:Chemical_MESH_D000093542 exists .
@@ -64,7 +96,42 @@ p:Disease_MESH_D021441 exists .
 
 p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
 p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_C000627770 v:increase p:Disease_MESH_D010190 .
 
 #Sample2
+p:Gene_3835 exists .
+p:Disease_MESH_D010190 exists .
+p:Chemical_MESH_C070243 exists .
+p:Gene_5604 exists .
+p:Gene_5605 exists .
+p:Gene_5595 exists .
+p:Gene_5594 exists .
+p:Gene_1033 exists .
+p:Gene_1026 exists .
+
+p:Gene_3835 v:express_in p:Disease_MESH_D010190 .
+p:Gene_3835 v:express_in p:Species_9606 .
+p:Gene_3835 v:correlate_with p:Ki67 .
+p:Gene_3835 v:inhibit p:Gene_5604;5605 .
+p:Gene_3835 v:inhibit p:Gene_5595;5594 .
+p:Gene_3835 v:stimulate p:Gene_1026 .
+p:Gene_3835 v:regulate p:cell_cycle_regulation in p:Disease_MESH_D010190 .
+p:Gene_3835 v:promote p:transmutation_G1/S in p:Disease_MESH_D010190 .
+p:Gene_3835 v:inhibit p:proliferation in p:Disease_MESH_D010190 cells with p:Chemical_MESH_C070243 .
+p:Gene_3835 v:inhibit p:proliferation in p:CellLine_CVCL_0480 .
+p:Gene_3835 v:inhibit p:proliferation in p:CellLine_CVCL_0428 .
 
 #Sample3
+ReadTimeOut (LOOP)
+==================================================================
+
+==================medgemma-27b-it==================
+#Sample1
+```ace
+p:Disease_MESH_D010190 exists .
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_C000627770 exists .
+p:Disease_MESH_D021441 exists .
+```
+#Sample2, 3
+ReadTimeOut (LOOP)

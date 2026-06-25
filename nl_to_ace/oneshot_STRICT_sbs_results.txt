@@ -1,0 +1,108 @@
+========================gemma-4-31b-it========================
+#Sample1
+p:Disease_MESH_D010190 exists .
+p:Disease_MESH_D021441 exists .
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_C000627770 exists .
+
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
+
+#Sample2
+p:Gene_3835 exists .
+p:Gene_5604_5605 exists .
+p:Gene_5595_5594 exists .
+p:Gene_1033 exists .
+p:Gene_1026 exists .
+p:Gene_5609 exists .
+p:Disease_UNKNOWN exists .
+p:Disease_MESH_D010190 exists .
+p:Chemical_MESH_C070243 exists .
+p:Species_9606 exists .
+p:CellLine_CVCL_0480 exists .
+p:CellLine_CVCL_0428 exists .
+
+p:Gene_3835 v:cause p:Disease_MESH_D010190 .
+p:Gene_3835 v:associate_with p:Disease_MESH_D010190 .
+p:Gene_3835 v:associate_with p:Disease_UNKNOWN .
+
+p:Gene_3835 v:associate_with p:Disease_MESH_D010190 .
+p:Gene_3835 v:associate_with p:Species_9606 .
+p:Gene_3835 v:cause p:Disease_MESH_D010190 .
+p:Gene_3835 v:associate_with p:CellLine_CVCL_0480 .
+p:Gene_3835 v:associate_with p:CellLine_CVCL_0428 .
+p:Gene_3835 v:interact_with p:Gene_5604_5605 .
+p:Gene_3835 v:interact_with p:Gene_5595_5594 .
+p:Gene_3835 v:interact_with p:Gene_1026 .
+p:Gene_3835 v:interact_with p:Gene_5609 .
+
+#Sample3 (incomplete)
+p:Gene_5595 exists .
+p:Gene_5594 exists .
+p:Gene_1401 exists .
+p:Chemical_MESH_D013739 exists .
+p:Chemical_MESH_D002784 exists .
+p:Chemical_MESH_D007986 exists .
+p:Disease_MESH_D006331 exists .
+p:Disease_MESH_D011085 exists .
+p:Species_9606 exists .
+p:Variant_tmVar_rs2276008 exists .
+p:Variant_tmVar_rs11865228 exists .
+
+p:Gene_5595 v:stimulate p:Gene_5594 .
+p:Gene_5594 v:stimulate p:Gene_5595 .
+p:Gene_5595 v:interact_with p:Chemical_MESH_D007986 .
+p:Gene_5594 v:interact_with p:Chemical_MESH_D007986 .
+p:Disease_MESH_D006331 v:associate_with p:Disease_MESH_D011085 .
+p:Gene_5595 v:associate_with p:Disease_MESH_D011085 .
+p:Gene_5594 v:associate_with p:Disease_MESH_D011085 .
+p:Variant_tmVar_rs2276008 v:associate_with p:Gene_5594 .
+p:Variant_tmVar_rs11865228 v:associate_with p:Gene_5595 .
+p:Gene_5595 v:associate_with p:Gene_1401 .
+p:Gene_5595 v:associate_with p:Chemical_MESH_D013739 .
+p:Gene_5595 v:associate_with p:Chemical_MESH_D002784 .
+p:Gene_5594 v:associate_with p:Gene_1401 .
+p:Gene_5594 v:associate_with p:Chemical_MESH_D013739 .
+p:Gene_5594 v:associate_with p:Chemical_MESH_D002784 .
+
+========================medgemma-27b-it========================
+
+#Sample1
+p:Disease_MESH_D010190 exists .
+p:Chemical_MESH_D000438 v:treat p:Disease_MESH_D010190 .
+
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_C000627770 exists .
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
+
+p:Disease_MESH_D021441 exists .
+p:Chemical_MESH_D000438 v:treat p:Disease_MESH_D021441 .
+
+p:Chemical_MESH_D000438 exists .
+
+#Sample2 (incomplete)
+p:Gene_3835 exists .
+p:Disease_MESH_D010190 exists .
+p:Disease_UNKNOWN exists .
+
+p:Gene_3835 v:associate_with p:Disease_MESH_D010190 .
+p:Gene_3835 v:associate_with p:Disease_MESH_D010190 .
+
+#Sample3(incomplete)
+p:Gene_5595 exists .
+p:Gene_5594 exists .
+p:Chemical_MESH_D007986 exists .
+p:ERK exists .
+p:kinase exists .
+p:Disease_MESH_D006331 exists .
+p:Disease_MESH_D011085 exists .
+
+p:Gene_5595 v:cause p:Ovulation .
+p:Gene_5594 v:cause p:Ovulation .
+p:Gene_5595 v:associate_with p:Gene_5594 .
+p:Gene_5595 v:inhibit p:Chemical_MESH_D007986 .
+p:Gene_5594 v:inhibit p:Chemical_MESH_D007986 .
+p:ERK v:inhibit p:kinase .
+p:kinase v:cause p:Disease_MESH_D006331 .
+p:kinase v:cause p:Disease_MESH_D011085 .

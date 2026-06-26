@@ -92,17 +92,40 @@ p:Gene_3835 v:associate_with p:Disease_MESH_D010190 .
 #Sample3(incomplete)
 p:Gene_5595 exists .
 p:Gene_5594 exists .
+p:Gene_1401 exists .
+p:Chemical_MESH_D013739 exists .
 p:Chemical_MESH_D007986 exists .
-p:ERK exists .
-p:kinase exists .
+p:Chemical_MESH_D008055 exists .
 p:Disease_MESH_D006331 exists .
 p:Disease_MESH_D011085 exists .
+p:Variant_tmVar_rs2276008 exists .
+p:Variant_tmVar_rs11865228 exists .
+p:ERK_kinase exists .
+p:Species_9606 exists .
+p:HOMA_IR exists .
+p:Ferriman_Gallwey_score exists .
+p:Waist_to_hip_ratio exists .
+p:Body_mass_index exists .
 
 p:Gene_5595 v:cause p:Ovulation .
 p:Gene_5594 v:cause p:Ovulation .
-p:Gene_5595 v:associate_with p:Gene_5594 .
-p:Gene_5595 v:inhibit p:Chemical_MESH_D007986 .
-p:Gene_5594 v:inhibit p:Chemical_MESH_D007986 .
-p:ERK v:inhibit p:kinase .
-p:kinase v:cause p:Disease_MESH_D006331 .
-p:kinase v:cause p:Disease_MESH_D011085 .
+p:Gene_5595 v:modulate p:Gene_5594 .
+p:Gene_5594 v:modulate p:Gene_5595 .
+p:Gene_5595 v:modulate p:Chemical_MESH_D007986 .
+p:Gene_5594 v:modulate p:Chemical_MESH_D007986 .
+p:ERK_kinase v:cause p:Disease_MESH_D006331 .
+p:ERK_kinase v:cause p:Disease_MESH_D011085 .
+p:Gene_5595 v:associate_with p:Disease_MESH_D011085 .
+p:Gene_5594 v:associate_with p:Disease_MESH_D011085 .
+p:Disease_MESH_D011085 v:associate_with p:Species_9606 .
+p:HOMA_IR v:associate_with p:Ferriman_Gallwey_score .
+p:HOMA_IR v:associate_with p:Waist_to_hip_ratio .
+p:HOMA_IR v:associate_with p:Body_mass_index .
+p:Ferriman_Gallwey_score v:associate_with p:Waist_to_hip_ratio .
+p:Ferriman_Gallwey_score v:associate_with p:Body_mass_index .
+p:Waist_to_hip_ratio v:associate_with p:Body_mass_index .
+p:Chemical_MESH_D008055 v:associate_with p:Gene_1401 .
+p:Chemical_MESH_D008055 v:associate_with p:Chemical_MESH_D013739 .
+p:Gene_1401 v:associate_with p:Chemical_MESH_D013739 .
+p:Variant_tmVar_rs2276008 v:associate_with p:Gene_5594 .
+p:Variant_tmVar_rs11865228 v:associate_with p:Gene_5595 .

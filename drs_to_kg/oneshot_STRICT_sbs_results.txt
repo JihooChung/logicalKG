@@ -27,6 +27,216 @@ lkg:STMT_05 rdf:type rdf:Statement ;
     rdf:object lkg:Disease_MESH_D010190 .
 
 #Sample2 (incomplete)
+lkg:Gene_3835 rdf:type lkg:Gene .
+lkg:Gene_5604 rdf:type lkg:Gene .
+lkg:Gene_5605 rdf:type lkg:Gene .
+lkg:Gene_5595 rdf:type lkg:Gene .
+lkg:Gene_5594 rdf:type lkg:Gene .
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+lkg:Chemical_MESH_C070243 rdf:type lkg:Chemical .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 .
+
+lkg:DRS_02 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+lkg:DRS_03 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C070243 .
+
+lkg:DRS_04 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5604 .
+
+lkg:DRS_05 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5605 .
+
+lkg:DRS_06 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5595 .
+
+lkg:DRS_07 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5594 .
+-----------------------------------------
+lkg:Gene_1033 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1033 .
+-----------------------------------------
+lkg:Gene_1026 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 .
+-----------------------------------------
+lkg:CellLine_CVCL_0480 rdf:type lkg:CellLine .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:CellLine_CVCL_0480 .
+-----------------------------------------
+lkg:CellLine_CVCL_0428 rdf:type lkg:CellLine .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:CellLine_CVCL_0428 .
+-----------------------------------------
+lkg:Gene_5609 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5609 .
+-----------------------------------------
+lkg:Gene_3835 rdf:type lkg:Gene .
+
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Disease_MESH_D010190 .
+-----------------------------------------
+lkg:Gene_5594 rdf:type lkg:Gene .
+
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5594 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_5594 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Disease_MESH_D010190 .
+-----------------------------------------
+lkg:Gene_1026 rdf:type lkg:Gene .
+
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1026 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Disease_MESH_D010190 .
+-----------------------------------------
+lkg:Gene_1026 rdf:type lkg:Gene .
+
+lkg:Gene_3835 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 , lkg:Gene_3835 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1026 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_3835 .
+-----------------------------------------
+lkg:Gene_1026 rdf:type lkg:Gene .
+
+lkg:Gene_5609 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 , lkg:Gene_5609 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1026 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5609 .
+-----------------------------------------
+lkg:Gene_1026 rdf:type lkg:Gene .
+
+lkg:Gene_5594 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 , lkg:Gene_5594 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1026 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5594 .
+-----------------------------------------
+lkg:Gene_1033 rdf:type lkg:Gene .
+
+lkg:Gene_3835 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1033 , lkg:Gene_3835 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1033 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_3835 .
+-----------------------------------------
+lkg:Gene_3835 rdf:type lkg:Gene .
+
+lkg:Gene_5604 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 , lkg:Gene_5604 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5604 .
+-----------------------------------------
+lkg:Gene_3835 rdf:type lkg:Gene .
+
+lkg:Gene_5605 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 , lkg:Gene_5605 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5605 .
+-----------------------------------------
+lkg:Gene_3835 rdf:type lkg:Gene .
+
+lkg:Gene_5609 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 , lkg:Gene_5609 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5609 .
+-----------------------------------------
+lkg:Gene_3835 rdf:type lkg:Gene .
+
+lkg:Gene_5594 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 , lkg:Gene_5594 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5594 .
+-----------------------------------------
+lkg:Gene_3835 rdf:type lkg:Gene .
+
+lkg:Gene_5595 rdf:type lkg:Gene .
+
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 , lkg:Gene_5595 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5595 .
+-----------------------------------------
 
 #Sample3 (incomplete)
 

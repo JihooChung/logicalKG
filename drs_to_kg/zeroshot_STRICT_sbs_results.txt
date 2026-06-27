@@ -37,9 +37,392 @@ lkg:Statement_6 rdf:type rdf:Statement ;
     rdf:predicate lkg:treat ;
     rdf:object lkg:Disease_MESH_D010190 .
 
-#Sample2 (incomplete)
+#Sample2 
+lkg:Gene_3835 rdf:type lkg:Gene .
+lkg:Gene_1026 rdf:type lkg:Gene .
+lkg:Gene_1033 rdf:type lkg:Gene .
+lkg:Gene_3835 rdf:type lkg:Gene .
+lkg:Gene_5594 rdf:type lkg:Gene .
+lkg:Gene_5595 rdf:type lkg:Gene .
+lkg:Gene_5609 rdf:type lkg:Gene .
+lkg:Gene_5605 rdf:type lkg:Gene .
+lkg:Gene_5604 rdf:type lkg:Gene .
+lkg:Chemical_MESH_C070243 rdf:type lkg:Chemical .
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+lkg:CellLine_CVCL_0428 rdf:type lkg:CellLine .
+lkg:CellLine_CVCL_0480 rdf:type lkg:CellLine .
+lkg:Species_9606 rdf:type lkg:Species .
 
-#Sample3 (incomplete)
+lkg:DRSBox_1 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 .
+
+lkg:DRSBox_2 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+lkg:DRSBox_3 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C070243 .
+
+lkg:DRSBox_4 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5604 .
+
+lkg:DRSBox_5 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5605 .
+
+lkg:DRSBox_6 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5595 .
+
+lkg:DRSBox_7 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5594 .
+
+lkg:DRSBox_8 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1033 .
+
+lkg:DRSBox_9 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 .
+
+
+lkg:DRSBox_10 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Species_9606 .
+
+lkg:DRSBox_11 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:CellLine_CVCL_0480 .
+
+lkg:DRSBox_12 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:CellLine_CVCL_0428 .
+
+lkg:DRSBox_13 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5609 .
+
+lkg:DRSBox_14 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:Statement_14 .
+
+lkg:Statement_14 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:DRSBox_15 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5609 ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:Statement_15 .
+
+lkg:Statement_15 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_5609 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:DRSBox_16 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5594 ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:Statement_16 .
+
+lkg:Statement_16 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_5594 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:DRSBox_17 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:Statement_17 .
+
+lkg:Statement_17 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1026 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:DRSBox_18 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 ;
+    lkg:containsEntity lkg:Gene_3835 ;
+    lkg:containsStatement lkg:Statement_18 .
+
+lkg:Statement_18 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1026 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_3835 .
+
+lkg:DRSBox_19 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 ;
+    lkg:containsEntity lkg:Gene_5609 ;
+    lkg:containsStatement lkg:Statement_19 .
+
+lkg:Statement_19 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1026 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5609 .
+
+lkg:DRSBox_20 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1026 ;
+    lkg:containsEntity lkg:Gene_5594 ;
+    lkg:containsStatement lkg:Statement_20 .
+
+lkg:Statement_20 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1026 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5594 .
+
+lkg:DRSBox_21 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1033 ;
+    lkg:containsEntity lkg:Gene_3835 ;
+    lkg:containsStatement lkg:Statement_21 .
+
+lkg:Statement_21 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1033 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_3835 .
+
+lkg:DRSBox_22 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 ;
+    lkg:containsEntity lkg:Gene_5604 ;
+    lkg:containsStatement lkg:Statement_22 .
+
+lkg:Statement_22 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5604 .
+
+lkg:DRSBox_23 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 ;
+    lkg:containsEntity lkg:Gene_5605 ;
+    lkg:containsStatement lkg:Statement_23 .
+
+lkg:Statement_23 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5605 .
+
+lkg:DRSBox_24 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 ;
+    lkg:containsEntity lkg:Gene_5609 ;
+    lkg:containsStatement lkg:Statement_24 .
+
+lkg:Statement_24 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5609 .
+
+lkg:DRSBox_25 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 ;
+    lkg:containsEntity lkg:Gene_5594 ;
+    lkg:containsStatement lkg:Statement_25 .
+
+lkg:Statement_25 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5594 .
+
+lkg:DRSBox_26 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_3835 ;
+    lkg:containsEntity lkg:Gene_5595 ;
+    lkg:containsStatement lkg:Statement_26 .
+
+lkg:Statement_26 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_3835 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5595 .
+
+#Sample3
+lkg:Gene_1401 rdf:type lkg:Gene .
+lkg:Gene_5595 rdf:type lkg:Gene .
+lkg:Gene_5594 rdf:type lkg:Gene .
+lkg:Disease_MESH_D011085 rdf:type lkg:Disease .
+lkg:Disease_MESH_D006331 rdf:type lkg:Disease .
+lkg:Chemical_MESH_D008055 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_D002784 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_D013739 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_D007986 rdf:type lkg:Chemical .
+lkg:Species_9606 rdf:type lkg:Species .
+lkg:Variant_tmVar_rs11865228 rdf:type lkg:Variant .
+lkg:Variant_tmVar_rs2276008 rdf:type lkg:Variant .
+
+lkg:DRSBox_1 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5595 .
+
+lkg:DRSBox_2 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_5594 .
+
+lkg:DRSBox_3 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D007986 .
+
+lkg:DRSBox_4 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D006331 .
+
+lkg:DRSBox_5 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D011085 .
+
+lkg:DRSBox_6 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Species_9606 .
+
+lkg:DRSBox_7 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D008055 .
+
+lkg:DRSBox_8 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1401 .
+
+lkg:DRSBox_9 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D013739 .
+
+lkg:DRSBox_10 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Variant_tmVar_rs2276008 .
+
+lkg:DRSBox_11 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Variant_tmVar_rs11865228 .
+
+lkg:DRSBox_12 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D002784 .
+
+lkg:DRSBox_13 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D002784 ;
+    lkg:containsEntity lkg:Disease_MESH_D011085 ;
+    lkg:containsStatement lkg:Statement_13 .
+
+lkg:Statement_13 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D002784 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Disease_MESH_D011085 .
+
+lkg:DRSBox_14 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D002784 ;
+    lkg:containsEntity lkg:Gene_5595 ;
+    lkg:containsStatement lkg:Statement_14 .
+
+lkg:Statement_14 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D002784 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5595 .
+
+
+lkg:DRSBox_15 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D002784 ;
+    lkg:containsEntity lkg:Gene_5594 ;
+    lkg:containsStatement lkg:Statement_15 .
+
+lkg:Statement_15 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D002784 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5594 .
+
+lkg:DRSBox_16 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D007986 ;
+    lkg:containsEntity lkg:Gene_5595 ;
+    lkg:containsStatement lkg:Statement_16 .
+
+lkg:Statement_16 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D007986 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5595 .
+
+lkg:DRSBox_17 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D007986 ;
+    lkg:containsEntity lkg:Gene_5594 ;
+    lkg:containsStatement lkg:Statement_17 .
+
+lkg:Statement_17 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D007986 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5594 .
+
+lkg:DRSBox_18 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D013739 ;
+    lkg:containsEntity lkg:Disease_MESH_D011085 ;
+    lkg:containsStatement lkg:Statement_18 .
+
+lkg:Statement_18 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D013739 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Disease_MESH_D011085 .
+
+lkg:DRSBox_19 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D013739 ;
+    lkg:containsEntity lkg:Gene_5595 ;
+    lkg:containsStatement lkg:Statement_19 .
+
+lkg:Statement_19 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D013739 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5595 .
+
+lkg:DRSBox_20 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D013739 ;
+    lkg:containsEntity lkg:Gene_5594 ;
+    lkg:containsStatement lkg:Statement_20 .
+
+lkg:Statement_20 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D013739 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5594 .
+
+lkg:DRSBox_21 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D011085 ;
+    lkg:containsEntity lkg:Gene_1401 ;
+    lkg:containsStatement lkg:Statement_21 .
+
+lkg:Statement_21 rdf:type rdf:Statement ;
+    rdf:subject lkg:Disease_MESH_D011085 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_1401 .
+
+lkg:DRSBox_22 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D011085 ;
+    lkg:containsEntity lkg:Gene_5595 ;
+    lkg:containsStatement lkg:Statement_22 .
+
+lkg:Statement_22 rdf:type rdf:Statement ;
+    rdf:subject lkg:Disease_MESH_D011085 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5595 .
+
+lkg:DRSBox_23 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D011085 ;
+    lkg:containsEntity lkg:Gene_5594 ;
+    lkg:containsStatement lkg:Statement_23 .
+
+lkg:Statement_23 rdf:type rdf:Statement ;
+    rdf:subject lkg:Disease_MESH_D011085 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5594 .
+
+lkg:DRSBox_24 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D011085 ;
+    lkg:containsEntity lkg:Variant_tmVar_rs2276008 ;
+    lkg:containsStatement lkg:Statement_24 .
+
+lkg:Statement_24 rdf:type rdf:Statement ;
+    rdf:subject lkg:Disease_MESH_D011085 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Variant_tmVar_rs2276008 .
+
+lkg:DRSBox_25 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D011085 ;
+    lkg:containsEntity lkg:Variant_tmVar_rs11865228 ;
+    lkg:containsStatement lkg:Statement_25 .
+
+lkg:Statement_25 rdf:type rdf:Statement ;
+    rdf:subject lkg:Disease_MESH_D011085 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Variant_tmVar_rs11865228 .
+
+lkg:DRSBox_26 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1401 ;
+    lkg:containsEntity lkg:Gene_5595 ;
+    lkg:containsStatement lkg:Statement_26 .
+
+lkg:Statement_26 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1401 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5595 .
+
+lkg:DRSBox_27 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_1401 ;
+    lkg:containsEntity lkg:Gene_5594 ;
+    lkg:containsStatement lkg:Statement_1 .
+
+lkg:Statement_27 rdf:type rdf:Statement ;
+    rdf:subject lkg:Gene_1401 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_5594 .
 
 ========================medgemma-27b-it========================
 

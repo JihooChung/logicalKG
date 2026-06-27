@@ -1,5 +1,41 @@
 ========================gemma-4-31b-it========================
-#Sample1 (incomplete)
+#Sample1
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical .
+lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical .
+
+lkg:DRSBox_1 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+lkg:DRSBox_2 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_MESH_D021441 .
+
+lkg:DRSBox_3 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 .
+
+lkg:DRSBox_4 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 .
+
+lkg:DRSBox_5 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:Statement_5 .
+
+lkg:Statement_5 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:DRSBox_6 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C000627770 ;
+    lkg:containsEntity lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:Statement_6 .
+
+lkg:Statement_6 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
 
 #Sample2 (incomplete)
 
@@ -8,6 +44,91 @@
 ========================medgemma-27b-it========================
 
 #Sample1 (incomplete)
+In total 6 sentences
+
+sentence[5] HTTP Error: 500 Server Error: Internal Server Error for url: https://chat-ai.academiccloud.de/v1/chat/completions
+  {"type":"error","status":500,"message":"ReadTimeout"}
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lkg: <http://example.org/lkg/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+lkg:Statement_1 a rdf:Statement ;
+    rdf:subject lkg:Disease_MESH_D010190 ;
+    rdf:predicate lkg:exist ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:Disease_MESH_D010190 a lkg:Disease .
+
+lkg:Statement_1 rdf:type lkg:Formula .
+```
+-----------------------------------------
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lkg: <http://example.org/lkg/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+lkg:Statement_1 a rdf:Statement ;
+    rdf:subject lkg:Disease_MESH_D021441 ;
+    rdf:predicate lkg:exist ;
+    rdf:object lkg:Disease_MESH_D021441 .
+
+lkg:Disease_MESH_D021441 a lkg:Disease .
+
+lkg:Statement_1 rdf:type lkg:Formula .
+```
+-----------------------------------------
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lkg: <http://example.org/lkg/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+lkg:Statement_1 a rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:exist ;
+    rdf:object lkg:Chemical_MESH_D000093542 .
+
+lkg:Chemical_MESH_D000093542 a lkg:Chemical .
+
+lkg:Statement_1 rdf:type lkg:Formula .
+```
+-----------------------------------------
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lkg: <http://example.org/lkg/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+lkg:Statement_1 a rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C000627770 ;
+    rdf:predicate lkg:exist ;
+    rdf:object lkg:Chemical_MESH_C000627770 .
+
+lkg:Chemical_MESH_C000627770 a lkg:Chemical .
+
+lkg:Statement_1 rdf:type lkg:Formula .
+```
+-----------------------------------------
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lkg: <http://example.org/lkg/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+lkg:Statement_1 a rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+
+lkg:Chemical_MESH_D000093542 a lkg:Chemical .
+lkg:Disease_MESH_D010190 a lkg:Disease .
+
+lkg:Statement_1 rdf:type lkg:Formula .
+```
+-----------------------------------------
 
 #Sample2 (incomplete)
 

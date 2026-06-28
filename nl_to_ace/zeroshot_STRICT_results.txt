@@ -1,133 +1,21 @@
-================qwen3-30b-a3b-instruct-2507=======================
-#Sample1
-p:Disease_MESH_D010190 exists .  
-p:Disease_MESH_D021441 exists .  
-p:Chemical_MESH_D000093542 exists .  
-p:Chemical_MESH_C000627770 exists .  
-
-p:Disease_MESH_D010190 v:associate_with p:Disease_MESH_D021441 .  
-p:Disease_MESH_D021441 v:account_for p:Disease_MESH_D010190 .  
-p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .  
-p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .  
-p:Chemical_MESH_C000627770 v:increase p:Disease_MESH_D010190 .  
-p:Disease_MESH_D021441 v:inhibit p:Disease_MESH_D010190 .  
-p:Disease_MESH_D021441 v:contribute_to p:Disease_MESH_D010190 .  
-p:Disease_MESH_D021441 v:cause chemoresistance .  
-p:Disease_MESH_D021441 v:require targeting .  
-p:Disease_MESH_D021441 v:be_targeted_by p:Chemical_MESH_C000627770 .  
-p:Disease_MESH_D021441 v:be_targeted_by p:Chemical_MESH_D000093542 .
-
-#Sample2
-ReadTimeOut (LOOP)
-
-#Sample3
-p:Species_9606 exists .  
-p:Disease_MESH_D011085 exists .  
-p:Gene_5595 exists .  
-p:Gene_5594 exists .  
-p:Chemical_MESH_D007986 exists .  
-p:Gene_1401 exists .  
-p:Chemical_MESH_D013739 exists .  
-p:Chemical_MESH_D002784 exists .  
-p:Variant_tmVar_rs11865228 exists .  
-p:Variant_tmVar_rs2276008 exists .  
-
-p:Gene_5595 v:regulate p:Gene_5594 .  
-p:Gene_5595 v:modulate p:Chemical_MESH_D007986-regulated_genes .  
-p:Gene_5595;5594 v:kinase p:Gene_5595 .  
-p:Gene_5595;5594 v:kinase p:Gene_5594 .  
-p:Gene_5595 v:signal p:Gene_5594 .  
-p:Gene_5595 v:signal p:Gene_5595 .  
-p:ERK v:signaling p:Gene_5595 .  
-p:ERK v:signaling p:Gene_5594 .  
-p:Genetic_problem v:contribute_to p:Disease_MESH_D006331 .  
-p:Genetic_problem v:contribute_to p:Disease_MESH_D011085 .  
-p:Defective_ERK_signaling v:contribute_to p:Disease_MESH_D006331 .  
-p:Defective_ERK_signaling v:contribute_to p:Disease_MESH_D011085 .  
-p:Defective_ERK_signaling v:cause p:Metabolic_problems .  
-p:Metabolic_problems v:occur_in p:Disease_MESH_D011085 .  
-
-p:Gene_5595 v:polymorphism p:Variant_tmVar_rs11865228 .  
-p:Gene_5594 v:polymorphism p:Variant_tmVar_rs2276008 .  
-p:Variant_tmVar_rs11865228 v:associated_with p:Disease_MESH_D011085 .  
-p:Variant_tmVar_rs2276008 v:associated_with p:Disease_MESH_D011085 .  
-
-p:Gene_5595 v:genotype p:GA .  
-p:Gene_5594 v:genotype p:GC .  
-p:GA v:differ p:Control_group .  
-p:GC v:differ p:Control_group .  
-p:GA v:relate_to p:BMI .  
-p:GA v:relate_to p:FGS .  
-p:GA v:relate_to p:HOMA-IR .  
-p:GA v:relate_to p:Gene_1401 .  
-p:GA v:relate_to p:total_Chemical_MESH_D013739 .  
-p:GA v:relate_to p:total_Chemical_MESH_D002784 .  
-p:GC v:relate_to p:BMI .  
-p:GC v:relate_to p:FGS .  
-p:GC v:relate_to p:HOMA-IR .  
-p:GC v:relate_to p:Gene_1401 .  
-p:GC v:relate_to p:total_Chemical_MESH_D013739 .  
-p:GC v:relate_to p:total_Chemical_MESH_D002784 .  
-
-p:Gene_5595 v:involved_in p:Disease_MESH_D011085 .  
-p:Gene_5594 v:involved_in p:Disease_MESH_D011085 .  
-p:Gene_5595 v:involved_in p:Disease_MESH_D011085 .  
-p:Gene_5594 v:involved_in p:Disease_MESH_D011085 .
-==================================================================
-
 ====================gemma-4-31b-it================================
 #Sample1
-p:Disease_MESH_D010190 exists .
-p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
-p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
-p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D010190 exists . p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 . p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 . p:Disease_MESH_D021441 exists .
 
 #Sample2
-p:Gene_3835 exists .
-p:Disease_MESH_D010190 exists .
-p:Chemical_MESH_C070243 exists .
-p:Gene_5604_5605 exists .
-p:Gene_5595_5594 exists .
-p:Gene_1026 exists .
-p:Species_9606 exists .
-p:CellLine_CVCL_0480 exists .
-p:CellLine_CVCL_0428 exists .
-
-p:Gene_3835 v:cause p:Disease_MESH_D010190 .
-p:Gene_3835 v:associate_with p:Disease_MESH_D010190 .
-p:Gene_3835 v:associate_with p:Species_9606 .
-p:Gene_3835 v:associate_with p:CellLine_CVCL_0480 .
-p:Gene_3835 v:associate_with p:CellLine_CVCL_0428 .
-p:Gene_3835 v:interact_with p:Gene_5604_5605 .
-p:Gene_3835 v:interact_with p:Gene_5595_5594 .
-p:Gene_3835 v:interact_with p:Gene_1026 .
+p:Gene_3835 exists . p:Disease_MESH_D010190 exists . p:Chemical_MESH_C070243 exists . p:Gene_5604_5605 exists . p:Gene_5595_5594 exists . p:Gene_1033 exists . p:Gene_1026 exists . p:Species_9606 exists . p:CellLine_CVCL_0480 exists . p:CellLine_CVCL_0428 exists . p:Gene_3835 v:cause p:Disease_MESH_D010190 . p:Gene_3835 v:associate_with p:Disease_MESH_D010190 . p:Gene_3835 v:associate_with p:Species_9606 . p:Gene_3835 v:associate_with p:CellLine_CVCL_0480 . p:Gene_3835 v:associate_with p:CellLine_CVCL_0428 . p:Gene_3835 v:interact_with p:Gene_5604_5605 . p:Gene_3835 v:interact_with p:Gene_5595_5594 . p:Gene_3835 v:interact_with p:Gene_1026 .
 
 #Sample3
-p:Gene_5595 exists .
-p:Gene_5594 exists .
-p:Chemical_MESH_D007986 exists .
-p:Disease_MESH_D006331 exists .
-p:Disease_MESH_D011085 exists .
-p:Species_9606 exists .
-p:Chemical_MESH_D008055 exists .
-p:Gene_1401 exists .
-p:Chemical_MESH_D013739 exists .
-p:Variant_tmVar_rs2276008 exists .
-p:Variant_tmVar_rs11865228 exists .
-p:Chemical_MESH_D002784 exists .
+p:Gene_5595 exists . p:Gene_5594 exists . p:Chemical_MESH_D007986 exists . p:Disease_MESH_D006331 exists . p:Disease_MESH_D011085 exists . p:Species_9606 exists . p:Chemical_MESH_D008055 exists . p:Gene_1401 exists . p:Chemical_MESH_D013739 exists . p:Variant_tmVar_rs2276008 exists . p:Variant_tmVar_rs11865228 exists . p:Chemical_MESH_D002784 exists .
+p:Gene_5595 v:associate_with p:Disease_MESH_D011085 . p:Gene_5594 v:associate_with p:Disease_MESH_D011085 . p:Gene_5595 v:interact_with p:Chemical_MESH_D007986 . p:Gene_5594 v:interact_with p:Chemical_MESH_D007986 .
 
-p:Gene_5595 v:associate_with p:Disease_MESH_D011085 .
-p:Gene_5594 v:associate_with p:Disease_MESH_D011085 .
-p:Gene_5595 v:associate_with p:Disease_MESH_D006331 .
-p:Gene_5594 v:associate_with p:Disease_MESH_D006331 .
-
-==================internvl3.5-30b-a3b============================
+==================medgemma-27b-it==================
 #Sample1
 p:Disease_MESH_D010190 exists .
+p:Disease_MESH_D010190 exists .
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_C000627770 exists .
 p:Disease_MESH_D021441 exists .
-p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
-p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
-p:Disease_MESH_D021441 v:inhibit p:Disease_MESH_D010190 .
 
 #Sample2
 p:Gene_3835 exists .
@@ -140,18 +28,19 @@ p:Gene_5595;5594 exists .
 p:Gene_1033 exists .
 p:Gene_1026 exists .
 p:Gene_5609 exists .
-p:Gene_5594 exists .
+p:Species_9606 exists .
 
+p:Gene_3835 v:associate_with p:Disease_MESH_D010190 .
 p:Gene_3835 v:inhibit p:CellLine_CVCL_0480 .
 p:Gene_3835 v:inhibit p:CellLine_CVCL_0428 .
-p:Gene_3835 v:positively_correlate_with p:Ki67 .
-p:Gene_3835 v:positively_correlate_with p:G1/S .
-p:Gene_3835 v:inhibit p:Gene_5604;5605 .
-p:Gene_3835 v:inhibit p:Gene_5595;5594 .
-p:Gene_3835 v:stimulate p:Gene_1026 .
-p:Gene_3835 v:stimulate p:Gene_5609 .
-p:Gene_3835 v:stimulate p:Gene_5594 .
-p:Gene_3835 v:stimulate p:Gene_1033 .
+p:Gene_3835 v:regulate p:Gene_5609;5594;1026 .
+p:Gene_3835 v:promote p:Disease_MESH_D010190 .
+p:Gene_3835 v:associate_with p:Gene_5604;5605 .
+p:Gene_3835 v:associate_with p:Gene_5595;5594 .
+p:Gene_3835 v:associate_with p:Gene_1026 .
+p:Gene_3835 v:associate_with p:Gene_5609 .
+p:Gene_3835 v:associate_with p:Species_9606 .
+p:Gene_3835 v:associate_with p:Chemical_MESH_C070243 .
 
 #Sample3
 p:Gene_5595 exists .
@@ -160,60 +49,33 @@ p:Chemical_MESH_D007986 exists .
 p:Disease_MESH_D006331 exists .
 p:Disease_MESH_D011085 exists .
 p:Species_9606 exists .
-p:Chemical_MESH_D008055 exists .
-p:Gene_1401 exists .
-p:Chemical_MESH_D013739 exists .
+
+p:Gene_5595 v:associate_with p:Gene_5594 .
+p:Gene_5595 v:associate_with p:Gene_5594 .
+p:Gene_5595 v:cause p:Disease_MESH_D006331 .
+p:Gene_5594 v:cause p:Disease_MESH_D006331 .
+p:Gene_5595 v:cause p:Disease_MESH_D011085 .
+p:Gene_5594 v:cause p:Disease_MESH_D011085 .
+
 p:Variant_tmVar_rs2276008 exists .
 p:Variant_tmVar_rs11865228 exists .
-p:Gene_5595 v:inhibit p:Gene_5594 .
-p:Gene_5594 v:inhibit p:Gene_5595 .
-p:Gene_5595 v:inhibit p:Chemical_MESH_D007986 .
-p:Gene_5594 v:inhibit p:Chemical_MESH_D007986 .
-p:Gene_5595 v:inhibit p:Disease_MESH_D006331 .
-p:Gene_5594 v:inhibit p:Disease_MESH_D006331 .
-p:Gene_5595 v:inhibit p:Disease_MESH_D011085 .
-p:Gene_5594 v:inhibit p:Disease_MESH_D011085 .
-p:Gene_5595 v:inhibit p:Species_9606 .
-p:Gene_5594 v:inhibit p:Species_9606 .
-p:Chemical_MESH_D008055 v:inhibit p:Gene_5595 .
-p:Chemical_MESH_D008055 v:inhibit p:Gene_5594 .
-p:Gene_1401 v:inhibit p:Gene_5595 .
-p:Gene_1401 v:inhibit p:Gene_5594 .
-p:Chemical_MESH_D013739 v:inhibit p:Gene_5595 .
-p:Chemical_MESH_D013739 v:inhibit p:Gene_5594 .
-p:Variant_tmVar_rs2276008 v:inhibit p:Gene_5595 .
-p:Variant_tmVar_rs2276008 v:inhibit p:Gene_5594 .
-p:Variant_tmVar_rs11865228 v:inhibit p:Gene_5595 .
-p:Variant_tmVar_rs11865228 v:inhibit p:Gene_5594 .
-p:Gene_5595 v:inhibit p:Gene_5594 .
-p:Gene_5594 v:inhibit p:Gene_5595 .
-p:Gene_5595 v:inhibit p:Chemical_MESH_D007986 .
-p:Gene_5594 v:inhibit p:Chemical_MESH_D007986 .
-p:Gene_5595 v:inhibit p:Disease_MESH_D006331 .
-p:Gene_5594 v:inhibit p:Disease_MESH_D006331 .
-p:Gene_5595 v:inhibit p:Disease_MESH_D011085 .
-p:Gene_5594 v:inhibit p:Disease_MESH_D011085 .
-p:Gene_5595 v:inhibit p:Species_9606 .
-p:Gene_5594 v:inhibit p:Species_9606 .
-p:Chemical_MESH_D008055 v:inhibit p:Gene_5595 .
-p:Chemical_MESH_D008055 v:inhibit p:Gene_5594 .
-p:Gene_1401 v:inhibit p:Gene_5595 .
-p:Gene_1401 v:inhibit p:Gene_5594 .
-p:Chemical_MESH_D013739 v:inhibit p:Gene_5595 .
-p:Chemical_MESH_D013739 v:inhibit p:Gene_5594 .
-p:Variant_tmVar_rs2276008 v:inhibit p:Gene_5595 .
-p:Variant_tmVar_rs2276008 v:inhibit p:Gene_5594 .
-p:Variant_tmVar_rs11865228 v:inhibit p:Gene_5595 .
-p:Variant_tmVar_rs11865228 v:inhibit p:Gene_5594 .
-==================================================================
 
-==================medgemma-27b-it==================
-#Sample1
-```ace
-p:Disease_MESH_D010190 exists .
-p:Chemical_MESH_D000093542 exists .
-p:Chemical_MESH_C000627770 exists .
-p:Disease_MESH_D021441 exists .
-```
-#Sample2, 3
-ReadTimeOut (LOOP)
+p:Variant_tmVar_rs2276008 v:associate_with p:Gene_5594 .
+p:Variant_tmVar_rs11865228 v:associate_with p:Gene_5595 .
+
+p:Gene_5595 v:associate_with p:Disease_MESH_D011085 .
+p:Gene_5594 v:associate_with p:Disease_MESH_D011085 .
+
+p:Gene_5595 v:associate_with p:BMI .
+p:Gene_5595 v:associate_with p:FGS .
+p:Gene_5595 v:associate_with p:HOMA_IR .
+p:Gene_5595 v:associate_with p:Gene_1401 .
+p:Gene_5595 v:associate_with p:Chemical_MESH_D013739 .
+p:Gene_5595 v:associate_with p:Chemical_MESH_D002784 .
+
+p:Gene_5594 v:associate_with p:BMI .
+p:Gene_5594 v:associate_with p:FGS .
+p:Gene_5594 v:associate_with p:HOMA_IR .
+p:Gene_5594 v:associate_with p:Gene_1401 .
+p:Gene_5594 v:associate_with p:Chemical_MESH_D013739 .
+p:Gene_5594 v:associate_with p:Chemical_MESH_D002784 .

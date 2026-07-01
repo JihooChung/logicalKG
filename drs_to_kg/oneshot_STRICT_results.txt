@@ -99,7 +99,7 @@ lkg:STMT_27 rdf:type rdf:Statement ; rdf:subject lkg:Gene_1401 ; rdf:predicate l
 
 ========================medgemma-27b-it========================
 
-##MEDGEMMA-SAMPLE1
+#MEDGEMMA-SAMPLE1
 lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
 lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
 lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical .
@@ -113,7 +113,7 @@ lkg:DRS_06 rdf:type lkg:DRSBox ; lkg:containsEntity lkg:Chemical_MESH_C000627770
 lkg:STMT_05 rdf:type rdf:Statement ; rdf:subject lkg:Chemical_MESH_D000093542 ; rdf:predicate lkg:treat ; rdf:object lkg:Disease_MESH_D010190 .
 lkg:STMT_06 rdf:type rdf:Statement ; rdf:subject lkg:Chemical_MESH_C000627770 ; rdf:predicate lkg:treat ; rdf:object lkg:Disease_MESH_D010190 .
 
-##MEDGEMMA-SAMPLE2
+#MEDGEMMA-SAMPLE2
 lkg:Gene_3835 rdf:type lkg:Gene .
 
 lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
@@ -296,7 +296,7 @@ lkg:STMT_26 rdf:type rdf:Statement ;
     rdf:predicate lkg:associate_with ;
     rdf:object lkg:Gene_5595 .
 
-##MEDGEMMA-SAMPLE3
+#MEDGEMMA-SAMPLE3
 lkg:Gene_5595 rdf:type lkg:Gene .
 
 lkg:Gene_5594 rdf:type lkg:Gene .

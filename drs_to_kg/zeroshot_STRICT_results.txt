@@ -1,13 +1,11 @@
 ========================gemma-4-31b-it========================
-#GEMMA-SAMPLE1
-@prefix rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# . @prefix lkg: http://example.org/lkg/ .
+#SAMPLE1
 lkg:DRS_A rdf:type lkg:DRSBox ; lkg:containsEntity lkg:Disease_MESH_D010190 ; lkg:containsEntity lkg:Disease_MESH_D021441 ; lkg:containsEntity lkg:Chemical_MESH_D000093542 ; lkg:containsEntity lkg:Chemical_MESH_C000627770 ; lkg:containsStatement lkg:Stmt1 ; lkg:containsStatement lkg:Stmt2 .
 lkg:Stmt1 rdf:type rdf:Statement ; rdf:subject lkg:Chemical_MESH_D000093542 ; rdf:predicate lkg:treat ; rdf:object lkg:Disease_MESH_D010190 .
 lkg:Stmt2 rdf:type rdf:Statement ; rdf:subject lkg:Chemical_MESH_C000627770 ; rdf:predicate lkg:treat ; rdf:object lkg:Disease_MESH_D010190 .
 lkg:Disease_MESH_D010190 rdf:type lkg:Disease . lkg:Disease_MESH_D021441 rdf:type lkg:Disease . lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical . lkg:Chemical_MESH_C000627770 rdf:type lkg:Chemical . lkg:DRS_A rdf:type lkg:DRSBox .
 
-#GEMMA-SAMPLE2
-@prefix lkg: http://example.org/lkg/ . @prefix rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# . @prefix owl: http://www.w3.org/2002/07/owl# .
+#SAMPLE2
 lkg:DRS_A rdf:type lkg:DRSBox ; lkg:containsEntity lkg:Gene_3835 ; lkg:containsEntity lkg:Disease_MESH_D010190 ; lkg:containsEntity lkg:Chemical_MESH_C070243 ; lkg:containsEntity lkg:Gene_5604 ; lkg:containsEntity lkg:Gene_5605 ; lkg:containsEntity lkg:Gene_5595 ; lkg:containsEntity lkg:Gene_5594 ; lkg:containsEntity lkg:Gene_1033 ; lkg:containsEntity lkg:Gene_1026 ; lkg:containsEntity lkg:Species_9606 ; lkg:containsEntity lkg:CellLine_CVCL_0480 ; lkg:containsEntity lkg:CellLine_CVCL_0428 ; lkg:containsEntity lkg:Gene_5609 ; lkg:containsStatement stmt1 ; lkg:containsStatement stmt2 ; lkg:containsStatement stmt3 ; lkg:containsStatement stmt4 ; lkg:containsStatement stmt5 ; lkg:containsStatement stmt6 ; lkg:containsStatement stmt7 ; lkg:containsStatement stmt8 ; lkg:containsStatement stmt9 ; lkg:containsStatement stmt10 ; lkg:containsStatement stmt11 ; lkg:containsStatement stmt12 ; lkg:containsStatement stmt13 .
 stmt1 rdf:type rdf:Statement ; rdf:subject lkg:Gene_3835 ; rdf:predicate lkg:associate ; rdf:object lkg:Disease_MESH_D010190 .
 stmt2 rdf:type rdf:Statement ; rdf:subject lkg:Gene_5609 ; rdf:predicate lkg:associate ; rdf:object lkg:Disease_MESH_D010190 .
@@ -24,8 +22,7 @@ stmt12 rdf:type rdf:Statement ; rdf:subject lkg:Gene_3835 ; rdf:predicate lkg:as
 stmt13 rdf:type rdf:Statement ; rdf:subject lkg:Gene_3835 ; rdf:predicate lkg:associate ; rdf:object lkg:Gene_5595 .
 lkg:Gene_3835 rdf:type lkg:Gene . lkg:Disease_MESH_D010190 rdf:type lkg:Disease . lkg:Chemical_MESH_C070243 rdf:type lkg:Chemical . lkg:Gene_5604 rdf:type lkg:Gene . lkg:Gene_5605 rdf:type lkg:Gene . lkg:Gene_5595 rdf:type lkg:Gene . lkg:Gene_5594 rdf:type lkg:Gene . lkg:Gene_1033 rdf:type lkg:Gene . lkg:Gene_1026 rdf:type lkg:Gene . lkg:Species_9606 rdf:type lkg:Species . lkg:CellLine_CVCL_0480 rdf:type lkg:CellLine . lkg:CellLine_CVCL_0428 rdf:type lkg:CellLine . lkg:Gene_5609 rdf:type lkg:Gene .
 
-#GEMMA-SAMPLE3
-@prefix lkg: http://example.org/lkg/ . @prefix rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# . @prefix owl: http://www.w3.org/2002/07/owl# .
+#SAMPLE3
 lkg:DRS_A rdf:type lkg:DRSBox ; lkg:containsEntity lkg:Gene_5595 ; lkg:containsEntity lkg:Gene_5594 ; lkg:containsEntity lkg:Chemical_MESH_D007986 ; lkg:containsEntity lkg:Disease_MESH_D006331 ; lkg:containsEntity lkg:Disease_MESH_D011085 ; lkg:containsEntity lkg:Species_9606 ; lkg:containsEntity lkg:Chemical_MESH_D008055 ; lkg:containsEntity lkg:Gene_1401 ; lkg:containsEntity lkg:Chemical_MESH_D013739 ; lkg:containsEntity lkg:Variant_tmVar_rs2276008 ; lkg:containsEntity lkg:Variant_tmVar_rs11865228 ; lkg:containsEntity lkg:Chemical_MESH_D002784 ; lkg:containsStatement stmt1 ; lkg:containsStatement stmt2 ; lkg:containsStatement stmt3 ; lkg:containsStatement stmt4 ; lkg:containsStatement stmt5 ; lkg:containsStatement stmt6 ; lkg:containsStatement stmt7 ; lkg:containsStatement stmt8 ; lkg:containsStatement stmt9 ; lkg:containsStatement stmt10 ; lkg:containsStatement stmt11 ; lkg:containsStatement stmt12 ; lkg:containsStatement stmt13 ; lkg:containsStatement stmt14 ; lkg:containsStatement stmt15 ; lkg:containsStatement stmt16 .
 stmt1 rdf:type rdf:Statement ; rdf:subject lkg:Chemical_MESH_D002784 ; rdf:predicate lkg:associate ; rdf:object lkg:Disease_MESH_D011085 .
 stmt2 rdf:type rdf:Statement ; rdf:subject lkg:Chemical_MESH_D002784 ; rdf:predicate lkg:associate ; rdf:object lkg:Gene_5595 .
@@ -46,12 +43,7 @@ stmt16 rdf:type rdf:Statement ; rdf:subject lkg:Gene_1401 ; rdf:predicate lkg:as
 lkg:Gene_5595 rdf:type lkg:Gene . lkg:Gene_5594 rdf:type lkg:Gene . lkg:Chemical_MESH_D007986 rdf:type lkg:Chemical . lkg:Disease_MESH_D006331 rdf:type lkg:Disease . lkg:Disease_MESH_D011085 rdf:type lkg:Disease . lkg:Species_9606 rdf:type lkg:Species . lkg:Chemical_MESH_D008055 rdf:type lkg:Chemical . lkg:Gene_1401 rdf:type lkg:Gene . lkg:Chemical_MESH_D013739 rdf:type lkg:Chemical . lkg:Variant_tmVar_rs2276008 rdf:type lkg:Variant . lkg:Variant_tmVar_rs11865228 rdf:type lkg:Variant . lkg:Chemical_MESH_D002784 rdf:type lkg:Chemical .
 
 ========================medgemma-27b-it========================
-##MEDGEMMA-SAMPLE1
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix lkg: <http://example.org/lkg/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-
+#SAMPLE1
 lkg:Statement_A a rdf:Statement ;
     rdf:subject lkg:Disease_MESH_D010190 ;
     rdf:predicate lkg:exist ;
@@ -103,12 +95,7 @@ lkg:Disease_MESH_D021441 a lkg:Disease .
 lkg:Chemical_MESH_D000093542 a lkg:Chemical .
 lkg:Chemical_MESH_C000627770 a lkg:Chemical .
 
-##MEDGEMMA-SAMPLE2
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix lkg: <http://example.org/lkg/> .
-
+#SAMPLE2
 lkg:Statement_1 a lkg:Formula ;
     rdf:type lkg:Statement ;
     rdf:subject lkg:Gene_3835 ;
@@ -202,12 +189,7 @@ lkg:CellLine_CVCL_0428 a lkg:CellLine .
 lkg:Gene_5609 a lkg:Gene .
 
 
-##MEDGEMMA-SAMPLE3
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix lkg: <http://example.org/lkg/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-
+#SAMPLE3
 lkg:associate rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
     rdfs:subPropertyOf lkg:MedRelation ;
     rdfs:label "Associate" .

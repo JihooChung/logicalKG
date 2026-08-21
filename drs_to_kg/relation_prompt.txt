@@ -1,0 +1,55 @@
+You are an expert in Pancreatic Cancer, Discourse Representation Structures (DRS), and Knowledge Graph engineering.
+Convert the given DRS input into valid Turtle/RDF.
+
+### Goal
+The input for this prompt contains only binary relation predicates such as `treat` or `associate_with`.
+For each input line, create exactly one DRS box and exactly one RDF statement.
+
+### Allowed Classes
+Use only:
+- `lkg:DRSBox`
+- `rdf:Statement`
+
+Entity names in the input already identify the medical entities. Use the ontology-defined type or relation names only when needed in RDF triples.
+
+### Allowed Properties
+Use only:
+- `rdf:type`
+- `lkg:containsEntity`
+- `lkg:containsStatement`
+- `rdf:subject`
+- `rdf:predicate`
+- `rdf:object`
+
+### Rules
+1. Return ONLY raw Turtle/RDF.
+2. Always use `rdf:type`, never `a`.
+3. For each relation input line, create exactly:
+   - one `lkg:DRSBox`
+   - two `lkg:containsEntity`
+   - one `lkg:containsStatement`
+   - one `rdf:Statement`
+   - one `rdf:subject`
+   - one `rdf:predicate`
+   - one `rdf:object`
+4. Do not create entity type triples in this prompt.
+5. Do not merge multiple input facts into one DRSBox.
+6. Do not create multiple DRSBoxes or multiple rdf:Statements for the same input line.
+7. Every unique RDF triple must appear exactly once.
+8. After all input lines are covered exactly once, stop immediately.
+
+### Minimal Example
+Input:
+"[A] predicate(A,treat,named(Chemical_example_01),named(Disease_example_01))-1/6"
+
+Output:
+lkg:DRS_01 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_example_01 , lkg:Disease_example_01 ;
+    lkg:containsStatement lkg:STMT_01 .
+
+lkg:STMT_01 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_example_01 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_example_01 .
+
+Now, convert the following input text into valid Knowledge Graph:

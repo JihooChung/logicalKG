@@ -1,0 +1,96 @@
+abstract_id,entity_id,mentions
+1,Disease_MESH_D010190,Pancreatic cancers
+1,Chemical_MESH_D000093542,gemcitabine
+1,Chemical_MESH_C000627770,FOLFIRINOX
+1,Disease_MESH_D021441,PDAC
+2,Gene_1033,cyclin-dependent kinase inhibitor
+2,Disease_MESH_D010190,pancreatic cancer
+2,Disease_UNKNOWN,paracarcinoma
+2,CellLine_CVCL_0428,MIA PaCa-2
+2,Species_9606,patients
+2,Gene_5604;5605,MEK1/2
+2,Gene_5595;5594,ERK1/2
+2,CellLine_CVCL_0480,PANC-1
+2,Gene_3835,KIF22
+2,Chemical_MESH_C070243,MTT
+2,Gene_1026,P21
+2,Gene_5609,MEK
+2,Gene_5594,ERK
+3,Disease_MESH_D021441,Pancreatic ductal adenocarcinoma/PDAC
+3,Disease_MESH_D001660,biliary tract infection
+3,Disease_MESH_D041781,obstructive jaundice
+3,Gene_174,alpha-fetoprotein/AFP
+3,Chemical_MESH_C582435,pembrolizumab
+3,Chemical_MESH_D000069287,capecitabine
+3,Chemical_MESH_D000093542,gemcitabine
+3,Disease_MESH_D015431,weight loss
+3,Chemical_MESH_C560077,trametinib
+3,Disease_MESH_D007565,jaundice
+3,Disease_MESH_D003967,diarrhea
+3,Species_9606,patient/woman
+3,Disease_MESH_D009369,tumor
+4,Disease_MESH_D010190,pancreatic cancer/pancreatic tumor
+4,Species_9606,patients/human
+4,Gene_7103,TSPAN8
+4,Disease_MESH_D009369,tumor
+4,Gene_10631,POSTN
+4,Gene_10551,AGR2
+4,Gene_7031,TFF1
+4,Gene_1356,CP
+5,Disease_MESH_D021441,Pancreatic ductal adenocarcinoma/PDAC
+5,Disease_MESH_D009369,malignancy/cancer/tumor
+5,Gene_3604,CD137
+5,Gene_3569,IL 6
+5,Gene_3845,KRAS
+5,Variant_3845_pG12C,G12C
+5,Gene_653108,CAR
+6,Chemical_MESH_C032881,lysophosphatidic acid
+6,Gene_7058,thrombospondin-2
+6,Disease_MESH_D004194,benign diseases
+6,Disease_MESH_D007249,inflammatory
+6,Disease_MESH_D001778,coagulation
+6,Gene_5168,autotaxin
+6,Disease_MESH_D021441,PDAC
+7,Disease_MESH_D021441,pancreas ductal adenocarcinoma/PDAC
+7,Disease_MESH_D050500,chronic pancreatitis
+7,Disease_MESH_D010195,acute pancreatitis/pancreatitis/AP
+7,Species_9606,patients/Patients
+7,Chemical_MESH_D000438,alcohol
+8,Gene_2260,fibroblast growth factor receptor 1/FGFR1
+8,Disease_MESH_D021441,pancreatic ductal adenocarcinoma/PDAC
+8,Disease_MESH_D001943,breast cancer
+8,Gene_406948,microRNA-15a/miR-15a-/miR-15a
+8,Gene_100861402;253782;5729,CERS6-AS1
+8,Species_9606,Patients
+8,Disease_MESH_D009369,cancer/tumor
+8,Gene_253782,CERS6
+9,Disease_MESH_D021441,Pancreatic ductal adenocarcinoma/pancreatic ductal adenocarcinoma/PDAC
+9,Chemical_MESH_D005472,5-fluorouracil/5-FU
+9,Chemical_MESH_D000093542,gemcitabine/GEM
+9,CellLine_CVCL_0428,MIA PaCa-2
+9,Chemical_MESH_D017239,paclitaxel/PTX
+9,CellLine_CVCL_1847,Patu-8988
+9,Chemical_MESH_D002945,cisplatin
+9,Species_9606,patients
+9,CellLine_CVCL_0237,CAPAN-1
+9,Disease_MESH_D009369,cancer/Cancer
+9,CellLine_CVCL_0152,AsPC-1
+9,CellLine_CVCL_0186,BxPC-3
+9,CellLine_CVCL_0313,HPAFII
+9,CellLine_CVCL_0480,PANC-1
+9,CellLine_CVCL_1723,SW1990
+9,CellLine_CVCL_1119,CFPAC
+9,CellLine_CVCL_4056,T3M4
+10,Disease_MESH_D021441,pancreatic ductal adenocarcinoma/PDAC
+10,Disease_MESH_D010190,Pancreatic Cancer
+10,Disease_MESH_D064420,cytotoxicity
+10,Chemical_MESH_C575255,givinostat
+10,Chemical_UNKNOWN,dacinostat
+10,Disease_MESH_D009369,tumours/Cancer
+10,CellLine_CVCL_1723,SW1990
+10,Gene_7291,TWIST
+10,Gene_3570,IL-6R
+10,Gene_10014,HDAC5
+10,Gene_8320,EOMES
+10,CellLine_CVCL_0186,BxPC3
+10,Gene_9734,HDAC

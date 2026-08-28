@@ -1,0 +1,178 @@
+#abstract1
+p:Disease_MESH_D010190 exists .
+p:Disease_MESH_D021441 exists .
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_C000627770 exists .
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
+
+#abstract2
+p:Gene_3835 exists .
+p:Disease_MESH_D010190 exists .
+p:Chemical_MESH_C070243 exists .
+p:Gene_5604 exists .
+p:Gene_5605 exists .
+p:Gene_5595 exists .
+p:Gene_5594 exists .
+p:Gene_1033 exists .
+p:Gene_1026 exists .
+p:Species_9606 exists .
+p:CellLine_CVCL_0480 exists .
+p:CellLine_CVCL_0428 exists .
+p:Gene_5609 exists .
+p:Gene_3835 v:associate_with p:Disease_MESH_D010190 .
+p:Gene_5609 v:associate_with p:Disease_MESH_D010190 .
+p:Gene_5594 v:associate_with p:Disease_MESH_D010190 .
+p:Gene_1026 v:associate_with p:Disease_MESH_D010190 .
+p:Gene_1026 v:associate_with p:Gene_3835 .
+p:Gene_1026 v:associate_with p:Gene_5609 .
+p:Gene_1026 v:associate_with p:Gene_5594 .
+p:Gene_1033 v:associate_with p:Gene_3835 .
+p:Gene_3835 v:associate_with p:Gene_5604 .
+p:Gene_3835 v:associate_with p:Gene_5605 .
+p:Gene_3835 v:associate_with p:Gene_5609 .
+p:Gene_3835 v:associate_with p:Gene_5594 .
+p:Gene_3835 v:associate_with p:Gene_5595 .
+
+#abstract3
+p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D009369 exists .
+p:Disease_MESH_D007565 exists .
+p:Disease_MESH_D003967 exists .
+p:Disease_MESH_D015431 exists .
+p:Disease_MESH_D001660 exists .
+p:Disease_MESH_D041781 exists .
+p:Gene_174 exists .
+p:Species_9606 exists .
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_D000069287 exists .
+p:Chemical_MESH_C582435 exists .
+p:Chemical_MESH_C560077 exists .
+p:Disease_MESH_D001660 v:associate_with p:Gene_174 .
+p:Disease_MESH_D021441 v:associate_with p:Gene_174 .
+p:Disease_MESH_D041781 v:associate_with p:Gene_174 .
+p:Disease_MESH_D007565 v:associate_with p:Gene_174 .
+p:Chemical_MESH_D000069287 v:cause p:Disease_MESH_D003967 .
+p:Chemical_MESH_D000093542 v:cause p:Disease_MESH_D003967 .
+p:Chemical_MESH_D000093542 v:cause p:Disease_MESH_D015431 .
+p:Chemical_MESH_D000069287 v:cotreat_with p:Chemical_MESH_D000093542 .
+p:Chemical_MESH_C582435 v:cotreat_with p:Chemical_MESH_C560077 .
+p:Chemical_MESH_D000069287 v:treat p:Disease_MESH_D021441 .
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D021441 .
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D007565 .
+p:Chemical_MESH_C582435 v:treat p:Disease_MESH_D021441 .
+p:Chemical_MESH_C582435 v:treat p:Disease_MESH_D003967 .
+p:Chemical_MESH_C582435 v:treat p:Disease_MESH_D015431 .
+p:Chemical_MESH_C560077 v:treat p:Disease_MESH_D021441 .
+p:Chemical_MESH_C560077 v:treat p:Disease_MESH_D003967 .
+
+#abstract4
+p:Disease_MESH_D010190 exists .
+p:Disease_MESH_D009369 exists .
+p:Species_9606 exists .
+p:Gene_7103 exists .
+p:Gene_10631 exists .
+p:Gene_10551 exists .
+p:Gene_7031 exists .
+p:Gene_1356 exists .
+p:Disease_MESH_D009369 v:associate_with p:Gene_7103 .
+p:Disease_MESH_D010190 v:associate_with p:Gene_1356 .
+p:Disease_MESH_D010190 v:associate_with p:Gene_7103 .
+p:Disease_MESH_D010190 v:stimulate p:Gene_10551 .
+p:Disease_MESH_D010190 v:stimulate p:Gene_10631 .
+p:Disease_MESH_D010190 v:stimulate p:Gene_7031 .
+
+#abstract5
+p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D009369 exists .
+p:Gene_3604 exists .
+p:Gene_3569 exists .
+p:Gene_3845 exists .
+p:Gene_653108 exists .
+p:Variant_3845_pG12C exists .
+p:Disease_MESH_D021441 v:associate_with p:Gene_3604 .
+p:Disease_MESH_D021441 v:associate_with p:Gene_3569 .
+p:Disease_MESH_D021441 v:associate_with p:Gene_653108 .
+
+#abstract6
+p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D004194 exists .
+p:Disease_MESH_D007249 exists .
+p:Disease_MESH_D001778 exists .
+p:Chemical_MESH_C032881 exists .
+p:Gene_7058 exists .
+p:Gene_5168 exists .
+p:Disease_MESH_D021441 v:associate_with p:Chemical_MESH_C032881 .
+p:Disease_MESH_D021441 v:associate_with p:Gene_7058 .
+p:Disease_MESH_D021441 v:associate_with p:Gene_5168 .
+
+#abstract7
+p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D050500 exists .
+p:Disease_MESH_D010195 exists .
+p:Species_9606 exists .
+p:Chemical_MESH_D000438 exists .
+p:Chemical_MESH_D000438 v:cause p:Disease_MESH_D010195 .
+
+
+#abstract8
+p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D001943 exists .
+p:Disease_MESH_D009369 exists .
+p:Gene_406948 exists .
+p:Gene_100861402 exists .
+p:Gene_253782 exists .
+p:Gene_2260 exists .
+p:Species_9606 exists .
+p:Disease_MESH_D001943 v:associate_with p:Gene_253782 .
+p:Disease_MESH_D001943 v:associate_with p:Gene_100861402 .
+p:Disease_MESH_D021441 v:associate_with p:Gene_253782 .
+p:Disease_MESH_D021441 v:associate_with p:Gene_100861402 .
+p:Disease_MESH_D021441 v:associate_with p:Gene_2260 .
+p:Disease_MESH_D021441 v:associate_with p:Gene_406948 .
+p:Disease_MESH_D009369 v:associate_with p:Gene_253782 .
+p:Disease_MESH_D009369 v:associate_with p:Gene_2260 .
+p:Disease_MESH_D009369 v:associate_with p:Gene_406948 .
+p:Gene_100861402 v:associate_with p:Gene_406948 .
+p:Gene_2260 v:associate_with p:Gene_406948 .
+p:Gene_253782 v:interact_with p:Gene_406948 .
+p:Gene_100861402 positively v:correlate_with p:Gene_2260 .
+p:Gene_2260 positively v:correlate_with p:Gene_253782 .
+
+#abstract9
+p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D009369 exists .
+p:Chemical_MESH_D005472 exists .
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_D017239 exists .
+p:Chemical_MESH_D002945 exists .
+p:Species_9606 exists .
+p:CellLine_CVCL_0152 exists .
+p:CellLine_CVCL_0186 exists .
+p:CellLine_CVCL_0237 exists .
+p:CellLine_CVCL_1119 exists .
+p:CellLine_CVCL_0313 exists .
+p:CellLine_CVCL_0428 exists .
+p:CellLine_CVCL_0480 exists .
+p:CellLine_CVCL_1847 exists .
+p:CellLine_CVCL_1723 exists .
+p:CellLine_CVCL_4056 exists .
+p:Chemical_MESH_D000093542 v:be_compared_with p:Chemical_MESH_D017239 .
+p:Chemical_MESH_D005472 v:treat p:Disease_MESH_D021441 .
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D021441 .
+p:Chemical_MESH_D017239 v:treat p:Disease_MESH_D021441 .
+
+#abstract10
+p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D010190 exists .
+p:Disease_MESH_D009369 exists .
+p:Disease_MESH_D064420 exists .
+p:Chemical_MESH_C575255 exists .
+p:CellLine_CVCL_1723 exists .
+p:CellLine_CVCL_0186 exists .
+p:Gene_7291 exists .
+p:Gene_3570 exists .
+p:Gene_10014 exists .
+p:Gene_8320 exists .
+p:Gene_9734 exists .
+p:Chemical_MESH_C575255 negatively v:correlate_with p:Gene_9734 .

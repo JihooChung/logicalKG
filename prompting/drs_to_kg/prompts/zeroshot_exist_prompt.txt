@@ -1,0 +1,37 @@
+You are an expert in Pancreatic Cancer, Discourse Representation Structures (DRS), and Knowledge Graph engineering.
+Convert the given DRS input into valid Turtle/RDF.
+
+### Goal
+The input for this prompt contains only `exist` predicates.
+For each input line, create the entity type triple and exactly one DRS box.
+
+### Allowed Classes
+Use only these medical entity classes for `rdf:type`:
+- `lkg:Species`
+- `lkg:Disease`
+- `lkg:Chemical`
+- `lkg:Gene`
+- `lkg:Variant`
+- `lkg:CellLine`
+
+Use `lkg:DRSBox` for the box.
+
+### Allowed Properties
+Use only:
+- `rdf:type`
+- `lkg:containsEntity`
+
+### Rules
+1. Return ONLY raw Turtle/RDF.
+2. Always use `rdf:type`, never `a`.
+3. For each `exist` input line, create exactly:
+   - one entity type triple
+   - one `lkg:DRSBox`
+   - one `lkg:containsEntity`
+4. Do not create any `rdf:Statement`.
+5. Do not create any `lkg:containsStatement`.
+6. Do not merge multiple input lines into one DRSBox.
+7. Every unique RDF triple must appear exactly once.
+8. After all input lines are covered exactly once, stop immediately.
+
+Now, convert the following input text into valid Knowledge Graph:

@@ -6,22 +6,28 @@ import re
 
 url = "https://chat-ai.academiccloud.de/v1/chat/completions"
 
-with open("./prompting/api_key.txt", "r") as file:
-    api_key = file.read().strip()
+api_key_path = "./prompting/api_key.txt"
+drs_list_path = "./data/drs/drs_list.csv"
+
+model = "gemma-4-31b-it" # gemma-4-31b-it, qwen3-30b-a3b-instruct-2507
+prompt_type = "oneshot" # oneshot, zeroshot
+exist_prompt_path = f"./prompting/drs_to_kg/prompts/{prompt_type}_exist_prompt.txt"
+relation_prompt_path = f"./prompting/drs_to_kg/prompts/{prompt_type}_relation_prompt.txt"
 
 EXIST_BATCH_SIZE = 5
 RELATION_BATCH_SIZE = 2
 
-df = pd.read_csv("./data/drs/drs_list.csv")
-
-model = "gemma-4-31b-it"
-prompt_type = "oneshot" # oneshot, zeroshot
 out_path = Path(f"./prompting/drs_to_kg/results/{prompt_type}_{model}.csv")
 
-with open(f"./prompting/drs_to_kg/{prompt_type}_exist_prompt.txt", "r") as file:
+df = pd.read_csv(drs_list_path)
+
+with open(api_key_path, "r") as file:
+    api_key = file.read().strip()
+
+with open(exist_prompt_path, "r") as file:
     exist_prompt = file.read()
 
-with open(f"./prompting/drs_to_kg/{prompt_type}_relation_prompt.txt", "r") as file:
+with open(relation_prompt_path, "r") as file:
     relation_prompt = file.read()
 
 headers = {
@@ -86,6 +92,7 @@ results = []
 
 for index, row in df.iterrows():
     abstract_id = row["abstract_id"]
+    
     drs_lines = [line.strip() for line in str(row["drs"]).splitlines() if line.strip()]
     exist_lines = [line for line in drs_lines if ",exist," in line]
     relation_lines = [line for line in drs_lines if ",exist," not in line]

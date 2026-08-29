@@ -5,17 +5,22 @@ from pathlib import Path
 
 url = "https://chat-ai.academiccloud.de/v1/chat/completions"
 
-with open("./prompting/api_key.txt", "r") as file:
-    api_key = file.read().strip()
+api_key_path = "./prompting/api_key.txt"
+nl_list_path = "./data/nl/nl_list.csv"
 
-df = pd.read_csv("./data/nl/nl_list.csv")
-
-model = "gemma-4-31b-it"
-prompt_type = "zeroshot" # zeroshot, oneshot
+model = "gemma-4-31b-it" # gemma-4-31b-it, qwen3-30b-a3b-instruct-2507
+prompt_type = "oneshot" # zeroshot, oneshot
+prompt_path = f"./prompting/nl_to_ace/{prompt_type}_prompt.txt"
 
 out_path = Path(f"./prompting/nl_to_ace/results/{prompt_type}_{model}.csv")
 
-with open(f"./prompting/nl_to_ace/{prompt_type}_prompt.txt", "r") as file:
+
+df = pd.read_csv(nl_list_path)
+
+with open(api_key_path, "r") as file:
+    api_key = file.read().strip()
+
+with open(prompt_path, "r") as file:
     prompt = file.read()
 
 headers = {

@@ -1,0 +1,465 @@
+abstract_id,ace
+1,"p:Disease_MESH_D010190 exists .
+p:Disease_MESH_D021441 exists .
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_C000627770 exists .
+p:Disease_MESH_D010190 v:be_compared_with p:Disease_MESH_D021441 .
+p:Disease_MESH_D010190 v:be_studied .
+p:Disease_MESH_D021441 v:have_feature p:stroma .
+p:stroma v:contribute_to p:therapeutic_difficulty .
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_C000627770 v:treat p:Disease_MESH_D010190 .
+p:Chemical_MESH_D000093542 v:increase p:overall_survival .
+p:Chemical_MESH_C000627770 v:increase p:overall_survival .
+p:Chemical_MESH_D000093542 v:cause p:chemoresistance .
+p:Chemical_MESH_C000627770 v:cause p:chemoresistance .
+p:stroma v:be_targeted .
+p:targeting v:potentiate p:pharmacological_weapons ."
+2,"p:Gene_3835 exists . 
+p:Disease_MESH_D010190 exists . 
+p:Species_9606 exists . 
+p:CellLine_CVCL_0480 exists . 
+p:CellLine_CVCL_0428 exists . 
+p:Chemical_MESH_C070243 exists . 
+p:Gene_5604;5605 exists . 
+p:Gene_5595;5594 exists . 
+p:Gene_1033 exists . 
+p:Gene_1026 exists . 
+p:GEPIA exists . 
+p:qRT-PCR exists . 
+p:immunohistochemistry exists . 
+p:colony formation assay exists . 
+p:GSEA exists . 
+p:Western blot exists . 
+p:Disease_MESH_D010190 v:involve p:Gene_3835 . 
+p:Gene_3835 v:be_highly_expressed_in p:Disease_MESH_D010190 . 
+p:Species_9606 v:have_worse_clinical_prognosis_outcome_than p:Species_9606 if p:Gene_3835 is highly expressed . 
+p:Gene_3835 v:be_silenced_by p:Gene_3835 SiRNA . 
+p:Gene_3835 SiRNA v:inhibit p:Gene_3835 . 
+p:Gene_3835 v:stimulate p:CellLine_CVCL_0480 proliferation . 
+p:Gene_3835 v:stimulate p:CellLine_CVCL_0428 proliferation . 
+p:Gene_3835 v:inhibit p:CellLine_CVCL_0480 proliferation if p:Gene_3835 is silenced . 
+p:Gene_3835 v:inhibit p:CellLine_CVCL_0428 proliferation if p:Gene_3835 is silenced . 
+p:Gene_3835 v:be_associated_with p:cell cycle regulation . 
+p:Gene_3835 v:be_associated_with p:phosphorylated Gene_5604;5605 . 
+p:Gene_3835 v:be_associated_with p:phosphorylated Gene_5595;5594 . 
+p:Gene_3835 v:be_associated_with p:Gene_1033 . 
+p:Gene_3835 v:be_associated_with p:Gene_1026 .
+p:Ki67 exists .
+p:Gene_5609 exists .
+p:Gene_5594 exists .
+p:cell cycle regulation exists .
+p:G1/S transition exists .
+p:Gene_3835 v:be_involved_in p:cell cycle regulation .
+p:Gene_3835 v:be_highly_expressed_in p:Disease_MESH_D010190 .
+p:Species_9606 v:have_poor_clinical_prognosis_outcome_if p:Gene_3835 is highly expressed .
+p:Gene_3835 v:positively v:correlate_with p:Ki67 .
+p:Gene_3835 v:promote p:G1/S transition .
+p:Gene_3835 v:downregulate p:phosphorylated Gene_5604;5605 .
+p:Gene_3835 v:downregulate p:phosphorylated Gene_5595;5594 .
+p:Gene_3835 v:upregulate p:Gene_1026 .
+p:Gene_3835 v:regulate p:Gene_5609/Gene_5594/Gene_1026 signaling axis .
+p:Gene_5609/Gene_5594/Gene_1026 signaling axis v:be_associated_with p:Disease_MESH_D010190 .
+p:Gene_3835 v:promote p:Disease_MESH_D010190 development ."
+3,"p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D009369 exists .
+p:CA19-9 exists .
+p:Gene_174 exists .
+p:Species_9606 exists .
+p:Disease_MESH_D007565 exists .
+p:pancreaticoduodenectomy exists .
+p:superior mesenteric vein exists .
+p:SMV_reconstruction exists .
+p:Chemical_MESH_D000093542 exists .
+p:Chemical_MESH_D000069287 exists .
+p:Disease_MESH_D003967 exists .
+p:Disease_MESH_D015431 exists .
+p:Chemical_MESH_C582435 exists .
+p:Chemical_MESH_C560077 exists .
+p:Disease_MESH_D001660 exists .
+p:Disease_MESH_D041781 exists .
+p:Disease_MESH_D021441 v:be_diagnosed_at_advanced_stage .
+p:Disease_MESH_D021441 v:have_high_mortality_rate .
+p:Disease_MESH_D021441 v:have_drug_resistance .
+p:CA19-9 v:be_biomarker_for p:Disease_MESH_D021441 .
+p:CA19-9 v:be_biomarker_for p:Disease_MESH_D009369 .
+p:CA19-9 v:be_used_for p:diagnosis .
+p:CA19-9 v:be_used_for p:prognosis .
+p:Gene_174 v:be_elevated_in p:Species_9606 .
+p:Gene_174 v:be_elevated_in p:Disease_MESH_D021441 .
+p:Gene_174 v:be_rare_in p:Disease_MESH_D021441 .
+p:Species_9606 v:have_elevated_Gene_174 .
+p:Species_9606 v:have_elevated_CA19-9 .
+p:Species_9606 v:present_with p:Disease_MESH_D007565 .
+p:Species_9606 v:be_diagnosed_with p:Disease_MESH_D021441 .
+p:Species_9606 v:undergo p:pancreaticoduodenectomy .
+p:Species_9606 v:undergo p:partial_resection_of_the_superior_mesenteric_vein .
+p:Species_9606 v:undergo p:SMV_reconstruction .
+p:Species_9606 v:achieve p:R0_resection .
+p:Species_9606 v:have_decreased_Gene_174_level_after_resection .
+p:Species_9606 v:have_decreased_CA19-9_level_after_resection .
+p:Species_9606 v:receive p:adjuvant_chemotherapy .
+p:adjuvant_chemotherapy v:contain p:Chemical_MESH_D000093542 .
+p:adjuvant_chemotherapy v:contain p:Chemical_MESH_D000069287 .
+p:Species_9606 v:present_with p:Disease_MESH_D003967 .
+p:Species_9606 v:present_with p:Disease_MESH_D015431 .
+p:Species_9606 v:have_poor_nutritional_status .
+p:Species_9606 v:have_signs_of_poor_chemotherapy_tolerance .
+p:Species_9606 v:change_chemotherapy_regimen_to p:Chemical_MESH_C582435 .
+p:Species_9606 v:change_chemotherapy_regimen_to p:Chemical_MESH_C560077 .
+p:Species_9606 v:have_hepatic_recurrence .
+p:Species_9606 v:develop p:Disease_MESH_D001660 .
+p:Species_9606 v:develop p:Disease_MESH_D041781 .
+p:Species_9606 v:die .
+p:Gene_174 v:be_potential_biomarker_for p:Disease_MESH_D021441 .
+p:Gene_174 v:be_potential_biomarker_for p:CA19-9_negative_Disease_MESH_D021441 .
+p:CA19-9_negative_Disease_MESH_D021441 exists ."
+4,"p:Species_9606 exists .  
+p:Disease_MESH_D010190 exists .  
+p:Disease_MESH_D009369 exists .  
+p:Black exists .  
+p:White exists .  
+p:Gene_10551 exists .  
+p:Gene_10631 exists .  
+p:Gene_7031 exists .  
+p:Gene_1356 exists .  
+p:Gene_7103 exists .  
+p:Disease_MESH_D010190 v:have_higher_morbidity_and_mortality_in p:Black .  
+p:Black v:be_under_represented_in p:Disease_MESH_D010190_clinical_trials .  
+p:Species_9606 v:have_transcriptomic_sequencing_performed_on p:Disease_MESH_D010190 .  
+p:Species_9606 v:have_transcriptomic_sequencing_performed_on p:Disease_MESH_D009369 .  
+p:Species_9606 v:have_transcriptomic_sequencing_performed_on p:non-Disease_MESH_D009369_tissue .  
+p:Species_9606 v:have_transcriptomic_sequencing_performed_on p:Disease_MESH_D010190_tissue .  
+p:Species_9606 v:have_transcriptomic_sequencing_performed_on p:non-Disease_MESH_D009369_tissue_from_Black .  
+p:Species_9606 v:have_transcriptomic_sequencing_performed_on p:non-Disease_MESH_D009369_tissue_from_White .  
+p:Species_9606 v:have_transcriptomic_sequencing_performed_on p:Disease_MESH_D010190_tissue_from_Black .  
+p:Species_9606 v:have_transcriptomic_sequencing_performed_on p:Disease_MESH_D010190_tissue_from_White .  
+p:Gene_10551 v:be_up_regulated_in p:Disease_MESH_D010190_tissue .  
+p:Gene_10631 v:be_up_regulated_in p:Disease_MESH_D010190_tissue .  
+p:Gene_7031 v:be_up_regulated_in p:Disease_MESH_D010190_tissue .  
+p:Gene_1356 v:be_up_regulated_in p:Disease_MESH_D010190_tissue .  
+p:Gene_10551 v:be_confirmed_by p:quantitative_PCR .  
+p:Gene_10631 v:be_confirmed_by p:quantitative_PCR .  
+p:Gene_7031 v:be_confirmed_by p:quantitative_PCR .  
+p:Gene_1356 v:be_confirmed_by p:quantitative_PCR .  
+p:Disease_MESH_D010190_tissue_from_Black v:differentially_express p:Gene_7103 .  
+p:Disease_MESH_D010190_tissue_from_White v:differentially_express p:Gene_7103 .  
+p:Gene_7103 v:be_significantly_overexpressed_in p:Disease_MESH_D010190_tissue_from_Black .  
+p:Gene_7103 v:be_significantly_overexpressed_in p:Disease_MESH_D010190_tissue_from_White .  
+p:Gene_7103 v:be_associated_with p:poor_overall_survival .  
+p:Gene_7103 v:be_potential_genetic_factor_contributing_to p:Disease_MESH_D010190_outcomes_in_Black .  
+p:Race_associated_gene_expression_profiles v:impact p:canonical_pathway .  
+p:Gene_7103 v:be_potential_target_for_larger_genomic_studies ."
+5,"p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D009369 exists .
+p:Disease_MESH_D021441 v:be_highly_lethal .
+p:Disease_MESH_D021441 v:have_limited_therapeutic_options .
+p:Disease_MESH_D021441 v:have_poor_overall_survival .
+p:Genomic_profiling v:reveal_complex_molecular_heterogeneity p:Disease_MESH_D021441 .
+p:Genomic_profiling v:reveal_complex_cellular_heterogeneity p:Disease_MESH_D021441 .
+p:Genomic_profiling v:offer_new_therapeutic_avenues p:Disease_MESH_D021441 .
+p:Therapeutic_strategies v:target_dysregulated_molecular_pathways p:Disease_MESH_D021441 .
+p:Therapeutic_strategies v:target_Disease_MESH_D009369_microenvironment p:Disease_MESH_D021441 .
+p:Therapeutic_strategies v:overcome_drug_resistance p:Disease_MESH_D021441 .
+p:Immune_checkpoint_inhibitors v:modulate_Disease_MESH_D021441_immunosuppressive_microenvironment .
+p:Gene_653108_T-cell_therapies v:modulate_Disease_MESH_D021441_immunosuppressive_microenvironment .
+p:Novel_immunotherapy_strategies v:be_explored p:Disease_MESH_D021441 .
+p:Recent_clinical_trials v:aim_to_improve_outcomes p:Disease_MESH_D021441 .
+p:Recent_clinical_trials v:cover_last_5_years .
+p:Genomic_profiling v:shape_treatment p:Disease_MESH_D021441 .
+p:Targeted_therapies v:shape_treatment p:Disease_MESH_D021441 .
+p:Immunotherapy v:shape_treatment p:Disease_MESH_D021441 .
+p:Disease_MESH_D021441 v:have_dense_stroma .
+p:Disease_MESH_D021441 v:have_immune_suppressive_microenvironment .
+p:Gene_3569_inhibitors v:be_promising p:Disease_MESH_D021441 .
+p:Gene_3604_inhibitors v:be_promising p:Disease_MESH_D021441 .
+p:Gene_653108-T_therapies v:be_promising p:Disease_MESH_D021441 .
+p:Therapeutic_Disease_MESH_D009369_vaccines v:be_promising p:Disease_MESH_D021441 .
+p:Gene_3845_targeted_therapies v:expand_beyond_Variant_3845_pG12C_inhibitors .
+p:Novel_drugs v:be_in_development p:Gene_3845_targeted_therapies .
+p:Novel_drugs v:improve_treatment_options p:Disease_MESH_D021441 .
+p:Disease_MESH_D009369_treating_fields v:be_investigated p:Disease_MESH_D021441 .
+p:Locally_advanced_Disease_MESH_D021441 v:be_target_of_Disease_MESH_D009369_treating_fields .
+p:PANOVA-3_trial v:potentially_integrate_Disease_MESH_D009369_treating_fields p:Disease_MESH_D021441 .
+p:Advancements_in_genomic_profiling v:enhance_outcomes p:Disease_MESH_D021441 .
+p:Advancements_in_targeted_therapies v:enhance_outcomes p:Disease_MESH_D021441 .
+p:Advancements_in_immunotherapy v:enhance_outcomes p:Disease_MESH_D021441 .
+p:Advancements_in_Disease_MESH_D009369_treating_fields v:enhance_outcomes p:Disease_MESH_D021441 ."
+6,"p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D007249 exists .
+p:Disease_MESH_D001778 exists .
+p:Disease_MESH_D004194 exists .
+p:Gene_7058 exists .
+p:Gene_5168 exists .
+p:Chemical_MESH_C032881 exists .
+p:Ca19-9 exists .
+p:Disease_MESH_D021441 v:have_prognosis p:poor .
+p:poor v:be_due_to p:lack_of_effective_treatment .
+p:lack_of_effective_treatment v:cause p:Disease_MESH_D021441 .
+p:late_diagnosis v:cause p:Disease_MESH_D021441 .
+p:early_detection v:decrease p:mortality .
+p:early_detection v:save_lives .
+p:ideal_biomarker v:be_cost_effective .
+p:ideal_biomarker v:be_detectable_in p:easily_accessible_biological_material .
+p:ideal_biomarker v:be_present_in p:earliest_phase_of_disease .
+p:Gene_7058 v:be_a_biomarker_for p:Disease_MESH_D021441 .
+p:insulin_linked_binding_protein_2 v:be_a_biomarker_for p:Disease_MESH_D021441 .
+p:Chemical_MESH_C032881 v:be_a_biomarker_for p:Disease_MESH_D021441 .
+p:Gene_5168 v:be_a_biomarker_for p:Disease_MESH_D021441 .
+p:Ca19-9 v:be_a_biomarker_for p:Disease_MESH_D021441 .
+p:Disease_MESH_D007249_factor v:be_a_biomarker_for p:Disease_MESH_D021441 .
+p:Disease_MESH_D001778_factor v:be_a_biomarker_for p:Disease_MESH_D021441 .
+p:Gene_7058 v:be_used_in p:early_detection .
+p:insulin_linked_binding_protein_2 v:be_used_in p:early_detection .
+p:Chemical_MESH_C032881 v:be_used_in p:early_detection .
+p:Gene_5168 v:be_used_in p:early_detection .
+p:Ca19-9 v:be_used_in p:early_detection .
+p:Disease_MESH_D007249_factor v:be_used_in p:early_detection .
+p:Disease_MESH_D001778_factor v:be_used_in p:early_detection .
+p:Gene_7058 v:be_used_in p:diagnosis .
+p:insulin_linked_binding_protein_2 v:be_used_in p:diagnosis .
+p:Chemical_MESH_C032881 v:be_used_in p:diagnosis .
+p:Gene_5168 v:be_used_in p:diagnosis .
+p:Ca19-9 v:be_used_in p:diagnosis .
+p:Disease_MESH_D007249_factor v:be_used_in p:diagnosis .
+p:Disease_MESH_D001778_factor v:be_used_in p:diagnosis .
+p:Gene_7058 v:be_used_in p:prognosis .
+p:insulin_linked_binding_protein_2 v:be_used_in p:prognosis .
+p:Chemical_MESH_C032881 v:be_used_in p:prognosis .
+p:Gene_5168 v:be_used_in p:prognosis .
+p:Ca19-9 v:be_used_in p:prognosis .
+p:Disease_MESH_D007249_factor v:be_used_in p:prognosis .
+p:Disease_MESH_D001778_factor v:be_used_in p:prognosis .
+p:Gene_7058 v:be_used_in p:treatment_response_prediction .
+p:insulin_linked_binding_protein_2 v:be_used_in p:treatment_response_prediction .
+p:Chemical_MESH_C032881 v:be_used_in p:treatment_response_prediction .
+p:Gene_5168 v:be_used_in p:treatment_response_prediction .
+p:Ca19-9 v:be_used_in p:treatment_response_prediction .
+p:Disease_MESH_D007249_factor v:be_used_in p:treatment_response_prediction .
+p:Disease_MESH_D001778_factor v:be_used_in p:treatment_response_prediction .
+p:Gene_7058 v:be_used_in p:differentiation_from p:Disease_MESH_D004194 .
+p:insulin_linked_binding_protein_2 v:be_used_in p:differentiation_from p:Disease_MESH_D004194 .
+p:Chemical_MESH_C032881 v:be_used_in p:differentiation_from p:Disease_MESH_D004194 .
+p:Gene_5168 v:be_used_in p:differentiation_from p:Disease_MESH_D004194 .
+p:Ca19-9 v:be_used_in p:differentiation_from p:Disease_MESH_D004194 .
+p:Disease_MESH_D007249_factor v:be_used_in p:differentiation_from p:Disease_MESH_D004194 .
+p:Disease_MESH_D001778_factor v:be_used_in p:differentiation_from p:Disease_MESH_D004194 .
+p:biomarker_panel v:be_useful_for p:diagnostic .
+p:biomarker_panel v:be_useful_for p:early_detection .
+p:biomarker_panel v:be_useful_for p:prognosis .
+p:biomarker_panel v:be_useful_for p:treatment_response_prediction .
+p:biomarker_panel v:be_useful_for p:differentiation_from p:Disease_MESH_D004194 ."
+7,"p:Species_9606 exists .
+p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D010195 exists .
+p:Chemical_MESH_D000438 exists .
+p:Disease_MESH_D050500 exists .
+p:Disease_MESH_D021441 v:be_associated_with p:Disease_MESH_D010195 .
+p:Species_9606 v:have p:Disease_MESH_D010195 .
+p:Species_9606 v:not_have p:biliary p:Disease_MESH_D010195 .
+p:Species_9606 v:not_have p:Chemical_MESH_D000438-induced p:Disease_MESH_D010195 .
+p:Species_9606 v:not_have p:Disease_MESH_D050500 .
+p:Species_9606 v:have p:Disease_MESH_D021441 .
+p:Species_9606 v:have p:Disease_MESH_D021441 within 1 year after p:Disease_MESH_D010195 .
+p:Species_9606 v:have p:Disease_MESH_D021441 within 5 years after p:Disease_MESH_D010195 .
+p:Species_9606 v:have p:Disease_MESH_D021441 with stage 1-2 .
+p:Species_9606 v:undergo p:surgical_resection for p:Disease_MESH_D021441 .
+p:Species_9606 v:have p:Disease_MESH_D021441 and p:Disease_MESH_D010195 in preceding year .
+p:Species_9606 v:not_have p:Disease_MESH_D010195 in preceding year .
+p:Species_9606 v:have p:Disease_MESH_D021441 with p:Disease_MESH_D010195 in preceding year v:be_more_likely_to v:undergo p:surgical_resection than p:Species_9606 v:not_have p:Disease_MESH_D010195 in preceding year .
+p:Species_9606 v:have p:Disease_MESH_D021441 with p:Disease_MESH_D010195 in preceding year v:be_more_likely_to v:have p:Disease_MESH_D021441 at early stage than p:Species_9606 v:not_have p:Disease_MESH_D010195 in preceding year .
+p:Species_9606 v:have p:Disease_MESH_D021441 with p:Disease_MESH_D010195 in preceding year v:have p:Disease_MESH_D021441 at stage 1-2 .
+p:Species_9606 v:have p:Disease_MESH_D021441 without p:Disease_MESH_D010195 in preceding year v:have p:Disease_MESH_D021441 at stage 1-2 ."
+8,"p:Gene_100861402;253782;5729 exists . 
+p:Disease_MESH_D021441 exists . 
+p:Disease_MESH_D009369 exists . 
+p:Species_9606 exists . 
+p:Gene_4069485p exists . 
+p:Gene_2260 exists . 
+p:Gene_100861402;253782;5729 v:be_compared_with p:Disease_MESH_D021441 . 
+p:Gene_100861402;253782;5729 v:regulate p:Disease_MESH_D021441 . 
+p:Gene_100861402;253782;5729 v:be_upregulated_in p:Disease_MESH_D021441 . 
+p:Species_9606 with p:Disease_MESH_D021441 v:have p:Gene_100861402;253782;5729 expression . 
+p:Species_9606 with p:Disease_MESH_D021441 and high p:Gene_100861402;253782;5729 expression v:have p:shorter_overall_survival_than p:Species_9606 with p:Disease_MESH_D021441 and low p:Gene_100861402;253782;5729 expression . 
+p:Gene_100861402;253782;5729 v:inhibit p:Disease_MESH_D021441 proliferation . 
+p:Gene_100861402;253782;5729 v:inhibit p:Disease_MESH_D021441 migration . 
+p:Gene_100861402;253782;5729 v:inhibit p:Disease_MESH_D021441 invasion . 
+p:Gene_100861402;253782;5729 v:stimulate p:Disease_MESH_D021441 apoptosis . 
+p:Gene_100861402;253782;5729 v:inhibit p:Disease_MESH_D021441 tumor_growth_in_vivo . 
+p:Gene_100861402;253782;5729 v:interact_as_drug_with p:Gene_4069485p . 
+p:Gene_100861402;253782;5729 v:act_as_molecular_sponge_for p:Gene_4069485p . 
+p:Gene_4069485p v:target p:Gene_2260 . 
+p:Gene_100861402;253782;5729 v:upregulate p:Gene_2260 . 
+p:Gene_4069485p v:be_downregulated . 
+p:Gene_2260 v:be_restored . 
+p:Gene_4069485p downregulation v:rescue p:Gene_100861402;253782;5729 knockdown effect on p:Disease_MESH_D021441 proliferation . 
+p:Gene_4069485p downregulation v:rescue p:Gene_100861402;253782;5729 knockdown effect on p:Disease_MESH_D021441 migration . 
+p:Gene_4069485p downregulation v:rescue p:Gene_100861402;253782;5729 knockdown effect on p:Disease_MESH_D021441 invasion . 
+p:Gene_4069485p downregulation v:rescue p:Gene_100861402;253782;5729 knockdown effect on p:Disease_MESH_D021441 apoptosis . 
+p:Gene_2260 restoration v:rescue p:Gene_100861402;253782;5729 knockdown effect on p:Disease_MESH_D021441 proliferation . 
+p:Gene_2260 restoration v:rescue p:Gene_100861402;253782;5729 knockdown effect on p:Disease_MESH_D021441 migration . 
+p:Gene_2260 restoration v:rescue p:Gene_100861402;253782;5729 knockdown effect on p:Disease_MESH_D021441 invasion . 
+p:Gene_2260 restoration v:rescue p:Gene_100861402;253782;5729 knockdown effect on p:Disease_MESH_D021441 apoptosis . 
+p:Gene_100861402;253782;5729 v:promote p:Disease_MESH_D021441 oncogenicity . 
+p:Gene_100861402;253782;5729 v:serve_as_competing_endogenous_RNA_for p:Gene_4069485p . 
+p:Gene_100861402;253782;5729 v:increase p:Gene_2260 expression . 
+p:Gene_100861402;253782;5729/Gene_4069485p/Gene_2260 pathway v:be_target_for p:Disease_MESH_D009369 therapy ."
+9,"p:Disease_MESH_D021441 exists . 
+p:Disease_MESH_D009369 exists . 
+p:Species_9606 exists . 
+p:Chemical_MESH_D000093542 exists . 
+p:Chemical_MESH_D005472 exists . 
+p:Disease_MESH_D021441 v:be_compared_with p:Disease_MESH_D009369 . 
+p:Disease_MESH_D021441 v:cause p:Disease_MESH_D009369 . 
+p:Chemical_MESH_D000093542 v:inhibit p:Disease_MESH_D021441 . 
+p:Chemical_MESH_D005472 v:inhibit p:Disease_MESH_D021441 . 
+p:Disease_MESH_D021441 v:be_compared_with p:Species_9606 . 
+p:epithelial-mesenchymal transition v:contribute_to p:drug_resistance . 
+p:cell_stemness v:contribute_to p:drug_resistance . 
+p:epithelial-mesenchymal transition v:be_associated_with p:drug_resistance . 
+p:cell_stemness v:be_associated_with p:drug_resistance . 
+p:Disease_MESH_D021441 v:have_subpopulation_with_resistance . 
+p:Drug_resistance v:be_attributed_to p:epithelial-mesenchymal transition . 
+p:Drug_resistance v:be_attributed_to p:cell_stemness . 
+p:Disease_MESH_D021441 v:show_resistance_to p:Chemical_MESH_D000093542 . 
+p:Disease_MESH_D021441 v:show_resistance_to p:Chemical_MESH_D005472 . 
+p:Disease_MESH_D021441 v:have_heterogeneous_profile . 
+p:Drug_resistance_mechanisms v:require_understanding . 
+p:Profile_heterogeneities v:require_understanding . 
+p:Drug_resistance_mechanisms v:lead_to p:therapeutic_strategy . 
+p:Profile_heterogeneities v:lead_to p:therapeutic_strategy . 
+p:Therapeutic_strategy v:address p:chemo-resistant_dilemma . 
+p:chemo-resistant_dilemma v:require p:therapeutic_strategy . 
+p:CellLine_CVCL_0152 exists . 
+p:CellLine_CVCL_0186 exists . 
+p:CellLine_CVCL_0237 exists . 
+p:CellLine_CVCL_1119 exists . 
+p:CellLine_CVCL_0313 exists . 
+p:CellLine_CVCL_0428 exists . 
+p:CellLine_CVCL_0480 exists . 
+p:CellLine_CVCL_1847 exists . 
+p:CellLine_CVCL_1723 exists . 
+p:CellLine_CVCL_4056 exists .
+p:CCK8 exists . 
+p:qRT-PCR exists . 
+p:Metascape exists . 
+p:CCLE exists . 
+p:Chemotherapy_regimen exists . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_0152 . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_0186 . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_0237 . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_1119 . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_0313 . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_0428 . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_0480 . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_1847 . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_1723 . 
+p:CCK8 v:perform_assay_on p:CellLine_CVCL_4056 .
+p:RNA_seq_data v:download_from p:CCLE . 
+p:RNA_seq_data v:analyze_for p:DEG . 
+p:DEG v:validate_by p:qRT-PCR . 
+p:DEG v:be_differentially_expressed_between p:resistant_cell_line and p:sensitive_cell_line . 
+p:Pathway v:be_enriched_in p:DEG . 
+p:DEG v:be_associated_with p:chemotherapy_regimen .
+p:Chemical_MESH_D017239 exists .
+p:Chemical_MESH_D002945 exists .
+p:Chemical_MESH_D000093542 exists .
+p:Gene_181 exists .
+p:Gene_461 exists .
+p:Gene_37 exists .
+p:Gene_25 exists .
+p:Pathway_1 exists .
+p:Pathway_2 exists .
+p:Chemical_MESH_D017239 v:be_compared_with p:Chemical_MESH_D000093542 .
+p:Chemical_MESH_D017239 v:cause p:Disease_MESH_D021441 .
+p:Chemical_MESH_D000093542 v:cause p:Disease_MESH_D021441 .
+p:CellLine_CVCL_1723 v:be_compared_with p:CellLine_CVCL_0428 .
+p:CellLine_CVCL_1723 v:be_compared_with p:CellLine_CVCL_0186 .
+p:CellLine_CVCL_0428 v:be_compared_with p:CellLine_CVCL_0186 .
+p:CellLine_CVCL_1723 v:be_resistant_to p:Chemical_MESH_D017239 .
+p:CellLine_CVCL_1723 v:be_resistant_to p:Chemical_MESH_D000093542 .
+p:CellLine_CVCL_1723 v:have_high_IC50_for p:Chemical_MESH_D017239 .
+p:CellLine_CVCL_1723 v:have_high_IC50_for p:Chemical_MESH_D000093542 .
+p:CellLine_CVCL_1723 v:have_high_IC50_for p:Chemical_MESH_D002945 .
+p:CellLine_CVCL_0428 v:be_sensitive_to p:Chemical_MESH_D017239 .
+p:CellLine_CVCL_0428 v:be_sensitive_to p:Chemical_MESH_D000093542 .
+p:CellLine_CVCL_0428 v:be_sensitive_to p:Chemical_MESH_D002945 .
+p:CellLine_CVCL_0186 v:be_sensitive_to p:Chemical_MESH_D017239 .
+p:CellLine_CVCL_0186 v:be_sensitive_to p:Chemical_MESH_D000093542 .
+p:CellLine_CVCL_0186 v:be_sensitive_to p:Chemical_MESH_D002945 .
+p:Chemical_MESH_D002945 v:associate_with p:Gene_181 .
+p:Chemical_MESH_D002945 v:associate_with p:Gene_461 .
+p:Chemical_MESH_D000093542 v:associate_with p:Gene_37 .
+p:Chemical_MESH_D000093542 v:associate_with p:Gene_25 .
+p:Gene_181 v:be_upregulated_in p:Chemical_MESH_D002945_resistant_cell_lines .
+p:Gene_461 v:be_downregulated_in p:Chemical_MESH_D002945_resistant_cell_lines .
+p:Gene_37 v:be_highly_expressed_in p:Chemical_MESH_D000093542_resistant_cell_lines .
+p:Gene_25 v:be_lowly_expressed_in p:Chemical_MESH_D000093542_resistant_cell_lines .
+p:Pathway_1 v:be_enriched_in p:Chemical_MESH_D002945_resistant_cell_lines .
+p:Pathway_2 v:be_enriched_in p:Chemical_MESH_D002945_resistant_cell_lines .
+p:Pathway_1 v:be_associated_with p:Disease_MESH_D021441 .
+p:Pathway_2 v:be_associated_with p:Disease_MESH_D021441 .
+p:Pathway_1 v:be_related_to p:extracellular_matrix .
+p:Pathway_2 v:be_related_to p:cell_cell_junction ."
+10,"p:Disease_MESH_D021441 exists .
+p:Disease_MESH_D010190 exists .
+p:Disease_MESH_D009369 exists .
+p:CellLine_CVCL_1723 exists .
+p:CellLine_CVCL_0186 exists .
+p:Gene_7291 exists .
+p:Gene_3570 exists .
+p:Gene_10014 exists .
+p:Gene_8320 exists .
+p:Gene_9734i exists .
+p:Chemical_MESH_C575255 exists .
+p:Chemical_UNKNOWN exists .
+p:Cytotoxic_T_Lymphocyte exists .
+p:Histone exists .
+p:Acetylated_Protein exists .
+p:Protein_Protein_Interaction_Network exists .
+p:Connectivity_Map exists .
+p:Chemical_Library exists .
+p:Inhibitor exists .
+p:Small_Molecule exists .
+p:Immunophenotype exists .
+p:Genomic_Dataset exists .
+p:High_Cytotoxic_T_Lymphocyte_Killing_Activity exists .
+p:Favourable_Clinical_Outcome exists .
+p:Low_Cytotoxic_T_Lymphocyte_Killing_Activity exists .
+p:Differentially_Expressed_Gene exists .
+p:CTL_Resistant_Cell exists .
+p:Parental_Cell exists .
+p:Histone_Deacetylase_Inhibitor exists .
+p:CTL_Mediated_Cytotoxicity exists .
+p:In_Silico_Study exists .
+p:In_Vitro_Study exists .
+p:Therapeutic_Strategy exists .
+p:Molecular_Mechanistic_Study exists .
+p:Animal_Study exists .
+p:Clinical_Evaluation exists .
+p:Combined_Therapy exists .
+
+p:Disease_MESH_D021441 v:have_prognosis_not_improved_over_50_years .
+p:Disease_MESH_D009369 v:be_associated_with p:Favourable_Clinical_Outcome .
+p:Disease_MESH_D009369 v:have_high_cytotoxic_T_lymphocyte_killing_activity .
+p:Differentially_Expressed_Gene v:be_associated_with p:Gene_7291 .
+p:Differentially_Expressed_Gene v:be_associated_with p:Gene_3570 .
+p:Differentially_Expressed_Gene v:be_associated_with p:Gene_10014 .
+p:Differentially_Expressed_Gene v:be_associated_with p:Gene_8320 .
+p:Differentially_Expressed_Gene v:be_associated_with p:Gene_9734i .
+p:Small_Molecule v:restore p:CTL_sensitivity .
+p:Inhibitor v:target p:Parental_Cell .
+p:Inhibitor v:target p:CTL_Resistant_Cell .
+p:CTL_Resistant_Cell v:have_higher_expression_of p:Histone .
+p:CTL_Resistant_Cell v:have_higher_expression_of p:Acetylated_Protein .
+p:Histone_Deacetylase_Inhibitor v:inhibit p:Gene_9734i .
+p:Histone_Deacetylase_Inhibitor v:restore p:CTL_sensitivity .
+p:Chemical_MESH_C575255 v:be_most_potent_inhibitor_of p:Gene_9734i .
+p:Chemical_UNKNOWN v:be_most_potent_inhibitor_of p:Gene_9734i .
+p:Gene_9734i v:inhibit p:CTL_resistance .
+p:Gene_9734i v:be_part_of p:Therapeutic_Strategy .
+p:CTL v:be_part_of p:Therapeutic_Strategy .
+p:Combined_Therapy v:be_promising .
+p:Combined_Therapy v:warrant p:Molecular_Mechanistic_Study .
+p:Combined_Therapy v:warrant p:Animal_Study .
+p:Combined_Therapy v:warrant p:Clinical_Evaluation ."

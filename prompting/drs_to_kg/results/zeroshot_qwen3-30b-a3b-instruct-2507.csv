@@ -1,0 +1,1061 @@
+abstract_id,kg
+1,"lkg:Entity_1 rdf:type lkg:Disease .
+lkg:Entity_1 lkg:containsEntity lkg:DRSBox_1 .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+
+lkg:Entity_2 rdf:type lkg:Disease .
+lkg:Entity_2 lkg:containsEntity lkg:DRSBox_2 .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+
+lkg:Entity_3 rdf:type lkg:Chemical .
+lkg:Entity_3 lkg:containsEntity lkg:DRSBox_3 .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+
+lkg:Entity_4 rdf:type lkg:Chemical .
+lkg:Entity_4 lkg:containsEntity lkg:DRSBox_4 .
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lkg: <http://example.org/lkg#> .
+
+_:b0 a lkg:DRSBox ;
+    lkg:containsEntity ""Chemical_MESH_D000093542"" ;
+    lkg:containsEntity ""Disease_MESH_D010190"" ;
+    lkg:containsStatement _:s0 .
+
+_:s0 a rdf:Statement ;
+    rdf:subject ""Chemical_MESH_D000093542"" ;
+    rdf:predicate lkg:treat ;
+    rdf:object ""Disease_MESH_D010190"" .
+
+_:b1 a lkg:DRSBox ;
+    lkg:containsEntity ""Chemical_MESH_C000627770"" ;
+    lkg:containsEntity ""Disease_MESH_D010190"" ;
+    lkg:containsStatement _:s1 .
+
+_:s1 a rdf:Statement ;
+    rdf:subject ""Chemical_MESH_C000627770"" ;
+    rdf:predicate lkg:treat ;
+    rdf:object ""Disease_MESH_D010190"" ."
+2,@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lkg: <http://example.org/lkg#> .
+
+lkg:Gene_3835 rdf:type lkg:Gene .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Gene_3835 .
+
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Disease_MESH_D010190 .
+
+lkg:Chemical_MESH_C070243 rdf:type lkg:Chemical .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Chemical_MESH_C070243 .
+
+lkg:Gene_5604 rdf:type lkg:Gene .
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:DRSBox_4 lkg:containsEntity lkg:Gene_5604 .
+
+lkg:Gene_5605 rdf:type lkg:Gene .
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:DRSBox_5 lkg:containsEntity lkg:Gene_5605 .
+
+lkg:Gene_5595 rdf:type lkg:Gene .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Gene_5595 .
+
+lkg:Gene_5594 rdf:type lkg:Gene .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Gene_5594 .
+
+lkg:Gene_1033 rdf:type lkg:Gene .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Gene_1033 .
+
+lkg:Gene_1026 rdf:type lkg:Gene .
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:DRSBox_4 lkg:containsEntity lkg:Gene_1026 .
+
+lkg:Species_9606 rdf:type lkg:Species .
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:DRSBox_5 lkg:containsEntity lkg:Species_9606 .
+
+lkg:CellLine_CVCL_0480 rdf:type lkg:CellLine .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:CellLine_CVCL_0480 .
+
+lkg:CellLine_CVCL_0428 rdf:type lkg:CellLine .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:CellLine_CVCL_0428 .
+
+lkg:Gene_5609 rdf:type lkg:Gene .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Gene_5609 .
+
+@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:b1 a lkg:DRSBox ;
+    lkg:containsEntity <Gene_3835> ;
+    lkg:containsEntity <Disease_MESH_D010190> ;
+    lkg:containsStatement _:s1 .
+
+_:s1 a rdf:Statement ;
+    rdf:subject <Gene_3835> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <Disease_MESH_D010190> .
+
+_:b2 a lkg:DRSBox ;
+    lkg:containsEntity <Gene_5609> ;
+    lkg:containsEntity <Disease_MESH_D010190> ;
+    lkg:containsStatement _:s2 .
+
+_:s2 a rdf:Statement ;
+    rdf:subject <Gene_5609> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <Disease_MESH_D010190> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_5594> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D010190> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_5594> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Disease_MESH_D010190> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_1026> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D010190> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_1026> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Disease_MESH_D010190> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_1026> ;
+    lkg:containsEntity <https://example.org/Gene_3835> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_1026> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_3835> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_1026> ;
+    lkg:containsEntity <https://example.org/Gene_5609> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_1026> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_5609> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_1026> ;
+    lkg:containsEntity <https://example.org/Gene_5594> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_1026> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_5594> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_1033> ;
+    lkg:containsEntity <https://example.org/Gene_3835> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_1033> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_3835> .
+
+<http://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Gene_3835> ;
+    lkg:containsEntity <http://example.org/Gene_5604> ;
+    lkg:containsStatement <http://example.org/Statement_1> .
+
+<http://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <http://example.org/Gene_3835> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_5604> .
+
+<http://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Gene_3835> ;
+    lkg:containsEntity <http://example.org/Gene_5605> ;
+    lkg:containsStatement <http://example.org/Statement_2> .
+
+<http://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <http://example.org/Gene_3835> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_5605> .
+
+@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:b1 a lkg:DRSBox ;
+    lkg:containsEntity <Gene_3835> ;
+    lkg:containsEntity <Gene_5609> ;
+    lkg:containsStatement _:s1 .
+
+_:s1 a rdf:Statement ;
+    rdf:subject <Gene_3835> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <Gene_5609> .
+
+_:b2 a lkg:DRSBox ;
+    lkg:containsEntity <Gene_3835> ;
+    lkg:containsEntity <Gene_5594> ;
+    lkg:containsStatement _:s2 .
+
+_:s2 a rdf:Statement ;
+    rdf:subject <Gene_3835> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <Gene_5594> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_3835> ;
+    lkg:containsEntity <https://example.org/Gene_5595> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_3835> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_5595> ."
+3,"lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+lkg:DRSBox_1 lkg:containsEntity lkg:Disease_MESH_D021441 .
+
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:Disease_MESH_D009369 rdf:type lkg:Disease .
+lkg:DRSBox_2 lkg:containsEntity lkg:Disease_MESH_D009369 .
+
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:Disease_MESH_D007565 rdf:type lkg:Disease .
+lkg:DRSBox_3 lkg:containsEntity lkg:Disease_MESH_D007565 .
+
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:Disease_MESH_D003967 rdf:type lkg:Disease .
+lkg:DRSBox_4 lkg:containsEntity lkg:Disease_MESH_D003967 .
+
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:Disease_MESH_D015431 rdf:type lkg:Disease .
+lkg:DRSBox_5 lkg:containsEntity lkg:Disease_MESH_D015431 .
+
+lkg:Entity_1 rdf:type lkg:Disease .
+lkg:Entity_2 rdf:type lkg:Disease .
+lkg:Entity_3 rdf:type lkg:Gene .
+lkg:Entity_4 rdf:type lkg:Species .
+lkg:Entity_5 rdf:type lkg:Chemical .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Entity_1 .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Entity_2 .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Entity_3 .
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:DRSBox_4 lkg:containsEntity lkg:Entity_4 .
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:DRSBox_5 lkg:containsEntity lkg:Entity_5 .
+
+@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+lkg:Chemical_MESH_D000069287 rdf:type lkg:Chemical ;
+    lkg:containsEntity lkg:DRSBox_1 .
+
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+
+lkg:Chemical_MESH_C582435 rdf:type lkg:Chemical ;
+    lkg:containsEntity lkg:DRSBox_2 .
+
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+
+lkg:Chemical_MESH_C560077 rdf:type lkg:Chemical ;
+    lkg:containsEntity lkg:DRSBox_3 .
+
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+
+<http://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Disease_MESH_D001660> ;
+    lkg:containsEntity <http://example.org/Gene_174> ;
+    lkg:containsStatement <http://example.org/Statement_1> .
+
+<http://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <http://example.org/Disease_MESH_D001660> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_174> .
+
+<http://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Disease_MESH_D021441> ;
+    lkg:containsEntity <http://example.org/Gene_174> ;
+    lkg:containsStatement <http://example.org/Statement_2> .
+
+<http://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <http://example.org/Disease_MESH_D021441> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_174> .
+
+<http://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Disease_MESH_D041781> ;
+    lkg:containsEntity <http://example.org/Gene_174> ;
+    lkg:containsStatement <http://example.org/Statement_1> .
+
+<http://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <http://example.org/Disease_MESH_D041781> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_174> .
+
+<http://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Disease_MESH_D007565> ;
+    lkg:containsEntity <http://example.org/Gene_174> ;
+    lkg:containsStatement <http://example.org/Statement_2> .
+
+<http://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <http://example.org/Disease_MESH_D007565> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_174> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D000069287> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D003967> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_D000069287> ;
+    rdf:predicate lkg:cause ;
+    rdf:object <https://example.org/Disease_MESH_D003967> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D000093542> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D003967> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_D000093542> ;
+    rdf:predicate lkg:cause ;
+    rdf:object <https://example.org/Disease_MESH_D003967> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D000093542> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D015431> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D015431> ;
+    rdf:predicate lkg:cause ;
+    rdf:object <https://example.org/Chemical_MESH_D000093542> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D000069287> ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D000093542> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_D000069287> ;
+    rdf:predicate lkg:cotreat ;
+    rdf:object <https://example.org/Chemical_MESH_D000093542> .
+
+<http://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Chemical_MESH_C582435> ;
+    lkg:containsEntity <http://example.org/Chemical_MESH_C560077> ;
+    lkg:containsStatement <http://example.org/Statement_1> .
+
+<http://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <http://example.org/Chemical_MESH_C582435> ;
+    rdf:predicate lkg:cotreat ;
+    rdf:object <http://example.org/Chemical_MESH_C560077> .
+
+<http://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Chemical_MESH_D000069287> ;
+    lkg:containsEntity <http://example.org/Disease_MESH_D021441> ;
+    lkg:containsStatement <http://example.org/Statement_2> .
+
+<http://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <http://example.org/Chemical_MESH_D000069287> ;
+    rdf:predicate lkg:treat ;
+    rdf:object <http://example.org/Disease_MESH_D021441> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D000093542> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_D000093542> ;
+    rdf:predicate lkg:treat ;
+    rdf:object <https://example.org/Disease_MESH_D021441> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D000093542> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D007565> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_D000093542> ;
+    rdf:predicate lkg:treat ;
+    rdf:object <https://example.org/Disease_MESH_D007565> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_C582435> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_C582435> ;
+    rdf:predicate lkg:treat ;
+    rdf:object <https://example.org/Disease_MESH_D021441> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_C582435> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D003967> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_C582435> ;
+    rdf:predicate lkg:treat ;
+    rdf:object <https://example.org/Disease_MESH_D003967> .
+
+@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+lkg:DRSBox_1 a lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C582435 ;
+    lkg:containsEntity lkg:Disease_MESH_D015431 ;
+    lkg:containsStatement lkg:Statement_1 .
+
+lkg:Statement_1 a rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C582435 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D015431 .
+
+lkg:DRSBox_2 a lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_C560077 ;
+    lkg:containsEntity lkg:Disease_MESH_D021441 ;
+    lkg:containsStatement lkg:Statement_2 .
+
+lkg:Statement_2 a rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_C560077 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D021441 .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_C560077> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D003967> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_C560077> ;
+    rdf:predicate lkg:treat ;
+    rdf:object <https://example.org/Disease_MESH_D003967> ."
+4,"@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+lkg:Entity_0 rdf:type lkg:Disease .
+lkg:Entity_0 lkg:containsEntity lkg:DRSBox_0 .
+lkg:DRSBox_0 rdf:type lkg:DRSBox .
+
+lkg:Entity_1 rdf:type lkg:Disease .
+lkg:Entity_1 lkg:containsEntity lkg:DRSBox_1 .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+
+lkg:Entity_2 rdf:type lkg:Species .
+lkg:Entity_2 lkg:containsEntity lkg:DRSBox_2 .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+
+lkg:Entity_3 rdf:type lkg:Gene .
+lkg:Entity_3 lkg:containsEntity lkg:DRSBox_3 .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+
+lkg:Entity_4 rdf:type lkg:Gene .
+lkg:Entity_4 lkg:containsEntity lkg:DRSBox_4 .
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+
+lkg:Gene_10551 rdf:type lkg:Gene .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Gene_10551 .
+
+lkg:Gene_7031 rdf:type lkg:Gene .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Gene_7031 .
+
+lkg:Gene_1356 rdf:type lkg:Gene .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Gene_1356 .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D009369> ;
+    lkg:containsEntity <https://example.org/Gene_7103> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D009369> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_7103> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D010190> ;
+    lkg:containsEntity <https://example.org/Gene_1356> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D010190> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_1356> .
+
+@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:b0 a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/entity/Disease_MESH_D010190> ;
+    lkg:containsEntity <http://example.org/entity/Gene_7103> ;
+    lkg:containsStatement _:s0 .
+
+_:s0 a rdf:Statement ;
+    rdf:subject <http://example.org/entity/Disease_MESH_D010190> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/entity/Gene_7103> .
+
+_:b1 a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/entity/Disease_MESH_D010190> ;
+    lkg:containsEntity <http://example.org/entity/Gene_10551> ;
+    lkg:containsStatement _:s1 .
+
+_:s1 a rdf:Statement ;
+    rdf:subject <http://example.org/entity/Disease_MESH_D010190> ;
+    rdf:predicate lkg:stimulate ;
+    rdf:object <http://example.org/entity/Gene_10551> .
+    
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D010190> ;
+    lkg:containsEntity <https://example.org/Gene_10631> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D010190> ;
+    rdf:predicate lkg:stimulate ;
+    rdf:object <https://example.org/Gene_10631> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D010190> ;
+    lkg:containsEntity <https://example.org/Gene_7031> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D010190> ;
+    rdf:predicate lkg:stimulate ;
+    rdf:object <https://example.org/Gene_7031> ."
+5,"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix lkg: <http://example.org/lkg#> .
+
+lkg:Entity_0 rdf:type lkg:Disease .
+lkg:Entity_0 a lkg:DRSBox .
+lkg:Entity_0 lkg:containsEntity lkg:Entity_0 .
+
+lkg:Entity_1 rdf:type lkg:Disease .
+lkg:Entity_1 a lkg:DRSBox .
+lkg:Entity_1 lkg:containsEntity lkg:Entity_1 .
+
+lkg:Entity_2 rdf:type lkg:Gene .
+lkg:Entity_2 a lkg:DRSBox .
+lkg:Entity_2 lkg:containsEntity lkg:Entity_2 .
+
+lkg:Entity_3 rdf:type lkg:Gene .
+lkg:Entity_3 a lkg:DRSBox .
+lkg:Entity_3 lkg:containsEntity lkg:Entity_3 .
+
+lkg:Entity_4 rdf:type lkg:Gene .
+lkg:Entity_4 a lkg:DRSBox .
+lkg:Entity_4 lkg:containsEntity lkg:Entity_4 .
+
+lkg:Gene_653108 rdf:type lkg:Gene .
+lkg:Variant_3845_pG12C rdf:type lkg:Variant .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Gene_653108 .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Variant_3845_pG12C .
+
+<http://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Disease_MESH_D021441> ;
+    lkg:containsEntity <http://example.org/Gene_3604> ;
+    lkg:containsStatement <http://example.org/Statement_1> .
+
+<http://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <http://example.org/Disease_MESH_D021441> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_3604> .
+
+<http://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Disease_MESH_D021441> ;
+    lkg:containsEntity <http://example.org/Gene_3569> ;
+    lkg:containsStatement <http://example.org/Statement_2> .
+
+<http://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <http://example.org/Disease_MESH_D021441> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_3569> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/A> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/A> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Disease_MESH_D021441> ."
+6,"@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+lkg:Disease_0 rdf:type lkg:Disease .
+lkg:DRSBox_0 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_0 .
+
+lkg:Disease_1 rdf:type lkg:Disease .
+lkg:DRSBox_1 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_1 .
+
+lkg:Disease_2 rdf:type lkg:Disease .
+lkg:DRSBox_2 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_2 .
+
+lkg:Disease_3 rdf:type lkg:Disease .
+lkg:DRSBox_3 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Disease_3 .
+
+lkg:Chemical_0 rdf:type lkg:Chemical .
+lkg:DRSBox_4 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_0 .
+
+lkg:Gene_7058 rdf:type lkg:Gene .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Gene_7058 .
+
+lkg:Gene_5168 rdf:type lkg:Gene .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Gene_5168 .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_C032881> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D021441> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Chemical_MESH_C032881> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsEntity <https://example.org/Gene_7058> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D021441> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_7058> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/A> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/A> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Disease_MESH_D021441> ."
+7,"lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Disease_MESH_D021441 .
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Disease_MESH_D050500 .
+lkg:Disease_MESH_D050500 rdf:type lkg:Disease .
+
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Disease_MESH_D010195 .
+lkg:Disease_MESH_D010195 rdf:type lkg:Disease .
+
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:DRSBox_4 lkg:containsEntity lkg:Species_9606 .
+lkg:Species_9606 rdf:type lkg:Species .
+
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:DRSBox_5 lkg:containsEntity lkg:Chemical_MESH_D000438 .
+lkg:Chemical_MESH_D000438 rdf:type lkg:Chemical .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D000438> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D010195> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_D000438> ;
+    rdf:predicate lkg:cause ;
+    rdf:object <https://example.org/Disease_MESH_D010195> ."
+8,"lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Disease_MESH_D021441 .
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Disease_MESH_D001943 .
+lkg:Disease_MESH_D001943 rdf:type lkg:Disease .
+
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Disease_MESH_D009369 .
+lkg:Disease_MESH_D009369 rdf:type lkg:Disease .
+
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:DRSBox_4 lkg:containsEntity lkg:Gene_406948 .
+lkg:Gene_406948 rdf:type lkg:Gene .
+
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:DRSBox_5 lkg:containsEntity lkg:Gene_100861402 .
+lkg:Gene_100861402 rdf:type lkg:Gene .
+
+lkg:Gene_253782 rdf:type lkg:Gene .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Gene_253782 .
+
+lkg:Gene_2260 rdf:type lkg:Gene .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Gene_2260 .
+
+lkg:Species_9606 rdf:type lkg:Species .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Species_9606 .
+
+<http://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Disease_MESH_D001943> ;
+    lkg:containsEntity <http://example.org/Gene_253782> ;
+    lkg:containsStatement <http://example.org/Statement_1> .
+
+<http://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <http://example.org/Disease_MESH_D001943> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_253782> .
+
+<http://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <http://example.org/Disease_MESH_D001943> ;
+    lkg:containsEntity <http://example.org/Gene_100861402> ;
+    lkg:containsStatement <http://example.org/Statement_2> .
+
+<http://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <http://example.org/Disease_MESH_D001943> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <http://example.org/Gene_100861402> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsEntity <https://example.org/Gene_253782> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D021441> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_253782> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsEntity <https://example.org/Gene_100861402> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D021441> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_100861402> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsEntity <https://example.org/Gene_2260> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D021441> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_2260> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsEntity <https://example.org/Gene_406948> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D021441> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_406948> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D009369> ;
+    lkg:containsEntity <https://example.org/Gene_253782> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D009369> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_253782> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D009369> ;
+    lkg:containsEntity <https://example.org/Gene_2260> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D009369> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_2260> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_406948> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D009369> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Disease_MESH_D009369> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_406948> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_406948> ;
+    lkg:containsEntity <https://example.org/Gene_100861402> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_100861402> ;
+    rdf:predicate lkg:associate ;
+    rdf:object <https://example.org/Gene_406948> .
+
+@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+lkg:DRSBox_1 a lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_2260 ;
+    lkg:containsEntity lkg:Gene_406948 ;
+    lkg:containsStatement lkg:Statement_1 .
+
+lkg:Statement_1 a rdf:Statement ;
+    rdf:subject lkg:Gene_2260 ;
+    rdf:predicate lkg:associate ;
+    rdf:object lkg:Gene_406948 .
+
+lkg:DRSBox_2 a lkg:DRSBox ;
+    lkg:containsEntity lkg:Gene_253782 ;
+    lkg:containsEntity lkg:Gene_406948 ;
+    lkg:containsStatement lkg:Statement_2 .
+
+lkg:Statement_2 a rdf:Statement ;
+    rdf:subject lkg:Gene_253782 ;
+    rdf:predicate lkg:interact ;
+    rdf:object lkg:Gene_406948 .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_100861402> ;
+    lkg:containsEntity <https://example.org/Gene_2260> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_100861402> ;
+    rdf:predicate lkg:positiveCorrelate ;
+    rdf:object <https://example.org/Gene_2260> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Gene_2260> ;
+    lkg:containsEntity <https://example.org/Gene_253782> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Gene_2260> ;
+    rdf:predicate lkg:positiveCorrelate ;
+    rdf:object <https://example.org/Gene_253782> ."
+9,"@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease ;
+    lkg:containsEntity lkg:DRSBox_1 .
+
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+
+lkg:Disease_MESH_D009369 rdf:type lkg:Disease ;
+    lkg:containsEntity lkg:DRSBox_2 .
+
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+
+lkg:Chemical_MESH_D005472 rdf:type lkg:Chemical ;
+    lkg:containsEntity lkg:DRSBox_3 .
+
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+
+lkg:Chemical_MESH_D000093542 rdf:type lkg:Chemical ;
+    lkg:containsEntity lkg:DRSBox_4 .
+
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+
+lkg:Chemical_MESH_D017239 rdf:type lkg:Chemical ;
+    lkg:containsEntity lkg:DRSBox_5 .
+
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+
+lkg:Chemical_MESH_D002945 rdf:type lkg:Chemical .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Chemical_MESH_D002945 .
+
+lkg:Species_9606 rdf:type lkg:Species .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Species_9606 .
+
+lkg:CellLine_CVCL_0152 rdf:type lkg:CellLine .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:CellLine_CVCL_0152 .
+
+lkg:CellLine_CVCL_0186 rdf:type lkg:CellLine .
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:DRSBox_4 lkg:containsEntity lkg:CellLine_CVCL_0186 .
+
+lkg:CellLine_CVCL_0237 rdf:type lkg:CellLine .
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:DRSBox_5 lkg:containsEntity lkg:CellLine_CVCL_0237 .
+
+lkg:CellLine_CVCL_1119 rdf:type lkg:CellLine .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:CellLine_CVCL_1119 .
+
+lkg:CellLine_CVCL_0313 rdf:type lkg:CellLine .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:CellLine_CVCL_0313 .
+
+lkg:CellLine_CVCL_0428 rdf:type lkg:CellLine .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:CellLine_CVCL_0428 .
+
+lkg:CellLine_CVCL_0480 rdf:type lkg:CellLine .
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:DRSBox_4 lkg:containsEntity lkg:CellLine_CVCL_0480 .
+
+lkg:CellLine_CVCL_1847 rdf:type lkg:CellLine .
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:DRSBox_5 lkg:containsEntity lkg:CellLine_CVCL_1847 .
+
+lkg:CellLine_CVCL_1723 rdf:type lkg:CellLine .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:CellLine_CVCL_1723 .
+
+lkg:CellLine_CVCL_4056 rdf:type lkg:CellLine .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:CellLine_CVCL_4056 .
+
+@prefix lkg: <http://example.org/lkg#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:b0 a lkg:DRSBox ;
+    lkg:containsEntity <Chemical_MESH_D000093542> ;
+    lkg:containsEntity <Chemical_MESH_D017239> ;
+    lkg:containsStatement _:s0 .
+
+_:s0 a rdf:Statement ;
+    rdf:subject <Chemical_MESH_D000093542> ;
+    rdf:predicate lkg:compare ;
+    rdf:object <Chemical_MESH_D017239> .
+
+_:b1 a lkg:DRSBox ;
+    lkg:containsEntity <Chemical_MESH_D005472> ;
+    lkg:containsEntity <Disease_MESH_D021441> ;
+    lkg:containsStatement _:s1 .
+
+_:s1 a rdf:Statement ;
+    rdf:subject <Chemical_MESH_D005472> ;
+    rdf:predicate lkg:treat ;
+    rdf:object <Disease_MESH_D021441> .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D000093542> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_D000093542> ;
+    rdf:predicate lkg:treat ;
+    rdf:object <https://example.org/Disease_MESH_D021441> .
+
+<https://example.org/DRSBox_2> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_D017239> ;
+    lkg:containsEntity <https://example.org/Disease_MESH_D021441> ;
+    lkg:containsStatement <https://example.org/Statement_2> .
+
+<https://example.org/Statement_2> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_D017239> ;
+    rdf:predicate lkg:treat ;
+    rdf:object <https://example.org/Disease_MESH_D021441> ."
+10,"lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Disease_MESH_D021441 .
+lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Disease_MESH_D010190 .
+lkg:Disease_MESH_D010190 rdf:type lkg:Disease .
+
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Disease_MESH_D009369 .
+lkg:Disease_MESH_D009369 rdf:type lkg:Disease .
+
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:DRSBox_4 lkg:containsEntity lkg:Disease_MESH_D064420 .
+lkg:Disease_MESH_D064420 rdf:type lkg:Disease .
+
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:DRSBox_5 lkg:containsEntity lkg:Chemical_MESH_C575255 .
+lkg:Chemical_MESH_C575255 rdf:type lkg:Chemical .
+
+lkg:CellLine_CVCL_1723 rdf:type lkg:CellLine .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:CellLine_CVCL_1723 .
+
+lkg:CellLine_CVCL_0186 rdf:type lkg:CellLine .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:CellLine_CVCL_0186 .
+
+lkg:Gene_7291 rdf:type lkg:Gene .
+lkg:DRSBox_3 rdf:type lkg:DRSBox .
+lkg:DRSBox_3 lkg:containsEntity lkg:Gene_7291 .
+
+lkg:Gene_3570 rdf:type lkg:Gene .
+lkg:DRSBox_4 rdf:type lkg:DRSBox .
+lkg:DRSBox_4 lkg:containsEntity lkg:Gene_3570 .
+
+lkg:Gene_10014 rdf:type lkg:Gene .
+lkg:DRSBox_5 rdf:type lkg:DRSBox .
+lkg:DRSBox_5 lkg:containsEntity lkg:Gene_10014 .
+
+lkg:Gene_8320 rdf:type lkg:Gene .
+lkg:DRSBox_1 rdf:type lkg:DRSBox .
+lkg:DRSBox_1 lkg:containsEntity lkg:Gene_8320 .
+
+lkg:Gene_9734 rdf:type lkg:Gene .
+lkg:DRSBox_2 rdf:type lkg:DRSBox .
+lkg:DRSBox_2 lkg:containsEntity lkg:Gene_9734 .
+
+<https://example.org/DRSBox_1> a lkg:DRSBox ;
+    lkg:containsEntity <https://example.org/Chemical_MESH_C575255> ;
+    lkg:containsEntity <https://example.org/Gene_9734> ;
+    lkg:containsStatement <https://example.org/Statement_1> .
+
+<https://example.org/Statement_1> a rdf:Statement ;
+    rdf:subject <https://example.org/Chemical_MESH_C575255> ;
+    rdf:predicate lkg:negativeCorrelate ;
+    rdf:object <https://example.org/Gene_9734> ."

@@ -5,8 +5,11 @@ import re
 import pandas as pd
 
 gt_path = Path("./data/ace/ace_list.csv")
-pred_path = Path("./prompting/nl_to_ace/results/oneshot_gemma.csv")
-out_path = Path("./prompting/nl_to_ace/results/oneshot_gemma_eval.csv")
+model = "gemma-4-31b-it" # gemma-4-31b-it, qwen3-30b-a3b-instruct-2507
+prompt_type = "oneshot" # zeroshot, oneshot
+
+pred_path = Path(f"./prompting/nl_to_ace/results/{prompt_type}_{model}.csv")
+out_path = Path(f"./prompting/nl_to_ace/results/{prompt_type}_{model}_eval.csv")
 
 # Symmetric ACE relations: A pred B == B pred A
 SYMMETRIC = {

@@ -6,34 +6,124 @@ Through experiments of several prompting strategies with custom ontology on a cu
 Unstructured natural language in scientific publications masks the explicit logical connections between claims, premises, and evidence. Consequently, standard text analysis tools struggle to extract these underlying reasoning structures, hindering comprehensive knowledge synthesis.
  
 ## Features
-What makes your project stand out? Include screenshots, code snippets, logos, etc.
+![logical reconstruction pilepine](archive/visualization/workflow.png)
+In this work, we designed **NL → ACE → DRS → logical KG pipeline** converting  biomedical abstracts into five primary tasks as follow Attempto Controlled English (ACE), then Discourse Representation Structures (DRS), then RDF/Turtle knowledge graphs based on the **Custom ontology (`ontology.ttl`)**
 
 ## Code examples
-Include **very short code examples** that show what the project does as **concisely** as possible. Developers should be able to figure out **how** your project solves their problem by looking at the code examples. Make sure the API you are showing off is intuitive, and that your code is short and concise. See the [news-please project](https://github.com/fhamborg/news-please/blob/master/README.md#use-within-your-own-code-as-a-library) for example.
+All scripts assume the working directory is `logicalKG/`.
+
+### 1. Build ground truth data
+
+```bash
+python data/nl/nl_gen.py
+python data/ace/ace_gen.py
+python data/drs/drs_gen.py
+python data/kg/kg_gen.py
+```
+
+### 2. Run LLM prompting and evaluate
+
+```bash
+python prompting/nl_to_ace/test.py
+python prompting/nl_to_ace/eval.py
+python prompting/drs_to_kg/test.py # evaluation is done manually
+```
+
+### 3. Example through the pipeline
+
+NL (masked):
+
+```text
+Chemical_MESH_D000093542 treats Disease_MESH_D010190.
+```
+
+ACE:
+
+```text
+p:Chemical_MESH_D000093542 v:treat p:Disease_MESH_D010190 .
+```
+
+DRS:
+
+```text
+[A] predicate(A,treat,named(Chemical_MESH_D000093542),named(Disease_MESH_D010190))-1/6
+```
+
+KG:
+
+```turtle
+lkg:box_001 rdf:type lkg:DRSBox ;
+    lkg:containsEntity lkg:Chemical_MESH_D000093542 , lkg:Disease_MESH_D010190 ;
+    lkg:containsStatement lkg:stmt_001 .
+lkg:stmt_001 rdf:type rdf:Statement ;
+    rdf:subject lkg:Chemical_MESH_D000093542 ;
+    rdf:predicate lkg:treat ;
+    rdf:object lkg:Disease_MESH_D010190 .
+```
 
 ## Installation
-Provide step-by-step examples and descriptions of how to set up a development environment.
 
-## API reference
-For small projects with a simple enough API, include the reference docs in this README. For medium-sized and larger projects, provide a link to the API reference docs.
+### Requirements
+- Python 3.10+
+- Internet access is required to connect to the following external services: PubTator3 API (used in nl_gen.py), APE Web Service (used in drs_gen.py), and GWDG LLM API (used in test.py)
+
+### Setup
+```bash
+git clone https://github.com/JihooChung/logicalKG
+cd logicalKG
+pip install pandas requests matplotlib
+```
+
+### API key
+LLM prompting reads the key from `prompting/api_key.txt`:
+
+```text
+<your-gwdg-api-key>
+```
+**Do not commit this file if the repository is public.**
+
+### Working directory
+Run all scripts from `logicalKG/` so relative paths such as `./data/...` and `./prompting/...` resolve correctly.
+
 
 ## Tests
-Describe and show how to run the tests with code examples.
+Generation scripts are not unit tests. Set `model` and `prompt_type` at the top of each file, then run:
 
-## How to use and extend the project? (maybe)
-Include a step-by-step guide that enables others to use and extend your code for their projects. Whether this section is required and whether it should be part of the `README.md` or a separate file depends on your project. If the **very short** `Code Examples` from above comprehensively cover (despite being concise!) all the major functionality of your project already, this section can be omitted. **If you think that users/developers will need more information than the brief code examples above to fully understand your code, this section is mandatory.** If your project requires significant information on code reuse, place the information into a new `.md` file.
+```bash
+python prompting/nl_to_ace/test.py
+python prompting/drs_to_kg/test.py
+```
+
+Supported switches in the scripts:
+
+- `model`: `gemma-4-31b-it` or `qwen3-30b-a3b-instruct-2507` (any chat model available on GWDG SAIA)
+- `prompt_type`: `zeroshot` or `oneshot`
+
+Outputs are written to `prompting/.../results/{prompt_type}_{model}.csv`.
+
+Evaluate NL→ACE automatically:
+
+```bash
+python prompting/nl_to_ace/eval.py
+```
+
+Use the same `model` / `prompt_type` in `eval.py` as in `test.py`.  
+DRS→KG evaluation is **manual** (no `eval.py` in this repository).
+
+If an abstract is too long, `nl_to_ace/test.py` splits `nl` on newlines. Those rows must be merged by hand before evaluation.
+
+## How to use and extend
+1. Add papers to `data/data_list.csv` (same columns as the existing file).
+2. Rebuild gold data with the scripts in Code examples (`nl_gen` → `ace_gen` → `drs_gen` → `kg_gen`). ACE gold is edited in `data/ace/ace_gen_manual.txt` first.
+3. Edit or add prompt files under `prompting/nl_to_ace/` and `prompting/drs_to_kg/prompts/`.
+4. Point `test.py` at the new `model` / `prompt_type` and run generation again.
 
 ## Results
-If you performed evaluations as part of your project, include your preliminary results that you also show in your final project presentation, e.g., precision, recall, F1 measure and/or figures highlighting what your project does. If applicable, briefly describe the dataset your created or used first before presenting the evaluated use cases and the results.
-
-If you are about to complete your thesis, include the most important findings (precision/recall/F1 measure) and refer to the corresponding pages in your thesis document.
+We evaluate Gemma (`gemma-4-31b-it`) and Qwen (`qwen3-30b-a3b-instruct-2507`) under zero-shot and one-shot prompting on 10 gold abstracts. Metrics are TP / FP / FN, precision, recall, F1, hallucination (FP / (TP+FP)), and omission (FN / (TP+FN)).
+**Table 1. NL→ACE.** Line-level match against gold ACE. One-shot Gemma is best (F1 0.630). Qwen over-generates (high FP / hallucination), so precision stays low even with one-shot.
+![NL-to-ACE results](archive/visualization/nltoace.png)
+**Table 2. DRS→KG.** Triple-level match against gold Turtle (manual scoring). One-shot helps both models a lot: Gemma reaches F1 0.950, Qwen 1.000. Zero-shot stays weak because of format and ontology errors.
+![DRS-to-KG results](archive/visualization/drstokg.png)
 
 ## License
-Include the project's license. Usually, we suggest MIT or Apache. Ask your supervisor. For example:
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use news-please except in compliance with the License. A copy of the License is included in the project, see the file [LICENSE](LICENSE).
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License
-
-## License of this readme-template (remove this once you replaced this readme-template with your own content)
-This file itself is partially based on [this file](https://gist.github.com/sujinleeme/ec1f50bb0b6081a0adcf9dd84f4e6271). 
+This project is licensed under the MIT License. See [LICENSE](LICENSE).

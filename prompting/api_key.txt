@@ -1,1 +1,1 @@
-YOUR API KEY
+<your-gwdg-api-key>

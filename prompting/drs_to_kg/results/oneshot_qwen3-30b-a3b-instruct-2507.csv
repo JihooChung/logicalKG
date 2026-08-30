@@ -527,7 +527,7 @@ lkg:STMT_a4r3_02 rdf:type rdf:Statement ;
     rdf:subject lkg:Disease_MESH_D010190 ;
     rdf:predicate lkg:stimulate ;
     rdf:object lkg:Gene_7031 ."
-"lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
+5,"lkg:Disease_MESH_D021441 rdf:type lkg:Disease .
 
 lkg:DRS_a5e1_01 rdf:type lkg:DRSBox ;
     lkg:containsEntity lkg:Disease_MESH_D021441 .

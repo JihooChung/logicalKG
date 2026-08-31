@@ -2,22 +2,25 @@ import requests
 import re
 import pandas as pd
 from pathlib import Path
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--input_path", type=str, default="./data/nl/nl_list.csv")
+parser.add_argument("--model", type=str, default="gemma-4-31b-it")
+parser.add_argument("--prompt_type", type=str, default="oneshot")
+parser.add_argument("--output_path", type=str, default="./prompting/nl_to_ace/results/{prompt_type}_{model}.csv")
+parser.add_argument("--api_key_path", type=str, default="./prompting/api_key.txt")
+parser.add_argument("--prompt_path", type=str, default="./prompting/nl_to_ace/{prompt_type}_prompt.txt")
+args = parser.parse_args()
 
 url = "https://chat-ai.academiccloud.de/v1/chat/completions"
 
-api_key_path = "./prompting/api_key.txt"
-nl_list_path = "./data/nl/nl_list.csv"
+prompt_path = Path(args.prompt_path.format(prompt_type=args.prompt_type))
+out_path = Path(args.output_path.format(prompt_type=args.prompt_type, model=args.model))
 
-model = "gemma-4-31b-it" # gemma-4-31b-it, qwen3-30b-a3b-instruct-2507
-prompt_type = "oneshot" # zeroshot, oneshot
-prompt_path = f"./prompting/nl_to_ace/{prompt_type}_prompt.txt"
+df = pd.read_csv(args.input_path)
 
-out_path = Path(f"./prompting/nl_to_ace/results/{prompt_type}_{model}.csv")
-
-
-df = pd.read_csv(nl_list_path)
-
-with open(api_key_path, "r") as file:
+with open(args.api_key_path, "r") as file:
     api_key = file.read().strip()
 
 with open(prompt_path, "r") as file:
@@ -38,7 +41,7 @@ def clean_ace_text(ace_text):
 
 def run_convert(prompt, nl, abstract_id, results):
     data = {
-        "model": model,
+        "model": args.model,
         "messages": [
             {"role": "system", "content": prompt},
             {"role": "user", "content": nl},

@@ -9,27 +9,7 @@ Unstructured natural language in scientific publications masks the explicit logi
 ![logical reconstruction pilepine](archive/visualization/workflow.png)
 In this work, we designed **NL → ACE → DRS → logical KG pipeline** converting  biomedical abstracts into five primary tasks as follow Attempto Controlled English (ACE), then Discourse Representation Structures (DRS), then RDF/Turtle knowledge graphs based on the **Custom ontology (`ontology.ttl`)**
 
-## Code examples
-All scripts assume the working directory is `logicalKG/`.
-
-### 1. Build ground truth data
-
-```bash
-python data/nl/nl_gen.py
-python data/ace/ace_gen.py
-python data/drs/drs_gen.py
-python data/kg/kg_gen.py
-```
-
-### 2. Run LLM prompting and evaluate
-
-```bash
-python prompting/nl_to_ace/test.py
-python prompting/nl_to_ace/eval.py
-python prompting/drs_to_kg/test.py # evaluation is done manually
-```
-
-### 3. Example through the pipeline
+### Example through the pipeline
 
 NL (masked):
 
@@ -61,6 +41,30 @@ lkg:stmt_001 rdf:type rdf:Statement ;
     rdf:object lkg:Disease_MESH_D010190 .
 ```
 
+
+## Code examples
+All scripts assume the working directory is `logicalKG/`.
+
+### 1. Build ground truth data
+
+```bash
+python data/nl/nl_gen.py
+python data/ace/ace_gen.py
+python data/drs/drs_gen.py
+python data/kg/kg_gen.py
+```
+
+### 2. Run LLM prompting and evaluate
+
+```bash
+python prompting/nl_to_ace/test.py --model gemma-4-31b-it --prompt_type oneshot
+python prompting/nl_to_ace/eval.py --model gemma-4-31b-it --prompt_type oneshot
+python prompting/drs_to_kg/test.py --model gemma-4-31b-it --prompt_type oneshot
+```
+
+Omit the flags to use the script defaults. `eval.py` must use the same `--model` and `--prompt_type` as `test.py`. DRS-to-KG scoring is manual.
+
+
 ## Installation
 
 ### Requirements
@@ -87,36 +91,26 @@ Run all scripts from `logicalKG/` so relative paths such as `./data/...` and `./
 
 
 ## Tests
-Generation scripts are not unit tests. Set `model` and `prompt_type` at the top of each file, then run:
+Generation scripts are not unit tests. Pass `--model` and `--prompt_type` (defaults: `gemma-4-31b-it`, `oneshot`):
 
 ```bash
-python prompting/nl_to_ace/test.py
-python prompting/drs_to_kg/test.py
+python prompting/nl_to_ace/test.py --model gemma-4-31b-it --prompt_type oneshot
+python prompting/drs_to_kg/test.py --model gemma-4-31b-it --prompt_type oneshot
+python prompting/nl_to_ace/eval.py --model gemma-4-31b-it --prompt_type oneshot
 ```
 
-Supported switches in the scripts:
-
-- `model`: `gemma-4-31b-it` or `qwen3-30b-a3b-instruct-2507` (any chat model available on GWDG SAIA)
+- `model`: `gemma-4-31b-it`, `qwen3-30b-a3b-instruct-2507`, or another GWDG SAIA chat model
 - `prompt_type`: `zeroshot` or `oneshot`
 
-Outputs are written to `prompting/.../results/{prompt_type}_{model}.csv`.
+Outputs go to `prompting/.../results/{prompt_type}_{model}.csv`. Use the same flags for `eval.py` as for `test.py`. DRS→KG evaluation is **manual**.
 
-Evaluate NL→ACE automatically:
-
-```bash
-python prompting/nl_to_ace/eval.py
-```
-
-Use the same `model` / `prompt_type` in `eval.py` as in `test.py`.  
-DRS→KG evaluation is **manual** (no `eval.py` in this repository).
-
-If an abstract is too long, `nl_to_ace/test.py` splits `nl` on newlines. Those rows must be merged by hand before evaluation.
+If an abstract is too long, `nl_to_ace/test.py` splits `nl` on newlines; merge those rows by hand before evaluation.
 
 ## How to use and extend
 1. Add papers to `data/data_list.csv` (same columns as the existing file).
 2. Rebuild gold data with the scripts in Code examples (`nl_gen` → `ace_gen` → `drs_gen` → `kg_gen`). ACE gold is edited in `data/ace/ace_gen_manual.txt` first.
 3. Edit or add prompt files under `prompting/nl_to_ace/` and `prompting/drs_to_kg/prompts/`.
-4. Point `test.py` at the new `model` / `prompt_type` and run generation again.
+4. Rerun generation with `--model` / `--prompt_type` (and optional `--input_path` / `--output_path`).
 
 ## Results
 We evaluate Gemma (`gemma-4-31b-it`) and Qwen (`qwen3-30b-a3b-instruct-2507`) under zero-shot and one-shot prompting on 10 gold abstracts. Metrics are TP / FP / FN, precision, recall, F1, hallucination (FP / (TP+FP)), and omission (FN / (TP+FN)).

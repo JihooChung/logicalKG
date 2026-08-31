@@ -2,8 +2,15 @@ import re
 from pathlib import Path
 
 import pandas as pd
+import argparse
 
-manual_path = Path("./data/ace/ace_gen_manual.txt")
+parser = argparse.ArgumentParser()
+parser.add_argument("--input_path", type=str, default="./data/ace/ace_gen_manual.txt")
+parser.add_argument("--output_path", type=str, default="./data/ace/ace_list.csv")
+parser.add_argument("--data_list_path", type=str, default="./data/data_list.csv")
+args = parser.parse_args()
+
+manual_path = Path(args.input_path)
 text = manual_path.read_text(encoding="utf-8")
 
 rows = []
@@ -43,11 +50,11 @@ for line in text.splitlines():
 saving_ace()
 
 ace_df = pd.DataFrame(rows)[["abstract_id", "ace"]]
-ace_df.to_csv("./data/ace/ace_list.csv", index=False)
+ace_df.to_csv(args.output_path, index=False)
 
-data_df = pd.read_csv("./data/data_list.csv")
+data_df = pd.read_csv(args.data_list_path)
 counts = pd.DataFrame(rows).set_index("abstract_id")[["entities", "relations"]]
 data_df = data_df.set_index("abstract_id")
 data_df.update(counts)
 data_df = data_df.reset_index()
-data_df.to_csv("./data/data_list.csv", index=False)
+data_df.to_csv(args.data_list_path, index=False)

@@ -1,6 +1,13 @@
 import re
 import requests
 import pandas as pd
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--input_path", type=str, default="./data/data_list.csv")
+parser.add_argument("--output_path", type=str, default="./data/nl/nl_list.csv")
+parser.add_argument("--entity_map_path", type=str, default="./data/nl/entity_dict.csv")
+args = parser.parse_args()
 
 def clean_entity_id(entity_type, identifier):
     identifier = str(identifier)
@@ -19,7 +26,7 @@ def clean_entity_id(entity_type, identifier):
         entity_id = "UNKNOWN"
     return f"{entity_type}_{entity_id}"
 
-df = pd.read_csv("./data/data_list.csv")
+df = pd.read_csv(args.input_path)
 
 nl_rows = []
 entity_map_rows = []
@@ -89,5 +96,5 @@ for index, row in df.iterrows():
     else:
         print(f"Error: {response.status_code}")
 
-pd.DataFrame(nl_rows).to_csv("./data/nl/nl_list.csv", index=False)
-pd.DataFrame(entity_map_rows).to_csv("./data/nl/entity_dict.csv", index=False)
+pd.DataFrame(nl_rows).to_csv(args.output_path, index=False)
+pd.DataFrame(entity_map_rows).to_csv(args.entity_map_path, index=False)

@@ -1,8 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
+import argparse
 
-df = pd.read_csv("./data/data_list.csv")
+parser = argparse.ArgumentParser()
+parser.add_argument("--input_path", type=str, default="./data/data_list.csv")
+parser.add_argument("--output_path", type=str, default="./data/entity_relation_counts.png")
+args = parser.parse_args()
+
+df = pd.read_csv(args.input_path)
 
 x = df["abstract_id"].astype(str)
 width = 0.36
@@ -47,7 +53,7 @@ ax.set_axisbelow(True)
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
-out_path = Path("./data/entity_relation_counts.png")
+out_path = Path(args.output_path)
 fig.tight_layout()
 fig.savefig(out_path, dpi=150)
 plt.show()

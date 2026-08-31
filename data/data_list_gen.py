@@ -1,4 +1,9 @@
 import pandas as pd
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--output_path", type=str, default="./data/data_list.csv")
+args = parser.parse_args()
 
 data = { "abstract_id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
          "pmid": ["33508184", "35578724", "42017925", "36812168", "40012027", 
@@ -17,4 +22,4 @@ data = { "abstract_id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
          "relations": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
 
 df = pd.DataFrame(data)
-df.to_csv("./data/data_list.csv", index=False)
+df.to_csv(args.output_path, index=False)

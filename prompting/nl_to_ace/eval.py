@@ -3,13 +3,19 @@ from pathlib import Path
 import re
 
 import pandas as pd
+import argparse
 
-gt_path = Path("./data/ace/ace_list.csv")
-model = "gemma-4-31b-it" # gemma-4-31b-it, qwen3-30b-a3b-instruct-2507
-prompt_type = "oneshot" # zeroshot, oneshot
+parser = argparse.ArgumentParser()
+parser.add_argument("--gt_path", type=str, default="./data/ace/ace_list.csv")
+parser.add_argument("--model", type=str, default="gemma-4-31b-it")
+parser.add_argument("--prompt_type", type=str, default="oneshot")
+parser.add_argument("--pred_path", type=str, default="./prompting/nl_to_ace/results/{prompt_type}_{model}.csv")
+parser.add_argument("--out_path", type=str, default="./prompting/nl_to_ace/results/{prompt_type}_{model}_eval.csv")
+args = parser.parse_args()
 
-pred_path = Path(f"./prompting/nl_to_ace/results/{prompt_type}_{model}.csv")
-out_path = Path(f"./prompting/nl_to_ace/results/{prompt_type}_{model}_eval.csv")
+gt_path = Path(args.gt_path)
+pred_path = Path(args.pred_path.format(prompt_type=args.prompt_type, model=args.model))
+out_path = Path(args.out_path.format(prompt_type=args.prompt_type, model=args.model))
 
 # Symmetric ACE relations: A pred B == B pred A
 SYMMETRIC = {

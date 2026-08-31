@@ -1,5 +1,11 @@
 import re
 import pandas as pd
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--input_path", type=str, default="./data/drs/drs_list.csv")
+parser.add_argument("--output_path", type=str, default="./data/kg/kg_list.csv")
+args = parser.parse_args()
 
 PREDICATE_MAP = {
     "associate_with": "associate",
@@ -60,7 +66,7 @@ def kg_gen_per_drs(drs_line, box_id):
         return f"No Matching: {drs_line}"
     return kg_gen_medrelation(named_ids[0], named_ids[1], medrelation, box)
 
-df = pd.read_csv("./data/drs/drs_list.csv")
+df = pd.read_csv(args.input_path)
 
 kg_rows = []
 
@@ -81,4 +87,4 @@ for index, row in df.iterrows():
         "kg": "\n".join(kg),
     })
 
-pd.DataFrame(kg_rows).to_csv("./data/kg/kg_list.csv", index=False)
+pd.DataFrame(kg_rows).to_csv(args.output_path, index=False)

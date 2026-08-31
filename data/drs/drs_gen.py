@@ -1,7 +1,13 @@
 import pandas as pd
 import requests
+import argparse
 
-df = pd.read_csv("./data/ace/ace_list.csv")
+parser = argparse.ArgumentParser()
+parser.add_argument("--input_path", type=str, default="./data/ace/ace_list.csv")
+parser.add_argument("--output_path", type=str, default="./data/drs/drs_list.csv")
+args = parser.parse_args()
+
+df = pd.read_csv(args.input_path)
 url = "https://attempto.ifi.uzh.ch/service/ape"
 
 drs_rows = []
@@ -44,4 +50,4 @@ for index, row in df.iterrows():
     })
 
 drs_df = pd.DataFrame(drs_rows)
-drs_df.to_csv("./data/drs/drs_list.csv", index=False)
+drs_df.to_csv(args.output_path, index=False)

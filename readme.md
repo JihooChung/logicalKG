@@ -1,17 +1,18 @@
 ## Logical Reconstruction of Arguments in Publications
 We present a framework which converts natural language scientific text into logical Knowledge Graphs (KGs). 
 Through experiments of several prompting strategies with custom ontology on a curated corpus, we discover the operational bottlenecks in ontology building and relation extraction. Ultimately, this work offers foundational insights for leveraging Large Language Models (LLMs) to bridge unstructured literature with formal logical representations.
+A short paper with further details is in [`archive/docs/logicalKG_shortpaper.pdf`](archive/docs/logicalKG_shortpaper.pdf).
 
 ## Motivation
 Unstructured natural language in scientific publications masks the explicit logical connections between claims, premises, and evidence. Consequently, standard text analysis tools struggle to extract these underlying reasoning structures, hindering comprehensive knowledge synthesis.
  
 ## Features
-![logical reconstruction pilepine](archive/visualization/workflow.png)
-In this work, we designed **NL → ACE → DRS → logical KG pipeline** converting  biomedical abstracts into five primary tasks as follow Attempto Controlled English (ACE), then Discourse Representation Structures (DRS), then RDF/Turtle knowledge graphs based on the **Custom ontology (`ontology.ttl`)**
+![logical reconstruction pipeline](archive/visualization/workflow.png)
+In this work, we designed **NL → ACE → DRS → logical KG pipeline** converting  biomedical abstracts into Attempto Controlled English (ACE), then Discourse Representation Structures (DRS), then RDF/Turtle knowledge graphs based on the **Custom ontology (`ontology.ttl`)**
 
 ### Example through the pipeline
 
-NL (masked):
+NL (normalized):
 
 ```text
 Chemical_MESH_D000093542 treats Disease_MESH_D010190.
@@ -84,6 +85,7 @@ LLM prompting reads the key from `prompting/api_key.txt`:
 ```text
 <your-gwdg-api-key>
 ```
+See the [GWDG SAIA documentation](https://docs.hpc.gwdg.de/services/ai-services/saia/index.html) for how to obtain an API key.
 **Do not commit this file if the repository is public.**
 
 ### Working directory
@@ -114,6 +116,7 @@ If an abstract is too long, `nl_to_ace/test.py` splits `nl` on newlines; merge t
 
 ## Results
 We evaluate Gemma (`gemma-4-31b-it`) and Qwen (`qwen3-30b-a3b-instruct-2507`) under zero-shot and one-shot prompting on 10 gold abstracts. Metrics are TP / FP / FN, precision, recall, F1, hallucination (FP / (TP+FP)), and omission (FN / (TP+FN)).
+
 **Table 1. NL→ACE.** Line-level match against gold ACE. One-shot Gemma is best (F1 0.630). Qwen over-generates (high FP / hallucination), so precision stays low even with one-shot.
 ![NL-to-ACE results](archive/visualization/nltoace.png)
 **Table 2. DRS→KG.** Triple-level match against gold Turtle (manual scoring). One-shot helps both models a lot: Gemma reaches F1 0.950, Qwen 1.000. Zero-shot stays weak because of format and ontology errors.
